@@ -1865,7 +1865,6 @@ button#prevBtn {
 }
 /* Tooltip styling */
 .tooltip {
-  display: block;
   position: absolute;
   bottom: 120%; /* Đặt tooltip phía trên của phần tử */
   left: 50%;
