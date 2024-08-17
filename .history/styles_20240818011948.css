@@ -259,12 +259,14 @@ nav {
 }
 .nav__logo__icon {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap:10px
 }
 
-.nav__logo__icon__svg {
- margin-top: -6px;
+.nav__logo__icon img {
+  width: 18px;
+  height: 18px;
 }
 /* bannercss start */
 
