@@ -9,8 +9,8 @@ menuBtn.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 const list = document.querySelector('.new__arrivals__list');
-const prevButton = document.querySelector('.prev2');
-const nextButton = document.querySelector('.next2');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
 
 let scrollPosition = 0;
 
@@ -112,35 +112,78 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+
+.section__banner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
 
+.banner__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
 
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}

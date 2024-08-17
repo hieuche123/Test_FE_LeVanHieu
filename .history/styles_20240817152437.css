@@ -1057,7 +1057,7 @@ button#prevBtn {
     height: 308px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
     position: absolute;
     top: 55%; /* Căn giữa theo chiều dọc */
@@ -1069,7 +1069,7 @@ button#prevBtn {
   .section__banner .banner__content .banner__text {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
   }
   .section__banner .banner__content .banner__text h1 {
@@ -1077,7 +1077,7 @@ button#prevBtn {
     height: 125px;
     font-size: 50px;
     font-weight: 400;
-    line-height: 55px; /* Đảm bảo thêm đơn vị đo */
+    line-height: 65px; /* Đảm bảo thêm đơn vị đo */
     text-align: center;
   }
   
@@ -1426,7 +1426,7 @@ button#prevBtn {
     align-items: center;
     position: absolute;
     top: 50%; /* Căn giữa theo chiều dọc */
-    left: 33%; /* Căn giữa theo chiều ngang */
+    left: 35%; /* Căn giữa theo chiều ngang */
     transform: translate(-50%, -50%); /* Đưa phần tử về chính giữa */
   
   }
@@ -1659,7 +1659,6 @@ button#prevBtn {
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
 }
 .addtocard {
-  cursor: pointer;
   width: 90%;
   position: absolute;
   display: flex;

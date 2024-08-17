@@ -1050,44 +1050,69 @@ button#prevBtn {
 @media (min-width: 769px) and (max-width: 1024px) {
   .section__banner {
     position: relative;
+    overflow: hidden; /* Đảm bảo phần thừa của các slide sẽ bị ẩn */
   }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Hiệu ứng chuyển slide */
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
   .section__banner .banner__content {
     position: absolute;
     width: 437px;
     height: 308px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
-    position: absolute;
-    top: 55%; /* Căn giữa theo chiều dọc */
-    left: 35%; /* Căn giữa theo chiều ngang */
-    transform: translate(-50%, -50%); /* Đưa phần tử về chính giữa */
+    top: 55%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
   
+  .section__banner .banner__content.active {
+    left: 35%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
   
   .section__banner .banner__content .banner__text {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
   }
+  
   .section__banner .banner__content .banner__text h1 {
     width: 437px;
     height: 125px;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 400;
-    line-height: 55px; /* Đảm bảo thêm đơn vị đo */
+    line-height: 65px;
     text-align: center;
   }
   
   .section__banner .banner__content .banner__text p {
     font-size: 14px;
     font-weight: 400;
-    line-height: 20.12px; /* Đảm bảo thêm đơn vị đo */
+    line-height: 20.12px;
     text-align: center;
   }
-
   .btn__collection.btn__collection_clothing {
     position: absolute;
     top: 55%; /* Đặt vị trí ở giữa chiều dọc */
@@ -1398,100 +1423,99 @@ button#prevBtn {
 
   /* bannercss start */
 
-  .section__banner {
-    font-family: 'Jost', sans-serif; /* Áp dụng font Jost */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Giữ cho ảnh không bị tràn ra ngoài */
-    padding-top: 0;
-    height: 100%;
-    position: relative;
-  }
+.section__banner {
+  font-family: 'Jost', sans-serif; /* Áp dụng font Jost */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Giữ cho ảnh không bị tràn ra ngoài */
+  padding-top: 0;
+  height: 100%;
+  position: relative;
+}
+
+.section__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   
-  .section__banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-  }
-  
-  .section__banner .banner__content {
-    position: absolute;
-    width: 437px;
-    height: 308px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-    position: absolute;
-    top: 50%; /* Căn giữa theo chiều dọc */
-    left: 33%; /* Căn giữa theo chiều ngang */
-    transform: translate(-50%, -50%); /* Đưa phần tử về chính giữa */
-  
-  }
-  
-  .section__banner .banner__content .banner__text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .section__banner .banner__content .banner__text h1 {
-    width: 437px;
-    height: 160px;
-    font-size: 80px;
-    font-weight: 400;
-    line-height: 80px; /* Đảm bảo thêm đơn vị đo */
-    text-align: center;
-  }
-  
-  .section__banner .banner__content .banner__text p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 23.12px; /* Đảm bảo thêm đơn vị đo */
-    text-align: center;
-  }
-  
-  .section__banner .banner__content .btn-explore {
-    width: 200px;
-    height: 55px;
-    padding: 10px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-color: #111111;
-    cursor: pointer;
-  }
-  
-  .section__banner .banner__content .btn-explore:hover {
-    background-color: #272626;
-  }
-  
-  .section__banner .slider {
-    position: relative;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
-  }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
-  }
-  
-  .slide {
-    min-width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    position: relative;
-    transition: transform 0.5s ease-in-out;
-  
-  }
-  
+}
+
+.section__banner .banner__content {
+  position: absolute;
+  width: 437px;
+  height: 308px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  position: absolute;
+  top: 50%; /* Căn giữa theo chiều dọc */
+  left: 35%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Đưa phần tử về chính giữa */
+
+}
+
+.section__banner .banner__content .banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.section__banner .banner__content .banner__text h1 {
+  width: 437px;
+  height: 160px;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 80px; /* Đảm bảo thêm đơn vị đo */
+  text-align: center;
+}
+
+.section__banner .banner__content .banner__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px; /* Đảm bảo thêm đơn vị đo */
+  text-align: center;
+}
+
+.section__banner .banner__content .btn-explore {
+  width: 200px;
+  height: 55px;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #111111;
+  cursor: pointer;
+}
+
+.section__banner .banner__content .btn-explore:hover {
+  background-color: #272626;
+}
+
+.section__banner .slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+
+}
+
 /* bannercss end*/
 
 
@@ -1659,7 +1683,6 @@ button#prevBtn {
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
 }
 .addtocard {
-  cursor: pointer;
   width: 90%;
   position: absolute;
   display: flex;

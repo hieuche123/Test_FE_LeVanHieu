@@ -9,8 +9,8 @@ menuBtn.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 const list = document.querySelector('.new__arrivals__list');
-const prevButton = document.querySelector('.prev2');
-const nextButton = document.querySelector('.next2');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
 
 let scrollPosition = 0;
 

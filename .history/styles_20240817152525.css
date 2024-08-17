@@ -1426,7 +1426,7 @@ button#prevBtn {
     align-items: center;
     position: absolute;
     top: 50%; /* Căn giữa theo chiều dọc */
-    left: 33%; /* Căn giữa theo chiều ngang */
+    left: 35%; /* Căn giữa theo chiều ngang */
     transform: translate(-50%, -50%); /* Đưa phần tử về chính giữa */
   
   }
@@ -1659,7 +1659,6 @@ button#prevBtn {
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
 }
 .addtocard {
-  cursor: pointer;
   width: 90%;
   position: absolute;
   display: flex;

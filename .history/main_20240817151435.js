@@ -126,21 +126,28 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slide");
+  let banners = document.getElementsByClassName("banner__content");
   let dots = document.getElementsByClassName("dot");
 
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
 
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].classList.remove("active");
+    banners[i].classList.remove("active");
   }
 
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("active");
+  banners[slideIndex - 1].classList.add("active");
   dots[slideIndex - 1].className += " active";
+
+  // Di chuyển slider
+  document.querySelector(".slider").style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
 }
+
 
 

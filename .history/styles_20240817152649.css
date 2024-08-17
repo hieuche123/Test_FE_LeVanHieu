@@ -1659,7 +1659,6 @@ button#prevBtn {
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
 }
 .addtocard {
-  cursor: pointer;
   width: 90%;
   position: absolute;
   display: flex;

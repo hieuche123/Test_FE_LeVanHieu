@@ -327,20 +327,7 @@
             />
           </svg>
         </a>
-        <a class="next" onclick="plusSlides(1)"
-          ><svg
-            width="6"
-            height="11"
-            viewBox="0 0 6 11"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.27754 10.7214C1.13691 10.8738 0.961132 10.95 0.750195 10.95C0.539257 10.95 0.363476 10.8738 0.222851 10.7214C0.070507 10.5808 -0.00566483 10.4109 -0.00566483 10.2117C-0.00566483 10.0007 0.070507 9.81909 0.222851 9.66675L4.19551 5.69409L0.222851 1.72144C0.070507 1.58081 -0.00566483 1.41089 -0.00566483 1.21167C-0.00566483 1.00073 0.070507 0.819092 0.222851 0.666748C0.363476 0.526123 0.539257 0.455811 0.750195 0.455811C0.961132 0.455811 1.13691 0.526123 1.27754 0.666748L5.77754 5.16675C5.92988 5.31909 6.00605 5.50073 6.00605 5.71167C6.00605 5.91089 5.92988 6.08081 5.77754 6.22144L1.27754 10.7214Z"
-              fill="#111111"
-            />
-          </svg>
-        </a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
         <!-- Dots -->
         <div class="dots">
           <span class="dot" onclick="currentSlide(1)"></span>
@@ -352,7 +339,7 @@
 
     <section class="section__collections">
       <div class="collections__title">
-        <h2 class="section__header">Featured Collections</h2>
+        <h2 class="section__header">Featured <br />Collections</h2>
         <p class="section__description">
           Elevate your style with our chic featured collection where fashion
           meets flair effortlessly.
@@ -367,20 +354,22 @@
             <div class="btn__collection2 btn__collection_top">Sunglasses</div>
           </div>
         </div>
-        <div class="categories__item__double">
-          <div class="item_img item_img1 item_img_pc">
-            <img class="img1" src="/assets/collection2.jpg" />
+        <div class="categories__item categories__item__double">
+          <div class="item_img item_img_pc">
+            <img src="/assets/collection2.jpg" />
             <div class="btn__collection2">Sunglasses</div>
           </div>
-          <div class="item_img item_img2 item_img_pc">
-            <img class="img2" src="/assets/bag.png" />
+          <div class="item_img item_img_pc">
+            <img src="/assets/collection2.jpg" />
             <div class="btn__collection2">Bags</div>
           </div>
         </div>
         <div class="categories__item">
           <div class="item_img item_img_mobile">
-            <img src="/assets/bag.png" />
-            <div class="btn__collection2 btn__collection_bottom">Bags</div>
+            <img src="/assets/collection2.jpg" />
+            <div class="btn__collection2 btn__collection_bottom">
+              Sunglasses
+            </div>
           </div>
           <img src="/assets/collection4.jpg" />
           <div class="btn__collection btn__collection4">Sneaker</div>
@@ -397,32 +386,10 @@
       </div>
       <div class="slider__controls">
         <button class="prev2" id="prevBtn">
-          <svg
-            width="6"
-            height="10"
-            viewBox="0 0 6 10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.46875 8.86328C5.60417 8.9987 5.67188 9.16016 5.67188 9.34766C5.67188 9.52474 5.60417 9.67578 5.46875 9.80078C5.34375 9.9362 5.1875 10.0039 5 10.0039C4.8125 10.0039 4.65625 9.9362 4.53125 9.80078L0.53125 5.80078C0.395833 5.67578 0.328125 5.52474 0.328125 5.34766C0.328125 5.16016 0.395833 4.9987 0.53125 4.86328L4.53125 0.863281C4.65625 0.738281 4.8125 0.675781 5 0.675781C5.1875 0.675781 5.34375 0.738281 5.46875 0.863281C5.60417 0.998698 5.67188 1.16016 5.67188 1.34766C5.67188 1.52474 5.60417 1.67578 5.46875 1.80078L1.9375 5.33203L5.46875 8.86328Z"
-              fill="#111111"
-            />
-          </svg>
+          <img src="./assets/prev.png" />
         </button>
         <button class="next2" id="nextBtn">
-          <svg
-            width="6"
-            height="10"
-            viewBox="0 0 6 10"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.46875 9.80078C1.34375 9.9362 1.1875 10.0039 1 10.0039C0.8125 10.0039 0.65625 9.9362 0.53125 9.80078C0.395833 9.67578 0.328125 9.52474 0.328125 9.34766C0.328125 9.16016 0.395833 8.9987 0.53125 8.86328L4.0625 5.33203L0.53125 1.80078C0.395833 1.67578 0.328125 1.52474 0.328125 1.34766C0.328125 1.16016 0.395833 0.998698 0.53125 0.863281C0.65625 0.738281 0.8125 0.675781 1 0.675781C1.1875 0.675781 1.34375 0.738281 1.46875 0.863281L5.46875 4.86328C5.60417 4.9987 5.67188 5.16016 5.67188 5.34766C5.67188 5.52474 5.60417 5.67578 5.46875 5.80078L1.46875 9.80078Z"
-              fill="#111111"
-            />
-          </svg>
+          <img src="./assets/next.png" />
         </button>
       </div>
       <div class="new__arrivals__list">
@@ -481,7 +448,6 @@
                 </svg>
               </div>
             </div>
-            <div class="addtocard"><h4>ADD TO CARD</h4></div>
           </div>
           <div class="product__des">
             <span>Square Textured Striped</span>
@@ -607,7 +573,6 @@
                 </svg>
               </div>
             </div>
-            <div class="addtocard"><h4>ADD TO CARD</h4></div>
           </div>
           <div class="product__des">
             <span>Square Textured Striped</span>
@@ -735,7 +700,6 @@
                 </svg>
               </div>
             </div>
-            <div class="addtocard"><h4>ADD TO CARD</h4></div>
           </div>
           <div class="product__des">
             <span>Square Textured Striped</span>
@@ -861,7 +825,6 @@
                 </svg>
               </div>
             </div>
-            <div class="addtocard"><h4>ADD TO CARD</h4></div>
           </div>
           <div class="product__des">
             <span>Square Textured Striped</span>
