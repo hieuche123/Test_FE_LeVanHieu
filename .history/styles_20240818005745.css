@@ -535,7 +535,6 @@ nav {
   
   
   .new__arrivals__item {
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -1835,8 +1834,8 @@ button#prevBtn {
 .tooltip2 {
   position: absolute;
   top: 50%;
-  left: -20%; /* Di chuyển tooltip sang bên trái phần tử */
-  transform: translate(-100%, -50%); /* Điều chỉnh vị trí chính xác của tooltip */
+  left: 110%; /* Di chuyển tooltip sang bên phải phần tử */
+  transform: translateY(-50%); /* Điều chỉnh tooltip nằm giữa chiều cao của phần tử */
   background-color: #333;
   color: #fff;
   padding: 5px 10px;
@@ -1854,16 +1853,17 @@ button#prevBtn {
   content: '';
   position: absolute;
   top: 50%;
-  right: -9px; /* Di chuyển mũi tên ra ngoài bên phải của tooltip */
+  left: -10px; /* Đặt mũi tên ở bên trái của tooltip */
   transform: translateY(-50%);
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent transparent #333; /* Mũi tên hướng về phía bên phải */
+  border-color: transparent #333 transparent transparent;
 }
+
 /* Tooltip styling */
 .tooltip {
   position: absolute;
-  bottom: 120%; /* Đặt tooltip phía trên của phần tử */
+  bottom: 100%; /* Đặt tooltip phía trên của phần tử */
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;

@@ -164,24 +164,3 @@ function showSlides(n) {
   // Cập nhật chấm tròn (dot)
   dots[slideIndex - 1].className += " active";
 }
-
-
-//select color
-// Lấy tất cả các phần tử .list_color_item
-const listColorItems = document.querySelectorAll('.list_color_item');
-
-// Thiết lập mặc định: .color_item_big của item đầu tiên sẽ có border màu #111111
-listColorItems[0].querySelector('.color_item_big').style.borderColor = '#111111';
-
-// Thêm sự kiện click cho từng item
-listColorItems.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    // Đặt lại tất cả .color_item_big có border màu #DDDDDD
-    listColorItems.forEach(item => {
-      item.querySelector('.color_item_big').style.borderColor = '#DDDDDD';
-    });
-
-    // Đổi màu border của item được click sang #111111
-    item.querySelector('.color_item_big').style.borderColor = '#111111';
-  });
-});

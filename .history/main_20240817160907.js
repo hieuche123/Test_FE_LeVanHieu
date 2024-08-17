@@ -134,54 +134,14 @@ function showSlides(n) {
 
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    slides[i].classList.remove("slide-active"); // Loại bỏ lớp slide-active khỏi tất cả các slide
   }
 
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  // Hiển thị slide hiện tại
   slides[slideIndex - 1].style.display = "block";
-
-  // Đảm bảo lớp animation được kích hoạt lại
-  const bannerContent = slides[slideIndex - 1].querySelector('.banner__content');
-  
-  // Reset trạng thái ban đầu của banner__content
-  bannerContent.style.opacity = '0';
-  bannerContent.style.transform = 'translate(-50%, -50%) translateX(-100px)';
-
-  // Buộc trình duyệt phải tính toán lại layout (force reflow)
-  bannerContent.offsetHeight; 
-
-  // Thêm lại lớp slide-active và kích hoạt lại animation
-  bannerContent.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-  setTimeout(() => {
-    bannerContent.style.opacity = '1';
-    bannerContent.style.transform = 'translate(-50%, -50%) translateX(0)';
-  }, 50);
-
-  // Cập nhật chấm tròn (dot)
   dots[slideIndex - 1].className += " active";
 }
 
 
-//select color
-// Lấy tất cả các phần tử .list_color_item
-const listColorItems = document.querySelectorAll('.list_color_item');
-
-// Thiết lập mặc định: .color_item_big của item đầu tiên sẽ có border màu #111111
-listColorItems[0].querySelector('.color_item_big').style.borderColor = '#111111';
-
-// Thêm sự kiện click cho từng item
-listColorItems.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    // Đặt lại tất cả .color_item_big có border màu #DDDDDD
-    listColorItems.forEach(item => {
-      item.querySelector('.color_item_big').style.borderColor = '#DDDDDD';
-    });
-
-    // Đổi màu border của item được click sang #111111
-    item.querySelector('.color_item_big').style.borderColor = '#111111';
-  });
-});

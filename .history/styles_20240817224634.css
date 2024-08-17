@@ -535,7 +535,6 @@ nav {
   
   
   .new__arrivals__item {
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -553,49 +552,7 @@ nav {
     top: 6%;
 }
 
-.list_color {
-  display: flex;
-  gap: 5px; /* Tạo khoảng cách giữa các nhóm hình tròn */
-}
-
-.list_color_item {
-  position: relative; /* Đặt vị trí tương đối để làm gốc cho các phần tử con */
-  width: 25px; /* Đảm bảo đủ không gian cho cả hai hình tròn */
-  height: 25px;
-  cursor: pointer;
-}
-
-.color_item_big,
-.color_item_small {
-  position: absolute; /* Cả hai hình tròn sẽ đè lên nhau */
-  border-radius: 50%; /* Đảm bảo các hình tròn có dạng tròn */
-}
-
-.color_item_big {
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  border: 1px solid #DDDDDD;
-  top: 0;
-  left: 0;
-}
-
-.color_item_small {
-  width: 19px;
-  height: 19px;
-  background-color: #EEEEEE;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Căn giữa hình tròn nhỏ bên trong hình tròn lớn */
-}
-.color_item_small2 {
-  background-color: #D6D6D6;
-}
-.color_item_small3 {
-  background-color: #C2CADF;
-}
 .new_icon div {
-    cursor: pointer;
     width: 40px;
     height: 40px;
     background-color: #FFFFFF;
@@ -613,12 +570,12 @@ nav {
 }
 
 .new_icon div:hover {
-    background-color: #111111; /* Màu xanh dương nhạt */
+    background-color: #87CEFA; /* Màu xanh dương nhạt */
     transform: scale(1.1); /* Phóng to nhẹ khi hover */
 }
 
 .new_icon div:hover svg path {
-    fill: #ffffff; /* Màu vàng */
+    fill: #3d381d; /* Màu vàng */
 }
   
   .new__arrivals__item .product__des {
@@ -1467,17 +1424,12 @@ button#prevBtn {
     flex-direction: column;
     gap: 50px;
     align-items: center;
+    position: absolute;
     top: 50%; /* Căn giữa theo chiều dọc */
     left: 33%; /* Căn giữa theo chiều ngang */
-    transform: translate(-50%, -50%) translateX(-100px);
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-.slide-active .banner__content {
-    opacity: 1; /* Hiển thị khi được kích hoạt */
-    transform: translate(-50%, -50%) translateX(100px); /* Trượt từ trái sang phải */
-}
+    transform: translate(-50%, -50%); /* Đưa phần tử về chính giữa */
+  
+  }
   
   .section__banner .banner__content .banner__text {
     display: flex;
@@ -1732,7 +1684,7 @@ button#prevBtn {
 .addtocard:hover {
   background-color: #111111;
   color: #fff;
-  transition: 0.2s ease
+
 }
 .new__arrivals__item .img__item:hover .addtocard {
   opacity: 1; /* Hiển thị khi hover */
@@ -1793,7 +1745,6 @@ button#prevBtn {
 
 .section__new__arrivals {
   padding: 20px;
-  margin-top: -20px;
 }
 
 .new__arrivals__list {
@@ -1832,79 +1783,6 @@ button#prevBtn {
 }
 
 
-.tooltip2 {
-  position: absolute;
-  top: 50%;
-  left: -20%; /* Di chuyển tooltip sang bên trái phần tử */
-  transform: translate(-100%, -50%); /* Điều chỉnh vị trí chính xác của tooltip */
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-/* Arrow pointing to the left */
-.tooltip2::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -9px; /* Di chuyển mũi tên ra ngoài bên phải của tooltip */
-  transform: translateY(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent transparent #333; /* Mũi tên hướng về phía bên phải */
-}
-/* Tooltip styling */
-.tooltip {
-  position: absolute;
-  bottom: 120%; /* Đặt tooltip phía trên của phần tử */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-/* Arrow below the tooltip */
-.tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  z-index: 1000;
-  border-color: #333 transparent transparent transparent;
-}
-
-/* Show tooltip on hover */
-.list_color_item:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1000;
-  
-}
-
-
-.new_icon_div:hover .tooltip2 {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1000;
-  
-}
 
 /* section__new__arrivals end */
 

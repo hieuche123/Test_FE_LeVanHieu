@@ -535,7 +535,6 @@ nav {
   
   
   .new__arrivals__item {
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -1778,6 +1777,7 @@ button#prevBtn {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 30px;
 }
 
 .line__space {
@@ -1832,79 +1832,6 @@ button#prevBtn {
 }
 
 
-.tooltip2 {
-  position: absolute;
-  top: 50%;
-  left: -20%; /* Di chuyển tooltip sang bên trái phần tử */
-  transform: translate(-100%, -50%); /* Điều chỉnh vị trí chính xác của tooltip */
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-/* Arrow pointing to the left */
-.tooltip2::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -9px; /* Di chuyển mũi tên ra ngoài bên phải của tooltip */
-  transform: translateY(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent transparent #333; /* Mũi tên hướng về phía bên phải */
-}
-/* Tooltip styling */
-.tooltip {
-  position: absolute;
-  bottom: 120%; /* Đặt tooltip phía trên của phần tử */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-/* Arrow below the tooltip */
-.tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  z-index: 1000;
-  border-color: #333 transparent transparent transparent;
-}
-
-/* Show tooltip on hover */
-.list_color_item:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1000;
-  
-}
-
-
-.new_icon_div:hover .tooltip2 {
-  opacity: 1;
-  visibility: visible;
-  z-index: 1000;
-  
-}
 
 /* section__new__arrivals end */
 
