@@ -100,112 +100,115 @@ body {
 }
 
 
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-}
-
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  transition: left 0.5s ease;
-  z-index: 1000; /* Đảm bảo modal nằm trên cùng */
-}
-.modalhome {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  transition: left 0.5s ease;
-  z-index: 1000; /* Đảm bảo modal nằm trên cùng */
-}
-
-.modal-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
   box-sizing: border-box;
 }
 
-
-.modal.show {
-  left: 0; /* Hiển thị modal */
+/* ============= Modal Common Css ============ */
+.modal-mask {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  user-select: none;
 }
-.modalhome.showhome {
-  left: 0; /* Hiển thị modal */
+.modal-mask::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  height: 100%;
+  width: 0;
+  margin-left: -0.25em;
 }
-
-.modal-content-list {
-  display: flex;
+.modal-mask .modal-dialog {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  width: 600px;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-flex;
   flex-direction: column;
+  vertical-align: middle;
+  max-height: calc(100vh - 200px);
+  user-select: text;
 }
-.modal__header {
-  padding: 0 20px;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #D73F0F;
+.modal-mask .modal-dialog .modal-close {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
 }
-.header__left {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  font-weight: 600;
+.modal-mask .modal-dialog .modal-close:hover svg path {
+  fill: #df0606;
 }
-.header__left__menu {
-  color: #FFFFFF;
+.modal-mask .modal-dialog .modal-close svg {
+  width: 16px;
+  height: 16px;
 }
-.header__left__cate {
-  color: #f4dddd;
+.modal-mask .modal-dialog .modal-close svg path {
+  transition: all 0.3s linear;
+  fill: #a3a3a3;
 }
-.modal__home, 
-.modal__shop, 
-.modal__sale, 
-.modal__view {
-  margin: 0 20px;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #EBEBEB;
+.modal-mask .modal-dialog .modal-title {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3b3b3b;
+  width: calc(100% - 24px);
+  margin-bottom: 16px;
 }
-.home__left, 
-.shop__left, 
-.sale__left, 
-.view__left {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #111111;
+.modal-mask .modal-dialog .modal-content {
+  height: 100%;
+  overflow-y: auto;
 }
-.sale__left, .view__left {
-  align-items: center;
-  gap: 12px;
+
+/* ============= End Modal Common Css ============ */
+/* ============= Modal Center Fade Zoom Css ============ */
+.modal-mask .fui-modal-center-fade-zoom.modal-dialog {
+  transition: transform 0.4s ease, opacity 0.4s linear;
+  transform: scale(0);
+  opacity: 0;
 }
-.header-language {
-  margin: 0px 20px;
-  padding: 15px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px ;
-  border-bottom: 1px solid #EBEBEB;
-  
+.modal-mask .fui-modal-center-fade-zoom.modal-dialog.is-open {
+  transform: scale(1);
+  opacity: 1;
 }
+
+/* ============= End Modal Center Fade Zoom Css ============ */
+/* ============= Button Css ============ */
+.btn {
+  margin-top: 20px;
+  padding-inline: 20px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  background-color: #307dca;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  outline: none;
+  border: none;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+/* ============= End Button Css ============ */
+/* ============= Responsive ============ */
+@media only screen and (max-width: 39.9375em) {
+  .modal-mask .modal-dialog {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+  }
+}
+/* ============= End Responsive ============ */
+
+/*# sourceMappingURL=app.css.map */
 .chat_box, .croll_top {
   display: flex;
   justify-content: center;

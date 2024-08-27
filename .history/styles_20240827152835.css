@@ -99,13 +99,17 @@ body {
   font-family: 'Jost', sans-serif; /* Áp dụng font Jost */
 }
 
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+button {
+  margin: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
 
 .modal {
   position: fixed;
@@ -113,98 +117,36 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
+  z-index: 1000;
   transition: left 0.5s ease;
-  z-index: 1000; /* Đảm bảo modal nằm trên cùng */
-}
-.modalhome {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  transition: left 0.5s ease;
-  z-index: 1000; /* Đảm bảo modal nằm trên cùng */
 }
 
 .modal-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  margin: 100px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
   background-color: white;
-  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
 }
 
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-.modal.show {
-  left: 0; /* Hiển thị modal */
-}
-.modalhome.showhome {
-  left: 0; /* Hiển thị modal */
-}
-
-.modal-content-list {
-  display: flex;
-  flex-direction: column;
-}
-.modal__header {
-  padding: 0 20px;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #D73F0F;
-}
-.header__left {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  font-weight: 600;
-}
-.header__left__menu {
-  color: #FFFFFF;
-}
-.header__left__cate {
-  color: #f4dddd;
-}
-.modal__home, 
-.modal__shop, 
-.modal__sale, 
-.modal__view {
-  margin: 0 20px;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #EBEBEB;
-}
-.home__left, 
-.shop__left, 
-.sale__left, 
-.view__left {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #111111;
-}
-.sale__left, .view__left {
-  align-items: center;
-  gap: 12px;
-}
-.header-language {
-  margin: 0px 20px;
-  padding: 15px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px ;
-  border-bottom: 1px solid #EBEBEB;
-  
+.close:hover {
+  color: #000;
 }
 .chat_box, .croll_top {
   display: flex;

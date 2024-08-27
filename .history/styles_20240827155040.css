@@ -99,112 +99,49 @@ body {
   font-family: 'Jost', sans-serif; /* Áp dụng font Jost */
 }
 
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-
 .modal {
   position: fixed;
+  left: 0;
   top: 0;
-  left: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  transition: left 0.5s ease;
-  z-index: 1000; /* Đảm bảo modal nằm trên cùng */
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
-.modalhome {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  transition: left 0.5s ease;
-  z-index: 1000; /* Đảm bảo modal nằm trên cùng */
-}
-
 .modal-content {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: white;
-  box-sizing: border-box;
+  padding: 2rem 2.5rem;
+  width: 30em;
+  border-radius: 0.5rem;
 }
-
-
-.modal.show {
-  left: 0; /* Hiển thị modal */
+.close-button {
+  float: right;
+  width: 1.5rem;
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0 .2em .15em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: var(--clr-neutral);
+  color: var(--clr-dark);
+  transition: color 0.12s ease-in-out;
 }
-.modalhome.showhome {
-  left: 0; /* Hiển thị modal */
+.close-button:hover {
+  color: var(--clr-main);
 }
-
-.modal-content-list {
-  display: flex;
-  flex-direction: column;
-}
-.modal__header {
-  padding: 0 20px;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #D73F0F;
-}
-.header__left {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  font-weight: 600;
-}
-.header__left__menu {
-  color: #FFFFFF;
-}
-.header__left__cate {
-  color: #f4dddd;
-}
-.modal__home, 
-.modal__shop, 
-.modal__sale, 
-.modal__view {
-  margin: 0 20px;
-  height: 55px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #EBEBEB;
-}
-.home__left, 
-.shop__left, 
-.sale__left, 
-.view__left {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #111111;
-}
-.sale__left, .view__left {
-  align-items: center;
-  gap: 12px;
-}
-.header-language {
-  margin: 0px 20px;
-  padding: 15px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px ;
-  border-bottom: 1px solid #EBEBEB;
-  
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 .chat_box, .croll_top {
   display: flex;

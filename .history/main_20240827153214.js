@@ -1,51 +1,10 @@
-const openModalBtn = document.getElementById('openModalBtn');
-const openModalBtnhome = document.getElementById('openModalBtnhome');
-
-const modal = document.getElementById('modal');
-const modalhome = document.getElementById('modalhome');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const closeModalBtnhome = document.getElementById('closeModalBtnhome');
-
-// Khi nhấn vào nút mở modal
-openModalBtn.addEventListener('click', () => {
-    modal.classList.add('show');
-});
-
-// Khi nhấn vào dấu X để đóng modal
-closeModalBtn.addEventListener('click', () => {
-    modal.classList.remove('show');
-});
-
-// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.classList.remove('show');
-    }
-});
-
-// Khi nhấn vào nút mở modal
-openModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.add('showhome');
-});
-
-// Khi nhấn vào dấu X để đóng modal
-closeModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.remove('showhome');
-});
-
-// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
-modalhome.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modalhome.classList.remove('showhome');
-    }
-});
-
-
-
-
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
+const menuBtnIcon = menuBtn.querySelector("i");
 
+menuBtn.addEventListener("click", (e) => {
+
+});
 const list = document.querySelector('.new__arrivals__list');
 const prevButton = document.querySelector('.prev2');
 const nextButton = document.querySelector('.next2');
@@ -343,3 +302,28 @@ nextButtoncustomer.addEventListener('click', () => {
 });
 
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

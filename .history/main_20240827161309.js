@@ -1,10 +1,6 @@
 const openModalBtn = document.getElementById('openModalBtn');
-const openModalBtnhome = document.getElementById('openModalBtnhome');
-
 const modal = document.getElementById('modal');
-const modalhome = document.getElementById('modalhome');
 const closeModalBtn = document.getElementById('closeModalBtn');
-const closeModalBtnhome = document.getElementById('closeModalBtnhome');
 
 // Khi nhấn vào nút mở modal
 openModalBtn.addEventListener('click', () => {
@@ -22,26 +18,6 @@ modal.addEventListener('click', (event) => {
         modal.classList.remove('show');
     }
 });
-
-// Khi nhấn vào nút mở modal
-openModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.add('showhome');
-});
-
-// Khi nhấn vào dấu X để đóng modal
-closeModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.remove('showhome');
-});
-
-// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
-modalhome.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modalhome.classList.remove('showhome');
-    }
-});
-
-
-
 
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");

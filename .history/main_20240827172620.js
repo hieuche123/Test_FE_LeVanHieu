@@ -24,19 +24,19 @@ modal.addEventListener('click', (event) => {
 });
 
 // Khi nhấn vào nút mở modal
-openModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.add('showhome');
+openModalBtn.addEventListener('click', () => {
+    modal.classList.add('show');
 });
 
 // Khi nhấn vào dấu X để đóng modal
-closeModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.remove('showhome');
+closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
 });
 
 // Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
-modalhome.addEventListener('click', (event) => {
+modal.addEventListener('click', (event) => {
     if (event.target === modal) {
-        modalhome.classList.remove('showhome');
+        modal.classList.remove('show');
     }
 });
 

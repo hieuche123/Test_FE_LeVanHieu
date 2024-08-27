@@ -1,51 +1,10 @@
-const openModalBtn = document.getElementById('openModalBtn');
-const openModalBtnhome = document.getElementById('openModalBtnhome');
-
-const modal = document.getElementById('modal');
-const modalhome = document.getElementById('modalhome');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const closeModalBtnhome = document.getElementById('closeModalBtnhome');
-
-// Khi nhấn vào nút mở modal
-openModalBtn.addEventListener('click', () => {
-    modal.classList.add('show');
-});
-
-// Khi nhấn vào dấu X để đóng modal
-closeModalBtn.addEventListener('click', () => {
-    modal.classList.remove('show');
-});
-
-// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.classList.remove('show');
-    }
-});
-
-// Khi nhấn vào nút mở modal
-openModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.add('showhome');
-});
-
-// Khi nhấn vào dấu X để đóng modal
-closeModalBtnhome.addEventListener('click', () => {
-    modalhome.classList.remove('showhome');
-});
-
-// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
-modalhome.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modalhome.classList.remove('showhome');
-    }
-});
-
-
-
-
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
+const menuBtnIcon = menuBtn.querySelector("i");
 
+menuBtn.addEventListener("click", (e) => {
+
+});
 const list = document.querySelector('.new__arrivals__list');
 const prevButton = document.querySelector('.prev2');
 const nextButton = document.querySelector('.next2');
@@ -343,3 +302,220 @@ nextButtoncustomer.addEventListener('click', () => {
 });
 
 
+
+  /* ================ Function Common ================ */
+  function isFunction(func) {
+    return typeof func === "function";
+  }
+  /* ================ End Function Common ================ */
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  /* ================ Html ================ */
+  const htmlModal = ({ title, contentHtml, className }) => `
+    <div class="modal-dialog${className ? ` ${className}` : ""}">
+      <div class="modal-close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M393.4 41.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L269.3 256 438.6 425.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 301.3 54.6 470.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0L224 210.7 393.4 41.4z" />
+        </svg>
+      </div>
+      ${title && `<h2 class="modal-title">${title}</h2>`}
+      <div class="modal-content">
+        ${contentHtml ?? ""}
+      </div>
+    </div>
+  `;
+  /* ================ End Html ================ */
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  /* ================ Modal Classes ================ */
+  class Modal {
+    // Property
+    #btnEl;
+
+    #dialogEl;
+
+    #modalMask = document.createElement("div");
+
+    #title;
+
+    #contentHtml;
+
+    #className;
+
+    onClose;
+
+    #timeOut = {};
+
+    constructor(props) {
+      const { title, contentHtml, btnEl, className } = props ?? {};
+      this.#title = title;
+      this.#contentHtml = contentHtml;
+      this.#btnEl = btnEl;
+      this.#className = className;
+
+      // Bind Method
+      this.open.bind(this);
+      this.destroy.bind(this);
+    }
+
+    // Getter
+    get titleParent() {
+      return this.#title;
+    }
+
+    get btnElParent() {
+      return this.#btnEl;
+    }
+
+    get contentHtmlParent() {
+      return this.#contentHtml;
+    }
+
+    get dialogElParent() {
+      return this.#dialogEl;
+    }
+
+    get modalMaskParent() {
+      return this.#modalMask;
+    }
+
+    get classNameParent() {
+      return this.#className;
+    }
+
+    // Method
+    open() {
+      const maskEl = this.#modalMask;
+      maskEl.className = "modal-mask";
+      maskEl.innerHTML = htmlModal({
+        title: this.#title,
+        contentHtml: this.#contentHtml,
+        className: this.#className,
+      });
+
+      const dialogEl = maskEl.querySelector(".modal-dialog");
+
+      this.#dialogEl = dialogEl;
+
+      dialogEl?.addEventListener("click", (e) => e.stopPropagation());
+
+      const btnClose = maskEl.querySelector(".modal-close");
+
+      const btnDestroyList = [btnClose, maskEl];
+
+      btnDestroyList.forEach((el) => {
+        el?.addEventListener("click", () => {
+          this.destroy();
+          btnDestroyList.forEach((el2) => {
+            const classList = el2?.classList;
+            if (classList?.contains('is-destroying')) {
+              return true;
+            }
+            classList?.add('is-destroying');
+            el2?.setAttribute('style', 'pointer-events: none;');
+            return true;
+          });
+          if (isFunction(this.onClose)) {
+            this.onClose();
+          }
+          return true;
+        });
+      });
+
+      document.body.append(maskEl);
+
+      return this;
+    }
+
+    destroy() {
+      document.body.removeChild(this.#modalMask);
+      return this;
+    }
+  }
+  /* ================ End Modal Classes ================ */
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  /* ================ Modal Fade Zoom Classes ================ */
+  class ModalFadeZoom extends Modal {
+    open() {
+      super.open();
+      const dialogEl = this.dialogElParent;
+      const btnEl = this.btnElParent;
+
+      setTimeout(() => {
+        const rectBtn = this.btnElParent?.getBoundingClientRect();
+        const rectDialog = dialogEl?.getBoundingClientRect();
+
+        const topOffset =
+          rectBtn.top +
+          btnEl.clientHeight / 2 -
+          (rectDialog.top - dialogEl.clientHeight / 2);
+        const leftOffset =
+          rectBtn.left +
+          btnEl.clientWidth / 2 -
+          (window.innerWidth - dialogEl.clientWidth) / 2;
+        dialogEl?.setAttribute(
+          "style",
+          `transform-origin: ${leftOffset}px ${topOffset}px`
+        );
+      }, 10);
+
+      setTimeout(() => {
+        dialogEl?.classList.add("is-open");
+      }, 20);
+
+      return this;
+    }
+
+    destroy() {
+      this.dialogElParent?.classList.remove("is-open");
+      setTimeout(() => {
+        document.body.removeChild(this.modalMaskParent);
+      }, 400);
+      return this;
+    }
+  }
+  /* ================ End Modal Fade Zoom  Classes ================ */
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  /* ================ Run App ================ */
+  const btn = document.querySelector("#fui-modal-center-fade-zoom .btn");
+  btn?.addEventListener("click", () => {
+    const modal = new ModalFadeZoom({
+      title: "Modal fade zoom",
+      btnEl: btn,
+      className: "fui-modal-center-fade-zoom",
+      contentHtml:
+        '<p class="desc">The Modal plugin is a dialog box/popup window that is displayed on top of the current page. Plugins can be included individually (using fui ui), or all at once (using "fui ui"). A modal is a dialog box/popup window that is displayed on top of the current page. Add a class for modal-header, modal-body and modal-footer. Style the modal header, body and footer, and add animation (slide in the modal).</p>',
+    });
+    modal.open();
+  });
+  /* ================ End Run App ================ */

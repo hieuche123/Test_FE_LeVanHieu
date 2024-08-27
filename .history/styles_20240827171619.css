@@ -104,6 +104,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 
@@ -144,10 +145,6 @@ body {
 .modal.show {
   left: 0; /* Hiển thị modal */
 }
-.modalhome.showhome {
-  left: 0; /* Hiển thị modal */
-}
-
 .modal-content-list {
   display: flex;
   flex-direction: column;
