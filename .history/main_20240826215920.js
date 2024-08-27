@@ -221,85 +221,24 @@ updateCountdown();
 
 
 
-const prevBtn = document.getElementById('prevBtn-customer');
-const nextBtn = document.getElementById('nextBtn-customer');
-const sliderList = document.querySelector('.section__customer__list');
-const items = document.querySelectorAll('.section__customer__item');
-const itemCount = items.length;
+
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const slider = document.querySelector('.section__customer__list');
 let index = 0;
 
-function updateSlider() {
-  const itemWidth = items[0].offsetWidth;
-  sliderList.style.transform = `translateX(-${index * itemWidth}px)`;
-}
-
-// Event listeners for the previous and next buttons
-prevBtn.addEventListener('click', () => {
-  index = (index > 0) ? index - 1 : itemCount - Math.floor(3); // Adjust to visible items count on desktop
-  updateSlider();
-});
-
 nextBtn.addEventListener('click', () => {
-  index = (index < itemCount - Math.floor(3)) ? index + 1 : 0; // Adjust to visible items count on desktop
-  updateSlider();
+  index++;
+  if (index >= slider.children.length) {
+    index = 0; // Loop back to the first item
+  }
+  slider.style.transform = `translateX(-${index * 100}%)`;
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const prevBtn = document.getElementById('prevBtn-customer');
-  const nextBtn = document.getElementById('nextBtn-customer');
-  const slider = document.querySelector('.section__customer__list');
-  
-  let currentIndex = 0;
-  const items = document.querySelectorAll('.section__customer__item');
-  const totalItems = items.length;
-
-  function updateSliderPosition() {
-    const itemWidth = items[0].offsetWidth;
-    slider.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+prevBtn.addEventListener('click', () => {
+  index--;
+  if (index < 0) {
+    index = slider.children.length - 1; // Loop back to the last item
   }
-
-  prevBtn.addEventListener('click', function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSliderPosition();
-    }
-  });
-
-  nextBtn.addEventListener('click', function () {
-    if (currentIndex < totalItems - 1) {
-      currentIndex++;
-      updateSliderPosition();
-    }
-  });
-
-  // Optional: Adjust the slider width on window resize
-  window.addEventListener('resize', updateSliderPosition);
-});
-
-
-
-const listcustomer = document.querySelector('.new__customer__list');
-const prevButtoncustomer = document.querySelector('.prev-customer');
-const nextButtoncustomer = document.querySelector('.next-customer');
-
-let scrollPositioncustomer = 0;
-
-prevButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer > 0) {
-    scrollPositioncustomer -= listcustomer.clientWidth;
-    listcustomer.scrollTo({
-      left: scrollPositioncustomer,
-      behavior: 'smooth'
-    });
-  }
-});
-
-nextButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += listcustomer.clientWidth;
-    listcustomer.scrollTo({
-      left: scrollPositioncustomer,
-      behavior: 'smooth'
-    });
-  }
+  slider.style.transform = `translateX(-${index * 100}%)`;
 });

@@ -1809,7 +1809,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
   .nav__links {
     position: static;
-    width: fit-content;
     padding: 0;
     flex-direction: row;
     background-color: transparent;

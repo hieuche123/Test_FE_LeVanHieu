@@ -1849,7 +1849,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     overflow: visible;
   }
   .nav__links .dropdown__menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;

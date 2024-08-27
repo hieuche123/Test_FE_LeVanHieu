@@ -278,27 +278,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-const listcustomer = document.querySelector('.new__customer__list');
-const prevButtoncustomer = document.querySelector('.prev-customer');
-const nextButtoncustomer = document.querySelector('.next-customer');
+const list = document.querySelector('.new__arrivals__list');
+const prevButton = document.querySelector('.prev2');
+const nextButton = document.querySelector('.next2');
 
-let scrollPositioncustomer = 0;
+let scrollPosition = 0;
 
-prevButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer > 0) {
-    scrollPositioncustomer -= listcustomer.clientWidth;
-    listcustomer.scrollTo({
-      left: scrollPositioncustomer,
+prevButton.addEventListener('click', () => {
+  if (scrollPosition > 0) {
+    scrollPosition -= list.clientWidth / 2;
+    list.scrollTo({
+      left: scrollPosition,
       behavior: 'smooth'
     });
   }
 });
 
-nextButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += listcustomer.clientWidth;
-    listcustomer.scrollTo({
-      left: scrollPositioncustomer,
+nextButton.addEventListener('click', () => {
+  if (scrollPosition < list.scrollWidth - list.clientWidth) {
+    scrollPosition += list.clientWidth / 2;
+    list.scrollTo({
+      left: scrollPosition,
       behavior: 'smooth'
     });
   }

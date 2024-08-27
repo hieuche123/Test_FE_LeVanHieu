@@ -275,31 +275,3 @@ document.addEventListener('DOMContentLoaded', function () {
   // Optional: Adjust the slider width on window resize
   window.addEventListener('resize', updateSliderPosition);
 });
-
-
-
-const listcustomer = document.querySelector('.new__customer__list');
-const prevButtoncustomer = document.querySelector('.prev-customer');
-const nextButtoncustomer = document.querySelector('.next-customer');
-
-let scrollPositioncustomer = 0;
-
-prevButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer > 0) {
-    scrollPositioncustomer -= listcustomer.clientWidth;
-    listcustomer.scrollTo({
-      left: scrollPositioncustomer,
-      behavior: 'smooth'
-    });
-  }
-});
-
-nextButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += listcustomer.clientWidth;
-    listcustomer.scrollTo({
-      left: scrollPositioncustomer,
-      behavior: 'smooth'
-    });
-  }
-});

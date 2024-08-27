@@ -40,13 +40,6 @@
   text-align: center;
 }
 
-.section__description-trending {
-  color: var(--text-light);
-  line-height: 1.75rem;
-  text-align: center;
-  visibility: visible;
-}
-
 .btn {
   padding: 0.75rem 1.5rem;
   outline: none;
@@ -717,15 +710,11 @@ button#prevBtn {
   }
 
   .trending__nav {
-    height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    height: 36px;
     visibility: hidden;
-  }
-  .trending__arrivals__title {
-    margin-bottom: 0px;
   }
   .trending__nav__list {
     display: flex;
@@ -746,7 +735,6 @@ button#prevBtn {
     background-color: #F5F5F5;
   }
 
-
   /* section__new__arrivals end */
   
   
@@ -757,8 +745,7 @@ button#prevBtn {
   display: flex;
   gap: 20px; /* Khoảng cách giữa các phần tử */
   margin: 0 20px; /* Padding cho container */
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding: 60px 0;
   overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
   scroll-snap-type: x mandatory; /* Snap vào các phần tử khi cuộn */
   -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên iOS */
@@ -770,6 +757,7 @@ button#prevBtn {
 
 .section__news__item {
   border-radius: 10px;
+  position: relative;
   flex: 0 0 calc(100% / 1.5 - 20px); /* Chiều rộng 1,5 phần tử trên mobile */
   scroll-snap-align: start; /* Snap vào phần tử khi cuộn */
 }
@@ -778,7 +766,6 @@ button#prevBtn {
   width: 300px; /* Chiều rộng ảnh */
   height: 400px; /* Chiều cao ảnh */
   overflow: hidden;
-  position: relative;
 }
 
 .news__img__item img {
@@ -787,17 +774,17 @@ button#prevBtn {
   transition: transform 0.3s ease;
   border-radius: 10px;
   object-fit: cover;
-
 }
 
 .section__news__content {
   height: 84px;
+  width: 195px;
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 10%;
-  left: 20%;
-  transform: translate(-15%, -10%);
+  bottom: 8%;
+  left: 30%;
+  transform: translate(-30%, -8%);
 }
 
 .section__news__content .subtext {
@@ -830,17 +817,13 @@ button#prevBtn {
 }
 
 .section__instagram__head {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 40px;
 }
 
 .section__instagram__title {
-  font-size: 36px;
-  text-align: center;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -903,7 +886,6 @@ button#prevBtn {
   display: flex;
   gap: 15px;
   flex-direction: column;
-  margin-top: 60px;
 }
 
 .section__new__customer .new__customer__title h2 {
@@ -963,7 +945,7 @@ button#prevBtn {
 }
 
 .new__customer__item {
-  flex: 0 0 calc(100%); /* 100% với khoảng cách giữa các mục */
+  flex: 0 0 calc(100% - 10px); /* 50% với khoảng cách giữa các mục */
   box-sizing: border-box;
 }
 
@@ -984,9 +966,6 @@ button#prevBtn {
   align-items: center;
   gap: 10px;
 }
-.controls-customer {
-  display: flex;
-}
 .prev-customer, .next-customer {
 width: 40px;
 height: 40px;
@@ -995,7 +974,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
 button#nextBtn-customer {
 border: 1px solid #EBEBEB;
 
@@ -1611,12 +1589,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 .trending__nav {
   visibility: visible;
-  padding-bottom: 50px;
 }
-.trending__arrivals__title {
-  margin-bottom: 20px;
-}
-.section__description-trending {
+.section__description {
   visibility: hidden;
 }
 .new_icon {
@@ -1809,7 +1783,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
   .nav__links {
     position: static;
-    width: fit-content;
     padding: 0;
     flex-direction: row;
     background-color: transparent;
@@ -2195,16 +2168,11 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   transform: translateX(-50%) translateY(0); /* Trượt lên từ dưới */
 }
 .trending__nav {
-  display: contents;
   visibility: visible;
-  padding-bottom: 50px;
 }
-.trending__arrivals__title {
-  margin-bottom: 20px;
-}
-.section__description-trending {
+.section__description {
   visibility: hidden;
-} 
+}
 .section__new__arrivals .new__arrivals__title {
   height: 68px;
   line-height: 65.03px;
@@ -2221,17 +2189,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   color: #111111;
   margin-bottom: 4px;
 }
-.section__new__arrivals .new__arrivals__title .section__header-trending {
-  font-size: 45px;
-  text-align: center;
-  margin: 0 ;
-  font-weight: 400;
-  margin-bottom: -12px;
-}
-
-.trending__arrivals__title h2 {
-  margin-bottom: 10px;
-}
 
 .section__new__arrivals .new__arrivals__title p {
   font-size: 16px;
@@ -2239,7 +2196,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   text-align: center;
   font-weight: 400;
   color: #555555;
-
 }
 
 .new__arrivals__list {
@@ -2271,6 +2227,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .section__new__arrivals {
   padding: 20px;
+  margin-top: -20px;
   padding-bottom: 100px;
 }
 
@@ -2392,8 +2349,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .section__news {
   gap: 30px;
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần tử */
-  padding-bottom: 80px;
-  padding-top: 0px;
 }
 
 .section__news__item {
@@ -2407,9 +2362,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .section__news__content {
-  bottom: 10%;
+  bottom: 5%;
   left: 20%;
-  transform: translate(-15%, -10%);
+  transform: translate(-20%, -5%);
 }
 
 .section__news__content .subtext {
@@ -2475,15 +2430,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .section__instagram {
   max-width: 1410px;
   margin: 0 auto;
-}
-
-.section__instagram__head {
-  margin-top: 0;
-}
-.section__instagram__title {
-  font-size: 45px;
-  text-align: center;
-  font-weight: 400;
 }
 .section__instagram__list {
   overflow-x: hidden; /* Loại bỏ thanh cuộn ngang */
@@ -2570,7 +2516,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   gap: 2px;
   flex-direction: column;
-  margin-top: 0;
 }
 
 .section__new__customer .new__customer__title h2 {
@@ -2620,7 +2565,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .section__new__customer {
   padding: 20px;
   margin-top: -20px;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
 }
 
 .new__customer__list {
@@ -2655,13 +2600,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   transform: scale(1.1); /* Phóng to ảnh khi hover */
 }
 
-.controls-customer {
-  justify-content:space-between  ;
-}
-.slider__controls-customer {
-  display: none;
-}
-/* section__customer start */
+
 
 
 

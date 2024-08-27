@@ -244,41 +244,7 @@ nextBtn.addEventListener('click', () => {
   updateSlider();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const prevBtn = document.getElementById('prevBtn-customer');
-  const nextBtn = document.getElementById('nextBtn-customer');
-  const slider = document.querySelector('.section__customer__list');
-  
-  let currentIndex = 0;
-  const items = document.querySelectorAll('.section__customer__item');
-  const totalItems = items.length;
-
-  function updateSliderPosition() {
-    const itemWidth = items[0].offsetWidth;
-    slider.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
-  }
-
-  prevBtn.addEventListener('click', function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSliderPosition();
-    }
-  });
-
-  nextBtn.addEventListener('click', function () {
-    if (currentIndex < totalItems - 1) {
-      currentIndex++;
-      updateSliderPosition();
-    }
-  });
-
-  // Optional: Adjust the slider width on window resize
-  window.addEventListener('resize', updateSliderPosition);
-});
-
-
-
-const listcustomer = document.querySelector('.new__customer__list');
+const listcustomer = document.querySelector('.section__customer__list');
 const prevButtoncustomer = document.querySelector('.prev-customer');
 const nextButtoncustomer = document.querySelector('.next-customer');
 
@@ -286,8 +252,8 @@ let scrollPositioncustomer = 0;
 
 prevButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer > 0) {
-    scrollPositioncustomer -= listcustomer.clientWidth;
-    listcustomer.scrollTo({
+    scrollPositioncustomer -= list.clientWidth / 2;
+    list.scrollTo({
       left: scrollPositioncustomer,
       behavior: 'smooth'
     });
@@ -295,9 +261,9 @@ prevButtoncustomer.addEventListener('click', () => {
 });
 
 nextButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += listcustomer.clientWidth;
-    listcustomer.scrollTo({
+  if (scrollPositioncustomer < list.scrollWidth - list.clientWidth) {
+    scrollPositioncustomer += list.clientWidth / 2;
+    list.scrollTo({
       left: scrollPositioncustomer,
       behavior: 'smooth'
     });

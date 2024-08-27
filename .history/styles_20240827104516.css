@@ -1809,7 +1809,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
   .nav__links {
     position: static;
-    width: fit-content;
     padding: 0;
     flex-direction: row;
     background-color: transparent;
@@ -2656,10 +2655,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .controls-customer {
-  justify-content:space-between  ;
-}
-.slider__controls-customer {
-  display: none;
+  justify-content:  ;
 }
 /* section__customer start */
 

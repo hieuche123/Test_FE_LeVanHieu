@@ -296,7 +296,7 @@ prevButtoncustomer.addEventListener('click', () => {
 
 nextButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += listcustomer.clientWidth;
+    scrollPositioncustomer += listcustomer.clientWidth + '10px';
     listcustomer.scrollTo({
       left: scrollPositioncustomer,
       behavior: 'smooth'

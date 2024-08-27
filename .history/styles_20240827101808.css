@@ -832,6 +832,7 @@ button#prevBtn {
 .section__instagram__head {
   display: flex;
   flex-direction: column;
+  gap: 15px;
   text-align: center;
   margin-bottom: 20px;
   margin-top: 40px;
@@ -984,9 +985,6 @@ button#prevBtn {
   align-items: center;
   gap: 10px;
 }
-.controls-customer {
-  display: flex;
-}
 .prev-customer, .next-customer {
 width: 40px;
 height: 40px;
@@ -995,7 +993,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
 button#nextBtn-customer {
 border: 1px solid #EBEBEB;
 
@@ -1809,7 +1806,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
   .nav__links {
     position: static;
-    width: fit-content;
     padding: 0;
     flex-direction: row;
     background-color: transparent;
@@ -2204,7 +2200,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 .section__description-trending {
   visibility: hidden;
-} 
+} {
+  visibility: hidden;
+}
 .section__new__arrivals .new__arrivals__title {
   height: 68px;
   line-height: 65.03px;
@@ -2221,13 +2219,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   color: #111111;
   margin-bottom: 4px;
 }
-.section__new__arrivals .new__arrivals__title .section__header-trending {
-  font-size: 45px;
-  text-align: center;
-  margin: 0 ;
-  font-weight: 400;
-  margin-bottom: -12px;
-}
 
 .trending__arrivals__title h2 {
   margin-bottom: 10px;
@@ -2239,7 +2230,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   text-align: center;
   font-weight: 400;
   color: #555555;
-
 }
 
 .new__arrivals__list {
@@ -2655,13 +2645,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   transform: scale(1.1); /* Phóng to ảnh khi hover */
 }
 
-.controls-customer {
-  justify-content:space-between  ;
-}
-.slider__controls-customer {
-  display: none;
-}
-/* section__customer start */
+
 
 
 

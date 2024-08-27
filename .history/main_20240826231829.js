@@ -278,27 +278,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-const listcustomer = document.querySelector('.new__customer__list');
-const prevButtoncustomer = document.querySelector('.prev-customer');
-const nextButtoncustomer = document.querySelector('.next-customer');
+const listcustomer = document.querySelector('.new__arrivals__list');
+const prevButton = document.querySelector('.prev-customer');
+const nextButton = document.querySelector('.next-customer');
 
-let scrollPositioncustomer = 0;
+let scrollPosition = 0;
 
-prevButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer > 0) {
-    scrollPositioncustomer -= listcustomer.clientWidth;
+prevButton.addEventListener('click', () => {
+  if (scrollPosition > 0) {
+    scrollPosition -= listcustomer.clientWidth / 2;
     listcustomer.scrollTo({
-      left: scrollPositioncustomer,
+      left: scrollPosition,
       behavior: 'smooth'
     });
   }
 });
 
-nextButtoncustomer.addEventListener('click', () => {
-  if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += listcustomer.clientWidth;
+nextButton.addEventListener('click', () => {
+  if (scrollPosition < listcustomer.scrollWidth - listcustomer.clientWidth) {
+    scrollPosition += listcustomer.clientWidth / 2;
     listcustomer.scrollTo({
-      left: scrollPositioncustomer,
+      left: scrollPosition,
       behavior: 'smooth'
     });
   }
