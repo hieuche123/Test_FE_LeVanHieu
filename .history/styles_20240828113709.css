@@ -2894,10 +2894,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: none;
 }
 
-.img__item img{
-  width: 100%;
-  height: 100%;
-}
+
 .new__arrivals__item .img__item {
   position: relative;
   overflow: hidden; /* Đảm bảo ảnh không vượt ra ngoài khung */
