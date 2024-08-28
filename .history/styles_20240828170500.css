@@ -973,11 +973,12 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border: 10px;
   }
   .categories__item img {
     width: 100%;
     height: 100%;
-
+    border-radius: 10px;
   }
   .btn__collection, .btn__collection2 {
     width: 120px;
@@ -2730,7 +2731,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .categories__item {
   cursor: pointer;
   position: relative;
-  border-radius: 10px;
   overflow: hidden; /* Để đảm bảo rằng ảnh phóng to không vượt ra ngoài khung */
 }
 
@@ -2738,7 +2738,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà khi phóng to */
-  border-radius: 10px;
 }
 
 .categories__item:hover img {
@@ -2748,13 +2747,10 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .categories__item__double {
   display: flex; /* Đặt hai phần tử con nằm cạnh nhau */
   gap: 10px; /* Khoảng cách giữa hai phần tử */
-  border-radius: 10px;
-
 }
 
 .categories__item__double .item_img {
   position: relative;
-  border-radius: 10px;
   overflow: hidden; /* Đảm bảo ảnh không vượt ra ngoài khung */
   flex: 1; /* Đảm bảo hai item_img chia đều không gian */
 }
@@ -2790,10 +2786,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .new__arrivals__item .img__item {
   position: relative;
-  border-radius: 10px;
 }
 .img__item img {
-  border-radius: 10px;
   width: 100%;
   height: 100%;
 }

@@ -2791,6 +2791,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .new__arrivals__item .img__item {
   position: relative;
   border-radius: 10px;
+
 }
 .img__item img {
   border-radius: 10px;
