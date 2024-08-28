@@ -555,7 +555,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #111111;
-  margin-top: 12px;
+  margin-top: 3px;
 }
 /* On mouse-over, add a grey background color */
 .container-checkbox:hover input ~ .checkmark {
