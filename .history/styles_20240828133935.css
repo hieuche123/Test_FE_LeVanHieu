@@ -104,7 +104,20 @@ body {
   padding: 0;
 }
 
-.modal, .modalhome, .modalshop {
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color:var(--color-white);
+  overflow: hidden;
+  transition: left 0.5s ease;
+  z-index: 1000; /* Đảm bảo modal nằm trên cùng */
+  overflow-y: auto; /* Thêm cuộn dọc khi nội dung vượt quá chiều cao */
+}
+.modalhome, .modalshop {
   position: fixed;
   top: 0;
   left: -100%;
@@ -161,8 +174,12 @@ body {
 }
 
 
-.modal.show ,
-.modalhome.showhome,
+.modal.show {
+  left: 0; /* Hiển thị modal */
+}
+.modalhome.showhome {
+  left: 0; /* Hiển thị modal */
+}
 .modalshop.showshop {
   left: 0; /* Hiển thị modal */
 }
@@ -505,6 +522,7 @@ body {
 }
 /* Customize the label (the container) */
 .container-checkbox {
+
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;

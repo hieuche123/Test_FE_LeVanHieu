@@ -505,6 +505,7 @@ body {
 }
 /* Customize the label (the container) */
 .container-checkbox {
+
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;

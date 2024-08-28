@@ -161,8 +161,12 @@ body {
 }
 
 
-.modal.show ,
-.modalhome.showhome,
+.modal.show {
+  left: 0; /* Hiển thị modal */
+}
+.modalhome.showhome {
+  left: 0; /* Hiển thị modal */
+}
 .modalshop.showshop {
   left: 0; /* Hiển thị modal */
 }
@@ -505,6 +509,7 @@ body {
 }
 /* Customize the label (the container) */
 .container-checkbox {
+
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
