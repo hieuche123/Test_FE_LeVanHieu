@@ -2902,7 +2902,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .new__arrivals__item .img__item img {
   transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà khi phóng to */
   width: 100%; /* Đảm bảo ảnh chiếm toàn bộ không gian của khung cha */
-  height: 100%; /* Đảm bảo tỷ lệ ảnh không bị méo */
+  height: auto; /* Đảm bảo tỷ lệ ảnh không bị méo */
 }
 
 .new__arrivals__item .img__item:hover img {
