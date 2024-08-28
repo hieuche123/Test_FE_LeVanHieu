@@ -385,7 +385,7 @@ body {
   color: #111111;
 }
 .ship-tab-freeship span {
-  color: #111111;
+  color: #D73F0F;
 }
 
 .time-buy {
@@ -973,10 +973,7 @@ nav {
     color: #111111;
     cursor: pointer;
   } 
-  .item_img img {
-    width: 100%;
-    height: 100%;
-  }
+  
   .btn__collection:hover, .btn__collection2:hover {
     background-color: #ebb6b6;
   }
