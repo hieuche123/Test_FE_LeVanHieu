@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
 
 
@@ -1068,10 +1069,6 @@ nav {
     position: relative;
   }
 
-  .img__item img{
-    width: 100%;
-    height: 100%;
-  }
   .new_icon {
     position: absolute;
     display: flex;
@@ -1377,7 +1374,6 @@ button#prevBtn {
 
 .instagram__list__img img {
   width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -2688,8 +2684,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .categories__item img {
-  width: 100%;
-  height: 100%;
   transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà khi phóng to */
 }
 
@@ -2740,10 +2734,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .new__arrivals__item .img__item {
   position: relative;
 }
-.img__item img {
-  width: 100%;
-  height: 100%;
-}
+
 .new_icon {
   position: absolute;
   display: flex;
