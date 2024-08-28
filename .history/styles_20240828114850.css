@@ -342,10 +342,7 @@ body {
   cursor: pointer;
   color: #333;
 }
-.dropdown-right-item img {
-  width: 100%;
-  height: 100%;
-}
+
 .modalbuy.showbuy {
   right: 0;
 }
