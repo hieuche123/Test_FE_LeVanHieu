@@ -523,15 +523,13 @@ body {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   display: flex;
   align-items: center;
-  margin-top: 12px;
-  
 }
 
 /* Hide the browser's default checkbox */
@@ -1816,7 +1814,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     height: 50px;
     width: 290px;
     line-height: 20.23px;
-    color: #111111;
+    color: #999999;
     font-size: 14px;
     font-weight: 400;
     padding: 10px 20px;

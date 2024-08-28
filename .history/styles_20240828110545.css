@@ -523,15 +523,13 @@ body {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   display: flex;
   align-items: center;
-  margin-top: 12px;
-  
 }
 
 /* Hide the browser's default checkbox */
