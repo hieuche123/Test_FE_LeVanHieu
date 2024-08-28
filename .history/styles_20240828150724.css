@@ -242,15 +242,19 @@ body {
   flex-direction: column;
   gap: 20px;
   background-color: var(--color-white);
-}
-.layout__img {
   position: relative;
 }
 .layout__img img {
   width: 100%;
   height: 100%;
 }
+.btn-layout-shop {
+  position: absolute;
+  top: 50%; /* Căn giữa theo chiều dọc */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Đưa phần tử về chính giữa */
 
+}
 .modal__home__btn {
   background-color: #111111;
   border-radius: 30px;
@@ -318,9 +322,7 @@ body {
   background: #555; /* Màu của thumb khi hover */
 }
 
-.close {
-  cursor: pointer;
-}
+
 .closebuy {
   position: absolute;
   top: 10px;
@@ -329,31 +331,9 @@ body {
   cursor: pointer;
   color: #333;
 }
-.dropdown-right-item {
-  position: relative;
-}
 .dropdown-right-item img {
   width: 100%;
   height: 100%;
-}
-.btn-layout-shop {
-  height: 50px;
-  width: 300px;
-  background-color: var(--color-white);
-  color: #111111;
-  font-size: 16px;
-  border-radius: 30px;
-  text-align: center;
-  line-height: 50px;
-  position: absolute;
-  top: 90%; /* Căn giữa theo chiều dọc */
-  left: 50%; /* Căn giữa theo chiều ngang */
-  transform: translate(-50%, -90%); /* Đưa phần tử về chính giữa */
-  cursor: pointer;
-}
-.btn-layout-shop:hover {
-  background-color: #111111;
-  color: var(--color-white);
 }
 .modalbuy.showbuy {
   right: 0;
@@ -1284,7 +1264,7 @@ button#prevBtn {
 .section__news {
   display: flex;
   gap: 20px; /* Khoảng cách giữa các phần tử */
-  margin: 0 10px; /* Padding cho container */
+  margin: 0 20px; /* Padding cho container */
   padding-bottom: 60px;
   padding-top: 60px;
   overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
@@ -2314,14 +2294,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   align-items: center;
 }
-.toplink__intification p span {
-  margin-left: 4px; /* Tạo khoảng trắng trước thẻ span */
-  text-decoration: underline; /* Gạch chân nội dung của thẻ span */
-}
-.notification span {
-  margin-left: 4px; /* Tạo khoảng trắng trước thẻ span */
 
-}
 .toplink__language {
   display: flex;
   align-items: center;
@@ -2349,8 +2322,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
   nav {
     position: relative;
-    height: 68px;
-    padding: 0 30px;
+    padding: 20.3px 30px;
     max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
@@ -2376,7 +2348,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
 
   .nav__links {
-    height: 68px;
     position: relative;
     top: 0;
     padding: 0;
@@ -2416,9 +2387,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
   .dropdown {
     overflow: visible;
-  }
-  .nav__links__item {
-    height: 68px;
   }
   .nav__links .dropdown__menu {
     display: none;
@@ -2823,9 +2791,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   color: #fff;
   transition: 0.2s ease
 }
-.addtocard h2 {
-  font-size: 14px;
-}
 .new__arrivals__item .img__item:hover .addtocard {
   opacity: 1; /* Hiển thị khi hover */
   transform: translateX(-50%) translateY(0); /* Trượt lên từ dưới */
@@ -3029,7 +2994,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 /* section__news start */
 .section__news {
-  margin: 0 20px;
   gap: 30px;
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần tử */
   padding-bottom: 80px;
@@ -3044,12 +3008,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .news__img__item {
   width: 100%; /* Chiều rộng ảnh tự động theo kích thước mới */
   height: 610px; /* Chiều cao tự động theo tỷ lệ */
-  cursor: pointer;
 }
-.news__img__item:hover .news__item__img {
-  transform: scale(1.1);
-  transition: transform 0.3s ease
-}
+
 .section__news__content {
   bottom: 10%;
   left: 20%;
@@ -3135,21 +3095,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   gap: 5px;
   flex-wrap: wrap;
 }
-.instagram__list__img {
-  width: 100%;
-  height: auto;
-  overflow: hidden; /* Ngăn chặn hình ảnh tràn ra ngoài */
-  border-radius: 10px;
-}
-.instagram__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.instagram__list__img:hover .instagram__img {
-  transform: scale(1.1);
-  transition: transform 0.3s ease
-}
+
 .section__instagram__item {
   flex: 0 0 calc(16.66% - 5px); /* Hiển thị 6 mục trên một hàng, trừ đi khoảng cách giữa các mục */
 }
@@ -3769,15 +3715,6 @@ a.prev:hover svg path {
   flex-direction: column;
   gap: 10px;
 }
-
-.dropdown-center-content li, .dropdown-left-content li {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.dropdown-left-content li:hover, .dropdown-center-content li:hover {
-  transform: translateX(20px); /* Trượt sang phải 10px khi hover */
-}
 /* shop-dropdown end */
 
 
@@ -3819,10 +3756,6 @@ a.prev:hover svg path {
 }
 .dropdown-content li .new {
   background-color: #516CF4;
-}
-
-.btn-layout-shop {
-  width: 200px;
 }
 /* shop-dropdown end */
 }

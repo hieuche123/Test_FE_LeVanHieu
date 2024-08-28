@@ -3770,13 +3770,12 @@ a.prev:hover svg path {
   gap: 10px;
 }
 
-.dropdown-center-content li, .dropdown-left-content li {
+.dropdown-left-content li {
   transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
-.dropdown-left-content li:hover, .dropdown-center-content li:hover {
-  transform: translateX(20px); /* Trượt sang phải 10px khi hover */
+.dropdown-left-content li:hover {
+  transform: translateX(10px); /* Trượt sang phải 10px khi hover */
 }
 /* shop-dropdown end */
 

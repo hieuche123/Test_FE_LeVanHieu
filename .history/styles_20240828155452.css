@@ -1284,7 +1284,7 @@ button#prevBtn {
 .section__news {
   display: flex;
   gap: 20px; /* Khoảng cách giữa các phần tử */
-  margin: 0 10px; /* Padding cho container */
+  margin: 0 20px; /* Padding cho container */
   padding-bottom: 60px;
   padding-top: 60px;
   overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
@@ -2314,14 +2314,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   align-items: center;
 }
-.toplink__intification p span {
-  margin-left: 4px; /* Tạo khoảng trắng trước thẻ span */
-  text-decoration: underline; /* Gạch chân nội dung của thẻ span */
-}
-.notification span {
-  margin-left: 4px; /* Tạo khoảng trắng trước thẻ span */
 
-}
 .toplink__language {
   display: flex;
   align-items: center;
@@ -2823,9 +2816,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   color: #fff;
   transition: 0.2s ease
 }
-.addtocard h2 {
-  font-size: 14px;
-}
 .new__arrivals__item .img__item:hover .addtocard {
   opacity: 1; /* Hiển thị khi hover */
   transform: translateX(-50%) translateY(0); /* Trượt lên từ dưới */
@@ -3029,7 +3019,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 /* section__news start */
 .section__news {
-  margin: 0 20px;
   gap: 30px;
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần tử */
   padding-bottom: 80px;
@@ -3768,15 +3757,6 @@ a.prev:hover svg path {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.dropdown-center-content li, .dropdown-left-content li {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.dropdown-left-content li:hover, .dropdown-center-content li:hover {
-  transform: translateX(20px); /* Trượt sang phải 10px khi hover */
 }
 /* shop-dropdown end */
 
