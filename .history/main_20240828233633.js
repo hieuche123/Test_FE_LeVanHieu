@@ -320,34 +320,73 @@ updateCountdown();
 const prevBtn = document.getElementById('prevBtn-customer');
 const nextBtn = document.getElementById('nextBtn-customer');
 const sliderList = document.querySelector('.section__customer__list');
-const itemss = document.querySelectorAll('.section__customer__item');
-const itemCount = itemss.length;
+const items = document.querySelectorAll('.section__customer__item');
+const itemCount = items.length;
 let index = 0;
 
 function updateSlider() {
-  if (itemss.length > 0 && itemss[0]) {
-    const itemWidth = itemss[0].offsetWidth;
-    sliderList.style.transform = `translateX(-${index * itemWidth}px)`;
-  } 
+  const itemWidth = items[0].offsetWidth;
+  sliderList.style.transform = `translateX(-${index * itemWidth}px)`;
 }
 
 // Event listeners for the previous and next buttons
-// Event listeners for the previous and next buttons
 prevBtn.addEventListener('click', () => {
-  if (itemss.length > 0) {
-    index = (index > 0) ? index - 1 : itemCount - 1;
-    updateSlider();
-  }
+  index = (index > 0) ? index - 1 : itemCount - Math.floor(3); // Adjust to visible items count on desktop
+  updateSlider();
 });
 
 nextBtn.addEventListener('click', () => {
-  if (itemss.length > 0) {
-    index = (index < itemCount - 1) ? index + 1 : 0;
-    updateSlider();
-  }
+  index = (index < itemCount - Math.floor(3)) ? index + 1 : 0; // Adjust to visible items count on desktop
+  updateSlider();
 });
-// Initial call to set up the slider position
-updateSlider();
+
+document.addEventListener('DOMContentLoaded', function () {
+  const prevBtn = document.getElementById('prevBtn-customer');
+  const nextBtn = document.getElementById('nextBtn-customer');
+  const slider = document.querySelector('.section__customer__list');
+  
+  let currentIndex = 0;
+  const items = document.querySelectorAll('.section__customer__item');
+  const totalItems = items.length;
+
+  // Kiểm tra nếu các phần tử tồn tại
+  if (!prevBtn || !nextBtn || !slider || totalItems === 0) {
+    console.error('Có lỗi xảy ra: Một hoặc nhiều phần tử không tồn tại.');
+    return;
+  }
+
+  function updateSliderPosition() {
+    const itemWidth = items[0].offsetWidth;
+
+    // Kiểm tra nếu itemWidth có giá trị hợp lệ
+    if (!itemWidth) {
+      console.error('itemWidth không hợp lệ.');
+      return;
+    }
+    slider.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+  }
+
+  prevBtn.addEventListener('click', function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSliderPosition();
+    }
+  });
+
+  nextBtn.addEventListener('click', function () {
+    if (currentIndex < totalItems - 1) {
+      currentIndex++;
+      updateSliderPosition();
+    }
+  });
+
+  // Optional: Adjust the slider width on window resize
+  window.addEventListener('resize', updateSliderPosition);
+  
+  // Cập nhật vị trí slider ngay khi trang được tải
+  updateSliderPosition();
+});
+
 
 const listcustomer = document.querySelector('.new__customer__list');
 const prevButtoncustomer = document.querySelector('.prev-customer');

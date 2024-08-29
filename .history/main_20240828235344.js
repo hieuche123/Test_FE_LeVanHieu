@@ -328,26 +328,27 @@ function updateSlider() {
   if (itemss.length > 0 && itemss[0]) {
     const itemWidth = itemss[0].offsetWidth;
     sliderList.style.transform = `translateX(-${index * itemWidth}px)`;
-  } 
+  } else {
+    console.error("Items array is empty or itemss[0] is undefined.");
+  }
 }
 
 // Event listeners for the previous and next buttons
 // Event listeners for the previous and next buttons
 prevBtn.addEventListener('click', () => {
-  if (itemss.length > 0) {
+  if (items.length > 0) {
     index = (index > 0) ? index - 1 : itemCount - 1;
     updateSlider();
   }
 });
 
 nextBtn.addEventListener('click', () => {
-  if (itemss.length > 0) {
+  if (items.length > 0) {
     index = (index < itemCount - 1) ? index + 1 : 0;
     updateSlider();
   }
 });
-// Initial call to set up the slider position
-updateSlider();
+
 
 const listcustomer = document.querySelector('.new__customer__list');
 const prevButtoncustomer = document.querySelector('.prev-customer');

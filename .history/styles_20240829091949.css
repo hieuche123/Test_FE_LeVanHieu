@@ -211,21 +211,9 @@ body {
   font-weight: 600;
   color: #111111;
 }
-.modal__home__item, .home__left, .home__left__menu {
-  font-size: 16px;
-  font-weight: 400;
-}
-.header__menu__home {
-  font-size: 16px;
-}
 .sale__left, .view__left {
   align-items: center;
   gap: 12px;
-}
-
-.nav_list_mmobile {
-  font-size: 16px;
-  font-weight: 500;
 }
 .header-language {
   margin: 0px 20px;
@@ -1219,7 +1207,7 @@ nav {
     display: none;
   }
   .slider__controls {
-    margin-bottom: -20px;
+    margin-bottom: -18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1256,10 +1244,6 @@ button#prevBtn {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 40px;
-    width: 40px;
-    border-radius: 100px;
-    border: 1px solid #EBEBEB;
   }
 
   .trending__nav {
@@ -1533,6 +1517,7 @@ button#prevBtn {
   display: none;
 }
 .slider__controls-customer {
+  margin-top: 20px;
   margin-bottom: -18px;
   display: flex;
   justify-content: center;
@@ -1856,7 +1841,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   
   .footer_newsletter_contact {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
   }
   .footer_newsletter_contact input {
     border-radius: 30px;
@@ -2303,7 +2288,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     position: fixed;
     top: 0;
     right: -100%;
-    width: 450px;
+    width: 28.5%;
     height: 100%;
     background-color: white;
     overflow-y: auto;
@@ -3208,7 +3193,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   flex: 0 0 calc(16.66% - 5px); /* Hiển thị 6 mục trên một hàng, trừ đi khoảng cách giữa các mục */
 }
 .section__instagram {
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 /* section__instagram end */
 
@@ -3494,9 +3480,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .section__footer {
   padding: 20px;
-  padding-top: 60px;
-  padding-left: 0;
-  padding-right: 0;
 }
 .footer_categories_title div {
   font-size: 16px;
@@ -3624,7 +3607,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .footer__bottom {
   max-width: 1410px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
   padding-top: 35px;
   border-top: 1px solid #EBEBEB;
   flex-direction: row;
@@ -3896,15 +3879,6 @@ a.prev:hover svg path {
   display: none;
 }
 /* shop-dropdown end */
-
-.buy-title-name {
-  font-size: 16px;
-  margin-top: -4px;
-}
-.list-buy {
-  margin-bottom: 166px;
-}
-
 }
 
 

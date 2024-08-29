@@ -211,21 +211,9 @@ body {
   font-weight: 600;
   color: #111111;
 }
-.modal__home__item, .home__left, .home__left__menu {
-  font-size: 16px;
-  font-weight: 400;
-}
-.header__menu__home {
-  font-size: 16px;
-}
 .sale__left, .view__left {
   align-items: center;
   gap: 12px;
-}
-
-.nav_list_mmobile {
-  font-size: 16px;
-  font-weight: 500;
 }
 .header-language {
   margin: 0px 20px;
@@ -1219,6 +1207,7 @@ nav {
     display: none;
   }
   .slider__controls {
+    margin-top: 20px;
     margin-bottom: -20px;
     display: flex;
     justify-content: center;
@@ -1533,6 +1522,7 @@ button#prevBtn {
   display: none;
 }
 .slider__controls-customer {
+  margin-top: 20px;
   margin-bottom: -18px;
   display: flex;
   justify-content: center;
@@ -3898,13 +3888,9 @@ a.prev:hover svg path {
 /* shop-dropdown end */
 
 .buy-title-name {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: -4px;
 }
-.list-buy {
-  margin-bottom: 166px;
-}
-
 }
 
 

@@ -215,17 +215,9 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
-.header__menu__home {
-  font-size: 16px;
-}
 .sale__left, .view__left {
   align-items: center;
   gap: 12px;
-}
-
-.nav_list_mmobile {
-  font-size: 16px;
-  font-weight: 500;
 }
 .header-language {
   margin: 0px 20px;

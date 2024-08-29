@@ -211,21 +211,9 @@ body {
   font-weight: 600;
   color: #111111;
 }
-.modal__home__item, .home__left, .home__left__menu {
-  font-size: 16px;
-  font-weight: 400;
-}
-.header__menu__home {
-  font-size: 16px;
-}
 .sale__left, .view__left {
   align-items: center;
   gap: 12px;
-}
-
-.nav_list_mmobile {
-  font-size: 16px;
-  font-weight: 500;
 }
 .header-language {
   margin: 0px 20px;
@@ -1219,7 +1207,8 @@ nav {
     display: none;
   }
   .slider__controls {
-    margin-bottom: -20px;
+    margin-top: 20px;
+    margin-bottom: -18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1256,10 +1245,6 @@ button#prevBtn {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 40px;
-    width: 40px;
-    border-radius: 100px;
-    border: 1px solid #EBEBEB;
   }
 
   .trending__nav {
@@ -1484,7 +1469,7 @@ button#prevBtn {
 
 .new__customer__item {
   width: 100%;
-  height: 312px;
+  height: 292px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -1533,6 +1518,7 @@ button#prevBtn {
   display: none;
 }
 .slider__controls-customer {
+  margin-top: 20px;
   margin-bottom: -18px;
   display: flex;
   justify-content: center;
@@ -1856,7 +1842,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   
   .footer_newsletter_contact {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
   }
   .footer_newsletter_contact input {
     border-radius: 30px;
@@ -2303,7 +2289,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     position: fixed;
     top: 0;
     right: -100%;
-    width: 450px;
+    width: 28.5%;
     height: 100%;
     background-color: white;
     overflow-y: auto;
@@ -2346,7 +2332,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .toplink__intification p span {
   margin-left: 4px; /* Tạo khoảng trắng trước thẻ span */
   text-decoration: underline; /* Gạch chân nội dung của thẻ span */
-  font-weight: 500;
+  font-weight: 500px;
 }
 .notification span {
   margin-left: 4px; /* Tạo khoảng trắng trước thẻ span */
@@ -2663,7 +2649,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 /* section__collections start */
 .section__collections {
   max-width: 1410px;
-  padding: 0 0px;
+  padding: 0 20px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -2946,8 +2932,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 .section__new__arrivals {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 20px;
   padding-bottom: 100px;
 }
 
@@ -3076,7 +3061,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   gap: 30px;
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần tử */
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   padding: 0;
 
 }
@@ -3207,9 +3192,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .section__instagram__item {
   flex: 0 0 calc(16.66% - 5px); /* Hiển thị 6 mục trên một hàng, trừ đi khoảng cách giữa các mục */
 }
-.section__instagram {
-  padding: 0;
-}
 /* section__instagram end */
 
 
@@ -3219,8 +3201,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 /* section__new__arrivals start */
 .section__new__customer {
-  padding-left: 0;
-  padding-right: 0;
   max-width: 1410px;
   margin: 0 auto;
   display: flex;
@@ -3335,7 +3315,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 .section__new__customer {
-  padding-bottom: 100px;
+  padding: 20px;
+  margin-top: -20px;
+  padding-bottom: 60px;
 }
 
 .new__customer__list {
@@ -3494,9 +3476,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .section__footer {
   padding: 20px;
-  padding-top: 60px;
-  padding-left: 0;
-  padding-right: 0;
 }
 .footer_categories_title div {
   font-size: 16px;
@@ -3624,7 +3603,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .footer__bottom {
   max-width: 1410px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
   padding-top: 35px;
   border-top: 1px solid #EBEBEB;
   flex-direction: row;
@@ -3710,7 +3689,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .banner__content {
   width: 580px;
   position: absolute;
-  top: 46%;
+  top: 45%;
   left: 30%;
   transform: translate(-42%, -45%);
   text-align: center;
@@ -3720,9 +3699,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-.banner__text__list h1 {
-  width: 437px;
 }
 .prev, .next {
   cursor: pointer;
@@ -3896,15 +3872,6 @@ a.prev:hover svg path {
   display: none;
 }
 /* shop-dropdown end */
-
-.buy-title-name {
-  font-size: 16px;
-  margin-top: -4px;
-}
-.list-buy {
-  margin-bottom: 166px;
-}
-
 }
 
 

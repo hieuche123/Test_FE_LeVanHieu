@@ -222,11 +222,6 @@ body {
   align-items: center;
   gap: 12px;
 }
-
-.nav_list_mmobile {
-  font-size: 16px;
-  font-weight: 500;
-}
 .header-language {
   margin: 0px 20px;
   padding: 15px 0;
