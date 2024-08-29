@@ -2313,11 +2313,12 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   
 /* toplink start */
 .toplink {
+  max-width: 1920px;
   font-size: 14px;
   font-weight: 400;
   color: #111111;
   height: 40px;
-  padding: 0 30px;
+  padding: 0 0px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -2380,6 +2381,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     position: relative;
     height: 68px;
     padding: 0 30px;
+    max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
     align-items: center;

@@ -2313,6 +2313,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   
 /* toplink start */
 .toplink {
+  max-width: 1920px;
   font-size: 14px;
   font-weight: 400;
   color: #111111;
