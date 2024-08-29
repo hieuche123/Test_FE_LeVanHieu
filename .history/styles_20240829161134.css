@@ -1617,7 +1617,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
   
   /* section__footer start */
- 
+  .footer__section {
+    min-width: 390px;
+  }
   .section__footer {
     margin: 0 20px;
     margin-top: 20px;
@@ -3519,7 +3521,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .section__footer {
-  max-width: 1410px;
   padding: 20px;
   padding-top: 60px;
   padding-left: 30px;

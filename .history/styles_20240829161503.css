@@ -3405,7 +3405,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 /* section__footer start */
-
+.footer__section {
+  max-width: 1410px;
+}
 .section__footer {
   max-width: 1410px;
   margin: 0 auto;
