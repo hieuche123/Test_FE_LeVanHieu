@@ -3466,11 +3466,10 @@ div#openModalBtnbuy {
   cursor: pointer;
 }
 .footer__left__categories {
-  padding-top: 6px;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 206px;
+  width: 200px;
 }
 
 .footer__right__service {

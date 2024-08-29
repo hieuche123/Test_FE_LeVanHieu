@@ -1585,21 +1585,19 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   justify-content: center;
 }
 .customer__avatar img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
 .customer__avatar__desc {
   margin: 10px 0;
   text-align: center;
-  margin-top: 14px;
-  margin-bottom: 6px;
 }
 .customer__stars {
   display: flex;
   justify-content: center;
-  gap: 1px;
+  gap: 4px;
 }
 .customer__stars svg {
   width: 12px;
@@ -2674,7 +2672,6 @@ div#openModalBtnbuy {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 93px;
 }
 
 .section__collections .collections__title {
@@ -2741,7 +2738,7 @@ div#openModalBtnbuy {
 }
 .categories__item .btn__collection {
   position: absolute;
-  top: 93%; /* Đặt vị trí ở giữa chiều dọc */
+  top: 90%; /* Đặt vị trí ở giữa chiều dọc */
   left: 50%; /* Đặt vị trí ở giữa chiều ngang */
   transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   font-size: 16px;
@@ -2750,7 +2747,7 @@ div#openModalBtnbuy {
 }
 .categories__item__double .item_img .btn__collection2{
   position: absolute;
-  top: 85%; /* Đặt vị trí ở giữa chiều dọc */
+  top: 80%; /* Đặt vị trí ở giữa chiều dọc */
   left: 50%; /* Đặt vị trí ở giữa chiều ngang */
   transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   font-size: 16px;
@@ -2820,10 +2817,6 @@ div#openModalBtnbuy {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-
-.new_prices_new {
-  font-size: 14px;
 }
 .new__arrivals__item {
   display: flex;
@@ -2910,7 +2903,7 @@ div#openModalBtnbuy {
   margin: 0 ;
   font-weight: 400;
   color: #111111;
-  margin-bottom: 11px;
+  margin-bottom: 5px;
 }
 .section__new__arrivals .new__arrivals__title .section__header-trending {
   font-size: 45px;
@@ -2930,7 +2923,7 @@ div#openModalBtnbuy {
   font-weight: 400;
   color: #555555;
   display: none;
-  margin-top: -3px;
+
 }
 .section__new__arrivals .new__arrivals__title .section__description2 {
   display: block;
@@ -3055,10 +3048,7 @@ div#openModalBtnbuy {
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
-.section__new__arrivals2 {
-  gap: 34px;
-  margin-bottom: -9px;
-}
+
 /* Arrow below the tooltip */
 .tooltip::after {
   content: '';
@@ -3097,7 +3087,7 @@ div#openModalBtnbuy {
   gap: 30px;
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần tử */
   margin: 0 auto;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   padding: 0 30px;
 
 }
@@ -3126,9 +3116,9 @@ div#openModalBtnbuy {
 }
 .section__news__content {
   height: 98px;
-  bottom: 6%;
-  left: 13%;
-  transform: translate(-13%, -6%);
+  bottom: 10%;
+  left: 20%;
+  transform: translate(-15%, -10%);
 }
 
 .section__news__content .subtext {
@@ -3142,14 +3132,12 @@ div#openModalBtnbuy {
   font-size: 36px;
   font-weight: 400;
   line-height: 50px;
-  margin-top: -2px;
 }
 
 .section__news__content .btn-look {
   font-size: 12px;
   font-weight: 600;
   line-height: 24px;
-  margin-top: 8px;
 }
 /* section__news end */
 
@@ -3202,13 +3190,13 @@ div#openModalBtnbuy {
 
 .section__instagram__head {
   margin-top: 0;
-  margin-bottom: 33px;
+  margin-bottom: 40px;
 }
 .section__instagram__title {
   font-size: 45px;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .section__instagram__list {
   height: 231px;
@@ -3237,7 +3225,7 @@ div#openModalBtnbuy {
 }
 .section__instagram {
   padding: 0 30px;
-  margin-top: 82px;
+  margin-top: 100px;
 }
 /* section__instagram end */
 
@@ -3254,7 +3242,7 @@ div#openModalBtnbuy {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 40px;
 }
 .new__customer__item {
   display: flex;
@@ -3339,13 +3327,11 @@ div#openModalBtnbuy {
   display: flex;
   gap: 30px;
 }
-.customer__avatar__desc p {
-  line-height: 24px;
-}
+
 .new__customer__item {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 16px;
 }
 .new__customer__item .product__des {
   height: 102px;
@@ -3353,9 +3339,7 @@ div#openModalBtnbuy {
   flex-direction: column;
   gap: 8px;
 }
-.section__description__say {
-  margin-top: 1px;
-}
+
 .product__des span {
   height: 23px;
 }
@@ -3466,11 +3450,10 @@ div#openModalBtnbuy {
   cursor: pointer;
 }
 .footer__left__categories {
-  padding-top: 6px;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 206px;
+  width: 200px;
 }
 
 .footer__right__service {
@@ -3513,9 +3496,6 @@ div#openModalBtnbuy {
 .content_about_info {
   font-size: 16px;
   font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 }
 .content_about_social img {
   width: 36px;
