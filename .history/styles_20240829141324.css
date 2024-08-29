@@ -1063,8 +1063,10 @@ nav {
   }
   
   .section__new__arrivals .new__arrivals__title {
+    height: 68px;
     line-height: 65.03px;
     display: flex;
+    gap: 15px;
     flex-direction: column;
   }
   
@@ -1075,7 +1077,7 @@ nav {
     margin: 0 ;
     font-weight: 400;
     color: #111111;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   
   .section__new__arrivals .new__arrivals__title p {
@@ -1217,15 +1219,11 @@ nav {
     display: none;
   }
   .slider__controls {
-    margin-top: -60px;
     margin-bottom: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-  }
-  .slider__controls2 {
-    margin-top: -30px
   }
 .prev2, .next2 {
   width: 40px;
@@ -1452,6 +1450,7 @@ button#prevBtn {
 }
 
 .section__new__customer .new__customer__title {
+  height: 68px;
   line-height: 65.03px;
   display: flex;
   gap: 15px;
@@ -1466,7 +1465,7 @@ button#prevBtn {
   margin: 0 ;
   font-weight: 400;
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .section__new__customer .new__customer__title p {
@@ -1535,7 +1534,6 @@ button#prevBtn {
 }
 .slider__controls-customer {
   margin-bottom: -18px;
-  margin-top: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2095,7 +2093,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   padding: 0;
   font-weight: 400;
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .section__collections .collections__title p {
@@ -2189,6 +2187,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .section__new__arrivals .new__arrivals__title {
+  height: 68px;
   line-height: 65.03px;
   display: flex;
   gap: 2px;
@@ -2201,7 +2200,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   margin: 0 ;
   font-weight: 400;
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .section__new__arrivals .new__arrivals__title p {
@@ -2496,10 +2495,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .header__image {
     grid-area: 1/2/2/3;
   }
-.noti_icon {
-  margin-top: -5px;
-  
-}
+
   /* bannercss start */
 
  /* bannercss start */
@@ -2664,7 +2660,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 /* section__collections start */
 .section__collections {
   max-width: 1410px;
-  padding: 0 30px;
+  padding: 0 0px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -2686,7 +2682,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   padding: 0;
   font-weight: 400;
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .section__collections .collections__title p {
@@ -2881,32 +2877,34 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   visibility: visible;
   padding-bottom: 50px;
 }
-
+.trending__arrivals__title {
+  margin-bottom: 20px;
+}
 .section__description-trending {
   visibility: hidden;
 } 
 .section__new__arrivals .new__arrivals__title {
+  height: 68px;
   line-height: 65.03px;
   display: flex;
-  gap: 30px;
+  gap: 2px;
   flex-direction: column;
 }
-.section__new__arrivals .new__arrivals__title2 {
-  gap: 0;
-}
+
 .section__new__arrivals .new__arrivals__title h2 {
   font-size: 45px;
   text-align: center;
   margin: 0 ;
   font-weight: 400;
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .section__new__arrivals .new__arrivals__title .section__header-trending {
   font-size: 45px;
   text-align: center;
   margin: 0 ;
   font-weight: 400;
+  margin-bottom: -12px;
 }
 
 .trending__arrivals__title h2 {
@@ -2919,12 +2917,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   text-align: center;
   font-weight: 400;
   color: #555555;
-  display: none;
 
 }
-.section__new__arrivals .new__arrivals__title .section__description2 {
-  display: block;
-}
+
 .new__arrivals__list {
   display: flex;
   gap: 30px;
@@ -2954,8 +2949,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 .section__new__arrivals {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 100px;
 }
 
@@ -3085,7 +3080,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần tử */
   margin: 0 auto;
   margin-bottom: 100px;
-  padding: 0 30px;
+  padding: 0;
 
 }
 
@@ -3112,7 +3107,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   transition: transform 0.3s ease
 }
 .section__news__content {
-  height: 98px;
   bottom: 10%;
   left: 20%;
   transform: translate(-15%, -10%);
@@ -3122,7 +3116,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   font-size: 12px;
   font-weight: 500;
   line-height: 17.34px;
-  margin-bottom: 4px;
 }
 
 .section__news__content .content-name {
@@ -3180,20 +3173,17 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 /* section__instagram start */
 .section__instagram {
-  padding: 0 30px;
   max-width: 1410px;
   margin: 0 auto;
 }
 
 .section__instagram__head {
   margin-top: 0;
-  margin-bottom: 40px;
 }
 .section__instagram__title {
   font-size: 45px;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 5px;
 }
 .section__instagram__list {
   height: 231px;
@@ -3221,8 +3211,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   flex: 0 0 calc(16.66% - 5px); /* Hiển thị 6 mục trên một hàng, trừ đi khoảng cách giữa các mục */
 }
 .section__instagram {
-  padding: 0 30px;
-  margin-top: 100px;
+  padding: 0;
 }
 /* section__instagram end */
 
@@ -3296,6 +3285,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .section__new__customer .new__customer__title {
+  height: 68px;
   line-height: 65.03px;
   display: flex;
   gap: 2px;
@@ -3309,7 +3299,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   margin: 0 ;
   font-weight: 400;
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .section__new__customer .new__customer__title p {
@@ -3363,7 +3353,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .section__new__customer {
   padding-bottom: 100px;
-  padding: 0 30px;
 }
 
 .new__customer__list {
@@ -3523,8 +3512,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .section__footer {
   padding: 20px;
   padding-top: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .footer_categories_title div {
   font-size: 16px;
@@ -3648,13 +3637,11 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 }
 
-.footer__bottom__wrap {
-  width: 1410px;
-  margin: 0 auto;
-}
+
 .footer__bottom {
   max-width: 1410px;
-  margin: 0 30px;
+  margin: 0 auto;
+  padding: 0;
   padding-top: 35px;
   border-top: 1px solid #EBEBEB;
   flex-direction: row;
@@ -3937,26 +3924,9 @@ a.prev:hover svg path {
 .list-buy {
   margin-bottom: 166px;
 }
-.footer__bottom__wrap{
-  margin: 0 auto;
-}
 
 }
 
-@media (min-width: 1860px) {
-  
-  .section__footer,
-  .section__instagram,
-  .section__new__customer,
-  .section__new__arrivals,
-  .section__news,
-  .section__collections
-  {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .footer__bottom {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+
+
+

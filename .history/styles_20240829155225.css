@@ -3112,7 +3112,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   transition: transform 0.3s ease
 }
 .section__news__content {
-  height: 98px;
   bottom: 10%;
   left: 20%;
   transform: translate(-15%, -10%);
@@ -3122,7 +3121,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   font-size: 12px;
   font-weight: 500;
   line-height: 17.34px;
-  margin-bottom: 4px;
 }
 
 .section__news__content .content-name {

@@ -1065,6 +1065,7 @@ nav {
   .section__new__arrivals .new__arrivals__title {
     line-height: 65.03px;
     display: flex;
+    gap: 15px;
     flex-direction: column;
   }
   
@@ -1217,15 +1218,11 @@ nav {
     display: none;
   }
   .slider__controls {
-    margin-top: -60px;
     margin-bottom: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-  }
-  .slider__controls2 {
-    margin-top: -30px
   }
 .prev2, .next2 {
   width: 40px;
@@ -1535,7 +1532,6 @@ button#prevBtn {
 }
 .slider__controls-customer {
   margin-bottom: -18px;
-  margin-top: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2496,10 +2492,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .header__image {
     grid-area: 1/2/2/3;
   }
-.noti_icon {
-  margin-top: -5px;
-  
-}
+
   /* bannercss start */
 
  /* bannercss start */
@@ -3112,7 +3105,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   transition: transform 0.3s ease
 }
 .section__news__content {
-  height: 98px;
   bottom: 10%;
   left: 20%;
   transform: translate(-15%, -10%);
@@ -3122,7 +3114,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   font-size: 12px;
   font-weight: 500;
   line-height: 17.34px;
-  margin-bottom: 4px;
 }
 
 .section__news__content .content-name {
@@ -3222,7 +3213,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 .section__instagram {
   padding: 0 30px;
-  margin-top: 100px;
 }
 /* section__instagram end */
 
@@ -3648,13 +3638,11 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 }
 
-.footer__bottom__wrap {
-  width: 1410px;
-  margin: 0 auto;
-}
+
 .footer__bottom {
   max-width: 1410px;
-  margin: 0 30px;
+  margin: 0 auto;
+  padding: 0 30px;
   padding-top: 35px;
   border-top: 1px solid #EBEBEB;
   flex-direction: row;
@@ -3937,26 +3925,19 @@ a.prev:hover svg path {
 .list-buy {
   margin-bottom: 166px;
 }
-.footer__bottom__wrap{
-  margin: 0 auto;
-}
 
 }
 
 @media (min-width: 1860px) {
-  
+  .footer__bottom, 
   .section__footer,
   .section__instagram,
   .section__new__customer,
-  .section__new__arrivals,
-  .section__news,
-  .section__collections
+  .section__new__arrivals
+  
+  
   {
     padding-left: 0;
     padding-right: 0;
-  }
-  .footer__bottom {
-    margin-left: 0;
-    margin-right: 0;
   }
 }
