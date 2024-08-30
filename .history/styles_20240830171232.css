@@ -223,9 +223,6 @@ body {
   gap: 12px;
 }
 
-.close2 {
-  margin-right: 2px;
-}
 .nav_list_mmobile {
   font-size: 16px;
   font-weight: 500;
@@ -958,7 +955,7 @@ nav {
   }
   
   .new_discount {
-    color: #999999; /* Màu chữ cho new_discount */
+    color: #111111; /* Màu chữ cho new_discount */
     text-decoration: line-through; /* Gạch ngang ở giữa chữ */
   }
   .section__collections .collections__title h2 {
@@ -2094,7 +2091,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     flex-direction: column;
   }
   .modal__header {
-    padding: 0 30px;
+    padding: 0 20px;
     height: 55px;
     display: flex;
     justify-content: space-between;
@@ -2117,7 +2114,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .modal__shop, 
   .modal__sale, 
   .modal__view {
-    margin: 0 30px;
+    margin: 0 20px;
     height: 55px;
     display: flex;
     justify-content: space-between;
@@ -2151,7 +2148,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     font-weight: 500;
   }
   .header-language {
-    margin: 0px 30px;
+    margin: 0px 20px;
     padding: 15px 0;
     display: flex;
     flex-direction: column;
@@ -2159,9 +2156,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     border-bottom: 1px solid #EBEBEB;
     
   }
-  #closeModalBtnshop {
-    margin-right: -3px;
-  }
+  
   .modal__header__home {
     background-color: #F5F5F5;
   }
@@ -2174,7 +2169,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     gap: 20px;
   }
   .modal__layout__img {
-    padding: 0 30px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -2902,8 +2897,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       width: 100%;
       display: flex;
       gap: 10px;
-      margin-top: 2px;
-
     }
     
     
@@ -5331,7 +5324,6 @@ footer.footer__section {
 .product__des .product__des__price {
   height: 20px;
   font-size: 14px;
-  font-weight: 500;
 }
 .product__des .product__start {
   height: 10px;

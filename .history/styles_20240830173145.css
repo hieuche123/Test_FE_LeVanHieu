@@ -224,7 +224,7 @@ body {
 }
 
 .close2 {
-  margin-right: 2px;
+  margin-right: 12px;
 }
 .nav_list_mmobile {
   font-size: 16px;
@@ -2151,7 +2151,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     font-weight: 500;
   }
   .header-language {
-    margin: 0px 30px;
+    margin: 0px 20px;
     padding: 15px 0;
     display: flex;
     flex-direction: column;
@@ -2159,9 +2159,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     border-bottom: 1px solid #EBEBEB;
     
   }
-  #closeModalBtnshop {
-    margin-right: -3px;
-  }
+  
   .modal__header__home {
     background-color: #F5F5F5;
   }
@@ -2174,7 +2172,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     gap: 20px;
   }
   .modal__layout__img {
-    padding: 0 30px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
