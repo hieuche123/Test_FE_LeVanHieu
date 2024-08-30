@@ -938,10 +938,7 @@ nav {
     gap: 50px;
     margin-top: 59px;
   }
-  .iconicon {
-    width: 20px;
-    height: 20px;
-  }
+  
   .section__collections .collections__title {
     width: 370px;
     height: 86px;
@@ -2011,7 +2008,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .footer_scroll {
     height: 3px;
-    background-color: #999999;
+    background-color: #111111;
     width: 77px; /* Chiều rộng của footer_scroll bằng với .footer__mobile__item */
     transition: transform 0.3s ease;
 }
@@ -4820,7 +4817,7 @@ div#openModalBtnbuy {
   transition: 0.2s ease
 }
 .addtocard h2 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .new__arrivals__item .img__item:hover .addtocard {
   opacity: 1; /* Hiển thị khi hover */
@@ -5230,7 +5227,7 @@ div#openModalBtnbuy {
   justify-content: center;
   font-weight: 400;
   font-size: 12px;
-  padding: 14px 20px;
+  padding: 12px 20px;
   bottom: 5%; /* Cách bottom một khoảng nhỏ */
   background-color: #fff;
   left: 50%;
@@ -5510,7 +5507,6 @@ footer.footer__section {
 
 .footer__left__newsletter__mobile {
   margin-top: 0;
-
 }
 
 .footer__left__newsletter .title_span {
@@ -5928,7 +5924,7 @@ a.prev:hover svg path {
 }
 
 }
-@media (min-width: 1025px) and (max-width: 1350px) {
+@media (min-width: 1025px) and (max-width: 1340px) {
   .footer__left, .footer__right {
     width: 50%;
   }

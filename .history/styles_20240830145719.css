@@ -938,10 +938,7 @@ nav {
     gap: 50px;
     margin-top: 59px;
   }
-  .iconicon {
-    width: 20px;
-    height: 20px;
-  }
+  
   .section__collections .collections__title {
     width: 370px;
     height: 86px;
@@ -2011,7 +2008,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .footer_scroll {
     height: 3px;
-    background-color: #999999;
+    background-color: #111111;
     width: 77px; /* Chiều rộng của footer_scroll bằng với .footer__mobile__item */
     transition: transform 0.3s ease;
 }
@@ -4613,7 +4610,7 @@ div#openModalBtnbuy {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 89px;
+  margin-bottom: 93px;
 }
 
 .section__collections .collections__title {
@@ -4690,7 +4687,7 @@ div#openModalBtnbuy {
 }
 .categories__item__double .item_img .btn__collection2{
   position: absolute;
-  top: 84%; /* Đặt vị trí ở giữa chiều dọc */
+  top: 85%; /* Đặt vị trí ở giữa chiều dọc */
   left: 50%; /* Đặt vị trí ở giữa chiều ngang */
   transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   font-size: 16px;
@@ -4820,7 +4817,7 @@ div#openModalBtnbuy {
   transition: 0.2s ease
 }
 .addtocard h2 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .new__arrivals__item .img__item:hover .addtocard {
   opacity: 1; /* Hiển thị khi hover */
@@ -4915,7 +4912,6 @@ div#openModalBtnbuy {
   overflow: hidden; /* Ẩn nội dung tràn */
   scroll-behavior: smooth; /* Cuộn mượt mà */
   gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
-  margin-top: 2px;
 }
 
 .new__arrivals__item {
@@ -5230,7 +5226,7 @@ div#openModalBtnbuy {
   justify-content: center;
   font-weight: 400;
   font-size: 12px;
-  padding: 14px 20px;
+  padding: 12px 20px;
   bottom: 5%; /* Cách bottom một khoảng nhỏ */
   background-color: #fff;
   left: 50%;
@@ -5266,8 +5262,7 @@ div#openModalBtnbuy {
   margin: 0 ;
   font-weight: 400;
   color: #111111;
-  margin-top: -4px;
-  margin-bottom: 22px;
+  margin-bottom: 5px;
 }
 
 .section__new__customer .new__customer__title p {
@@ -5288,10 +5283,7 @@ div#openModalBtnbuy {
 .new__customer__item {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-footer.footer__section {
-  margin-top: 0px;
+  gap: 13px;
 }
 .new__customer__item .product__des {
   height: 102px;
@@ -5339,7 +5331,6 @@ footer.footer__section {
   overflow: hidden; /* Ẩn nội dung tràn */
   scroll-behavior: smooth; /* Cuộn mượt mà */
   gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
-  margin-top: 2px;
 }
 
 .new__customer__item {
@@ -5510,7 +5501,6 @@ footer.footer__section {
 
 .footer__left__newsletter__mobile {
   margin-top: 0;
-
 }
 
 .footer__left__newsletter .title_span {
@@ -5928,7 +5918,7 @@ a.prev:hover svg path {
 }
 
 }
-@media (min-width: 1025px) and (max-width: 1350px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
   .footer__left, .footer__right {
     width: 50%;
   }

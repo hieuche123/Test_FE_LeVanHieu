@@ -5230,7 +5230,7 @@ div#openModalBtnbuy {
   justify-content: center;
   font-weight: 400;
   font-size: 12px;
-  padding: 14px 20px;
+  padding: 12px 20px;
   bottom: 5%; /* Cách bottom một khoảng nhỏ */
   background-color: #fff;
   left: 50%;
@@ -5928,7 +5928,7 @@ a.prev:hover svg path {
 }
 
 }
-@media (min-width: 1025px) and (max-width: 1350px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
   .footer__left, .footer__right {
     width: 50%;
   }

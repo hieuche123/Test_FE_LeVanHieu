@@ -5928,7 +5928,7 @@ a.prev:hover svg path {
 }
 
 }
-@media (min-width: 1025px) and (max-width: 1350px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
   .footer__left, .footer__right {
     width: 50%;
   }

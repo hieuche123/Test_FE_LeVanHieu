@@ -820,7 +820,6 @@ nav {
 .nav__logo img {
   width: 92px;
   height: 20px;
-  margin-left: 50px;
 }
 .nav__logo__icon {
   display: flex;
@@ -938,10 +937,7 @@ nav {
     gap: 50px;
     margin-top: 59px;
   }
-  .iconicon {
-    width: 20px;
-    height: 20px;
-  }
+  
   .section__collections .collections__title {
     width: 370px;
     height: 86px;
@@ -990,7 +986,7 @@ nav {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
   .categories__item img {
     width: 100%;
@@ -1026,20 +1022,20 @@ nav {
   }
   .btn__collection {
     position: absolute;
-    top: 56%; /* Đặt vị trí ở giữa chiều dọc */
+    top: 55%; /* Đặt vị trí ở giữa chiều dọc */
     left: 50%; /* Đặt vị trí ở giữa chiều ngang */
     transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   }
 
   .btn__collection4 {
     position: absolute;
-  top: 91%; /* Đặt vị trí ở giữa chiều dọc */
+  top: 90%; /* Đặt vị trí ở giữa chiều dọc */
   left: 50%; /* Đặt vị trí ở giữa chiều ngang */
   transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   }
   .btn__collection_top {
     position: absolute;
-    top: 73%; /* Đặt vị trí ở giữa chiều dọc */
+    top: 70%; /* Đặt vị trí ở giữa chiều dọc */
     left: 50%; /* Đặt vị trí ở giữa chiều ngang */
     transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   }
@@ -1066,7 +1062,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-top: -5px;
   }
   
   .section__new__arrivals .new__arrivals__title {
@@ -1207,7 +1202,6 @@ nav {
     overflow-x: auto; /* Cuộn ngang nếu cần */
     flex-wrap: nowrap; /* Không cho các mục xuống dòng */
     gap: 10px; /* Giảm khoảng cách giữa các mục */
-    margin-top: -14px;
   }
 
   .new__arrivals__item {
@@ -1231,7 +1225,6 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: -68px;
   }
   .slider__controls2 {
     margin-top: -30px
@@ -1320,8 +1313,6 @@ button#prevBtn {
   overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
   scroll-snap-type: x mandatory; /* Snap vào các phần tử khi cuộn */
   -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên iOS */
-  margin-top: 7px;
-  margin-bottom: -14px;
 }
 
 .section__news::-webkit-scrollbar {
@@ -1355,8 +1346,8 @@ button#prevBtn {
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 6%;
-  left: 21%;
+  bottom: 10%;
+  left: 20%;
   transform: translate(-15%, -10%);
 }
 
@@ -1370,7 +1361,6 @@ button#prevBtn {
   font-size: 30px;
   font-weight: 400;
   line-height: 50px;
-  margin-top: -3px;
 }
 
 .section__news__content .btn-look {
@@ -1406,10 +1396,7 @@ button#prevBtn {
   font-size: 36px;
   text-align: center;
   font-weight: 400;
-  margin-bottom: 4px;
-}
-footer.footer__section {
-  margin-top: 41px;
+  margin-bottom: 10px;
 }
 
 .section__instagram__desc {
@@ -1465,7 +1452,6 @@ footer.footer__section {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin-bottom: -32px;
 }
 
 .section__new__customer .new__customer__title {
@@ -1473,7 +1459,7 @@ footer.footer__section {
   display: flex;
   gap: 15px;
   flex-direction: column;
-  margin-top: 54px;
+  margin-top: 60px;
 }
 
 .section__new__customer .new__customer__title h2 {
@@ -1492,7 +1478,6 @@ footer.footer__section {
   text-align: center;
   font-weight: 400;
   color: #555555;
-  margin-top: -18px;
 }
 
 .new__customer__list {
@@ -1507,7 +1492,7 @@ footer.footer__section {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   border: 1px solid #EBEBEB;
   border-radius: 10px;
   align-items: center;
@@ -1535,7 +1520,6 @@ footer.footer__section {
   overflow-x: auto; /* Cuộn ngang nếu cần */
   flex-wrap: nowrap; /* Không cho các mục xuống dòng */
   gap: 10px; /* Giảm khoảng cách giữa các mục */
-  margin-top: -12px;
 }
 
 .new__customer__item {
@@ -1559,7 +1543,6 @@ footer.footer__section {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: -32px;
 }
 .controls-customer {
   display: flex;
@@ -1613,7 +1596,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 .customer__avatar__desc {
   margin: 10px 0;
   text-align: center;
-  margin-top: 2px;
+  margin-top: 14px;
   margin-bottom: 6px;
 }
 .customer__stars {
@@ -2011,7 +1994,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .footer_scroll {
     height: 3px;
-    background-color: #999999;
+    background-color: #111111;
     width: 77px; /* Chiều rộng của footer_scroll bằng với .footer__mobile__item */
     transition: transform 0.3s ease;
 }
@@ -4532,7 +4515,7 @@ div#openModalBtnbuy {
   padding-top: 0;
   position: relative;
   width: 100%;
-  height: 810px;
+  height: calc(100vh - 148px);
 
 }
 
@@ -4613,7 +4596,7 @@ div#openModalBtnbuy {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 89px;
+  margin-bottom: 93px;
 }
 
 .section__collections .collections__title {
@@ -4647,7 +4630,6 @@ div#openModalBtnbuy {
   width: 100%;
   display: flex;
   gap: 30px;
-  margin-top: 2px;
 }
 
 
@@ -4681,7 +4663,7 @@ div#openModalBtnbuy {
 }
 .categories__item .btn__collection {
   position: absolute;
-  top: 92%; /* Đặt vị trí ở giữa chiều dọc */
+  top: 93%; /* Đặt vị trí ở giữa chiều dọc */
   left: 50%; /* Đặt vị trí ở giữa chiều ngang */
   transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   font-size: 16px;
@@ -4690,7 +4672,7 @@ div#openModalBtnbuy {
 }
 .categories__item__double .item_img .btn__collection2{
   position: absolute;
-  top: 84%; /* Đặt vị trí ở giữa chiều dọc */
+  top: 85%; /* Đặt vị trí ở giữa chiều dọc */
   left: 50%; /* Đặt vị trí ở giữa chiều ngang */
   transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa hoàn toàn */
   font-size: 16px;
@@ -4820,7 +4802,7 @@ div#openModalBtnbuy {
   transition: 0.2s ease
 }
 .addtocard h2 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .new__arrivals__item .img__item:hover .addtocard {
   opacity: 1; /* Hiển thị khi hover */
@@ -4915,7 +4897,6 @@ div#openModalBtnbuy {
   overflow: hidden; /* Ẩn nội dung tràn */
   scroll-behavior: smooth; /* Cuộn mượt mà */
   gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
-  margin-top: 2px;
 }
 
 .new__arrivals__item {
@@ -5230,7 +5211,7 @@ div#openModalBtnbuy {
   justify-content: center;
   font-weight: 400;
   font-size: 12px;
-  padding: 14px 20px;
+  padding: 12px 20px;
   bottom: 5%; /* Cách bottom một khoảng nhỏ */
   background-color: #fff;
   left: 50%;
@@ -5266,8 +5247,7 @@ div#openModalBtnbuy {
   margin: 0 ;
   font-weight: 400;
   color: #111111;
-  margin-top: -4px;
-  margin-bottom: 22px;
+  margin-bottom: 5px;
 }
 
 .section__new__customer .new__customer__title p {
@@ -5288,10 +5268,7 @@ div#openModalBtnbuy {
 .new__customer__item {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-footer.footer__section {
-  margin-top: 0px;
+  gap: 13px;
 }
 .new__customer__item .product__des {
   height: 102px;
@@ -5339,7 +5316,6 @@ footer.footer__section {
   overflow: hidden; /* Ẩn nội dung tràn */
   scroll-behavior: smooth; /* Cuộn mượt mà */
   gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
-  margin-top: 2px;
 }
 
 .new__customer__item {
@@ -5510,7 +5486,6 @@ footer.footer__section {
 
 .footer__left__newsletter__mobile {
   margin-top: 0;
-
 }
 
 .footer__left__newsletter .title_span {
@@ -5928,7 +5903,7 @@ a.prev:hover svg path {
 }
 
 }
-@media (min-width: 1025px) and (max-width: 1350px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
   .footer__left, .footer__right {
     width: 50%;
   }
