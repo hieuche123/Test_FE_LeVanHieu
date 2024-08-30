@@ -408,3 +408,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const increaseButton2 = document.querySelector(".increase_quantity2");
+  const reduceButton2 = document.querySelector(".reduce_quantity2");
+  const totalNumberElement2 = document.querySelector(".total-number2");
+
+  reduceButton2.addEventListener("click", function() {
+    let currentValue = parseInt(totalNumberElement2.textContent.trim());
+    totalNumberElement2.textContent = currentValue + 1;
+  });
+
+  increaseButton2.addEventListener("click", function() {
+    let currentValue = parseInt(totalNumberElement2.textContent.trim());
+    if (currentValue > 1) {
+      totalNumberElement2.textContent = currentValue - 1;
+    }
+  });
+});

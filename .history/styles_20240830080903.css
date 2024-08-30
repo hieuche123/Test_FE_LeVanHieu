@@ -2413,7 +2413,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     flex-direction: row;
     background-color: transparent;
     transform: none;
-    margin-left: 93px;
   }
 
   .nav__links a {

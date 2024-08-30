@@ -395,12 +395,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const reduceButton = document.querySelector(".reduce_quantity");
   const totalNumberElement = document.querySelector(".total-number");
 
-  reduceButton.addEventListener("click", function() {
+  increaseButton.addEventListener("click", function() {
     let currentValue = parseInt(totalNumberElement.textContent.trim());
     totalNumberElement.textContent = currentValue + 1;
   });
 
-  increaseButton.addEventListener("click", function() {
+  reduceButton.addEventListener("click", function() {
     let currentValue = parseInt(totalNumberElement.textContent.trim());
     if (currentValue > 1) {
       totalNumberElement.textContent = currentValue - 1;
@@ -408,3 +408,20 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const increaseButton2 = document.getElementById("increase_quantity2");
+  const reduceButton2 = document.getElementById("reduce_quantity2");
+  const totalNumberElement2 = document.getElementById("total-number2");
+
+  increaseButton2.addEventListener("click", function() {
+    let currentValue2 = parseInt(totalNumberElement2.textContent.trim());
+    totalNumberElement2.textContent = currentValue2 + 1;
+  });
+
+  reduceButton2.addEventListener("click", function() {
+    let currentValue2 = parseInt(totalNumberElement2.textContent.trim());
+    if (currentValue2 > 1) {
+      totalNumberElement2.textContent = currentValue2 - 1;
+    }
+  });
+});

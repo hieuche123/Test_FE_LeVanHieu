@@ -87,11 +87,6 @@ const modalbuy = document.getElementById('modalbuy');
 const overlay = document.getElementById('overlay');
 const closeModalBtnbuy = document.getElementById('closeModalBtnbuy');
 
-btnOpenCart.addEventListener('click', () => {
-  modalbuy.classList.add('showbuy');
-    overlay.classList.add('showbuy');
-});
-
 openModalBtnbuy.addEventListener('click', () => {
   modalbuy.classList.add('showbuy');
     overlay.classList.add('showbuy');
@@ -386,25 +381,5 @@ nextButtoncustomer.addEventListener('click', () => {
       behavior: 'smooth'
     });
   }
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const increaseButton = document.querySelector(".increase_quantity");
-  const reduceButton = document.querySelector(".reduce_quantity");
-  const totalNumberElement = document.querySelector(".total-number");
-
-  reduceButton.addEventListener("click", function() {
-    let currentValue = parseInt(totalNumberElement.textContent.trim());
-    totalNumberElement.textContent = currentValue + 1;
-  });
-
-  increaseButton.addEventListener("click", function() {
-    let currentValue = parseInt(totalNumberElement.textContent.trim());
-    if (currentValue > 1) {
-      totalNumberElement.textContent = currentValue - 1;
-    }
-  });
 });
 

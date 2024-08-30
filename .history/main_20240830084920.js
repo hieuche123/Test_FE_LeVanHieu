@@ -390,21 +390,21 @@ nextButtoncustomer.addEventListener('click', () => {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
   const increaseButton = document.querySelector(".increase_quantity");
   const reduceButton = document.querySelector(".reduce_quantity");
   const totalNumberElement = document.querySelector(".total-number");
 
-  reduceButton.addEventListener("click", function() {
-    let currentValue = parseInt(totalNumberElement.textContent.trim());
+  increaseButton.addEventListener("click", function() {
+    let currentValue = parseInt(totalNumberElement.textContent);
     totalNumberElement.textContent = currentValue + 1;
   });
 
-  increaseButton.addEventListener("click", function() {
-    let currentValue = parseInt(totalNumberElement.textContent.trim());
-    if (currentValue > 1) {
+  reduceButton.addEventListener("click", function() {
+    let currentValue = parseInt(totalNumberElement.textContent);
+    if (currentValue > 0) {
       totalNumberElement.textContent = currentValue - 1;
     }
   });
 });
-
