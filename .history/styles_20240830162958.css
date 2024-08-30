@@ -4180,13 +4180,15 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .new__arrivals__list {
-  overflow-x: auto; /* Cuộn ngang nếu cần */
-  flex-wrap: nowrap; /* Không cho các mục xuống dòng */
-  gap: 20px; /* Giảm khoảng cách giữa các mục */
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các mục xuống dòng trên màn hình lớn */
+  overflow: hidden; /* Ẩn nội dung tràn */
+  scroll-behavior: smooth; /* Cuộn mượt mà */
+  gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
 }
 
 .new__arrivals__item {
-  flex: 0 0 calc(50% - 20px); /* 50% với khoảng cách giữa các mục */
+  flex: 0 0 calc(50% - 30px); /* 25% với khoảng cách giữa các mục trừ đi */
   box-sizing: border-box;
 }
 .new__arrivals__item .img__item img{

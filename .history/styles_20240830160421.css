@@ -1601,13 +1601,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   cursor: pointer;
 }
 .customer__avatar {
-  height: 70px;
-  width: 70px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  border: 1px solid #EBEBEB;
 }
 .customer__avatar img {
   width: 60px;
@@ -1965,11 +1960,10 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
  /* footer__mobile start */
- .footer__mobile {
-  height: 75px;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffff;
+  .footer__mobile {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__mobile__icon {
@@ -3824,7 +3818,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       gap: 15px;
     
     }
@@ -4180,13 +4174,15 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 
 .new__arrivals__list {
-  overflow-x: auto; /* Cuộn ngang nếu cần */
-  flex-wrap: nowrap; /* Không cho các mục xuống dòng */
-  gap: 20px; /* Giảm khoảng cách giữa các mục */
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các mục xuống dòng trên màn hình lớn */
+  overflow: hidden; /* Ẩn nội dung tràn */
+  scroll-behavior: smooth; /* Cuộn mượt mà */
+  gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
 }
 
 .new__arrivals__item {
-  flex: 0 0 calc(50% - 20px); /* 50% với khoảng cách giữa các mục */
+  flex: 1 1 calc(25% - 30px); /* 25% với khoảng cách giữa các mục trừ đi */
   box-sizing: border-box;
 }
 .new__arrivals__item .img__item img{
@@ -5526,7 +5522,7 @@ footer.footer__section {
 
 .footer__left__newsletter__mobile {
   margin-top: 0;
-  width: 415px;
+
 }
 
 .footer__left__newsletter .title_span {
