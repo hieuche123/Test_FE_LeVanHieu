@@ -3973,14 +3973,12 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: transform 0.3s ease;
 }
 .close_notification {
   position: absolute;
   right: 16px;
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
   nav {
@@ -4949,7 +4947,7 @@ li.nav__links__item.nav__links__item2 {
   font-weight: 400;
   font-size: 12px;
   padding: 14px 20px;
-  bottom: 15px; /* Cách bottom một khoảng nhỏ */
+  bottom: 5%; /* Cách bottom một khoảng nhỏ */
   background-color: #fff;
   left: 50%;
   transform: translateX(-50%) translateY(50%); /* Nằm giữa theo chiều ngang và trượt xuống dưới */

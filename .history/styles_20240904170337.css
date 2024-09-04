@@ -3973,7 +3973,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: transform 0.3s ease;
 }
 .close_notification {
   position: absolute;

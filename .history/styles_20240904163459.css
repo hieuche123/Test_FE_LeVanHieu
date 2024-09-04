@@ -730,9 +730,7 @@ body {
   background-color: #1e8f50; /* Màu nền khi hover */
   transform: scale(1.1); /* Phóng to khi hover */
 }
-.badge {
-  display: none;
- }
+
 /* Hiệu ứng khi hover cho croll_top */
 .croll_top:hover {
   background-color: #333333; /* Màu nền khi hover */
@@ -3973,14 +3971,12 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: transform 0.3s ease;
 }
 .close_notification {
   position: absolute;
   right: 16px;
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
   nav {
@@ -4459,48 +4455,11 @@ div#openModalBtnbuy {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  right: 15px;
-  top: 15px;
+  right: 6%;
+  top: 6%;
   opacity: 0; /* Ban đầu ẩn */
   transform: translateX(20px); /* Dịch sang trái */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
-}
-
-.badge {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.badge .badge1 {
-  width: 50px;
-  height: 25px;
-  background-color: #D73F0F;
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 18.79px;
-}
-.badge .badge2 {
-  text-align: center;
-  width: 75px;
-  height: 25px;
-  background-color: #177983;
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: 400;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 18.79px;
 }
 li.nav__links__item.nav__links__item2 {
   width: 81px;
@@ -4931,8 +4890,8 @@ li.nav__links__item.nav__links__item2 {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  right: 15px;
-  top: 15px;
+  right: 7%;
+  top: 5%;
   opacity: 0; /* Ban đầu ẩn */
   transform: translateX(20px); /* Dịch sang trái */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
@@ -4949,7 +4908,7 @@ li.nav__links__item.nav__links__item2 {
   font-weight: 400;
   font-size: 12px;
   padding: 14px 20px;
-  bottom: 15px; /* Cách bottom một khoảng nhỏ */
+  bottom: 5%; /* Cách bottom một khoảng nhỏ */
   background-color: #fff;
   left: 50%;
   transform: translateX(-50%) translateY(50%); /* Nằm giữa theo chiều ngang và trượt xuống dưới */
@@ -5028,7 +4987,7 @@ footer.footer__section {
   font-size: 14px;
   font-weight: 500;
 }
-.new_discount {
+.product__des__price {
   font-weight: 400;
 }
 .product__des .product__start {

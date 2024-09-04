@@ -1,34 +1,41 @@
-// Thiết lập thời gian kết thúc (ví dụ: 1 ngày sau)
-const endDate = new Date(Date.now() + 652 * 24 * 60 * 60 * 1000); // 652 ngày sau
 
-function updateCountdown() {
-  const now = new Date();
-  const timeLeft = endDate - now;
+document.querySelector('.close_notification').addEventListener('click', function() {
+  document.querySelector('notification').style.display = 'none';
+});
 
-  if (timeLeft <= 0) {
-    document.getElementById('countdown').innerText = '00 days : 00 hours : 00 mins : 00 secs';
-    clearInterval(countdownInterval); // Dừng đếm ngược khi thời gian kết thúc
-    return;
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  const increaseBtn = document.querySelector('.increase_quantity');
+  const reduceBtn = document.querySelector('.reduce_quantity');
+  const totalNumberElem = document.querySelector('.total-number');
+  increaseBtn.addEventListener('click', function() {
+    let currentNumber = parseInt(totalNumberElem.textContent);
+    totalNumberElem.textContent = currentNumber + 1;
+  });
 
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  reduceBtn.addEventListener('click', function() {
+    let currentNumber = parseInt(totalNumberElem.textContent);
+    if (currentNumber > 0) {
+      totalNumberElem.textContent = currentNumber - 1;
+    }
+  });
+});
 
-  document.getElementById('countdown').innerText = 
-    `${formatNumber(days)} days : ${formatNumber(hours)} hours : ${formatNumber(minutes)} mins : ${formatNumber(seconds)} secs`;
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const increaseBtn2 = document.querySelector('.increase_quantity2');
+  const reduceBtn2 = document.querySelector('.reduce_quantity2');
+  const totalNumberElem2 = document.querySelector('.total-number2');
+  increaseBtn2.addEventListener('click', function() {
+    let currentNumber2 = parseInt(totalNumberElem2.textContent);
+    totalNumberElem2.textContent = currentNumber2 + 1;
+  });
 
-// Cập nhật đồng hồ mỗi giây
-const countdownInterval = setInterval(updateCountdown, 1000);
-
-// Cập nhật ngay lập tức khi tải trang
-updateCountdown();
-
-
-
-
+  reduceBtn2.addEventListener('click', function() {
+    let currentNumber2 = parseInt(totalNumberElem2.textContent);
+    if (currentNumber2 > 0) {
+      totalNumberElem2.textContent = currentNumber2 - 1;
+    }
+  });
+});
 // closeModalBtnlayout
 const openModalBtn = document.getElementById('openModalBtn');
 const openModalBtnhome = document.querySelector('.openModalBtnhome');
@@ -133,48 +140,6 @@ modalshop.addEventListener('click', (event) => {
   }
 });
 
-
-
-
-
-
-document.querySelector('.close_notification').addEventListener('click', function() {
-  document.querySelector('.notification').style.display = 'none';
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const increaseBtn = document.querySelector('.increase_quantity');
-  const reduceBtn = document.querySelector('.reduce_quantity');
-  const totalNumberElem = document.querySelector('.total-number');
-  increaseBtn.addEventListener('click', function() {
-    let currentNumber = parseInt(totalNumberElem.textContent);
-    totalNumberElem.textContent = currentNumber + 1;
-  });
-
-  reduceBtn.addEventListener('click', function() {
-    let currentNumber = parseInt(totalNumberElem.textContent);
-    if (currentNumber > 0) {
-      totalNumberElem.textContent = currentNumber - 1;
-    }
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const increaseBtn2 = document.querySelector('.increase_quantity2');
-  const reduceBtn2 = document.querySelector('.reduce_quantity2');
-  const totalNumberElem2 = document.querySelector('.total-number2');
-  increaseBtn2.addEventListener('click', function() {
-    let currentNumber2 = parseInt(totalNumberElem2.textContent);
-    totalNumberElem2.textContent = currentNumber2 + 1;
-  });
-
-  reduceBtn2.addEventListener('click', function() {
-    let currentNumber2 = parseInt(totalNumberElem2.textContent);
-    if (currentNumber2 > 0) {
-      totalNumberElem2.textContent = currentNumber2 - 1;
-    }
-  });
-});
 
 
 
@@ -445,7 +410,33 @@ function formatNumber(number) {
   return number < 10 ? '0' + number : number;
 }
 
+// Thiết lập thời gian kết thúc (ví dụ: 1 ngày sau)
+const endDate = new Date(Date.now() + 652 * 24 * 60 * 60 * 1000); // 652 ngày sau
 
+function updateCountdown() {
+  const now = new Date();
+  const timeLeft = endDate - now;
+
+  if (timeLeft <= 0) {
+    document.getElementById('countdown').innerText = '00 days : 00 hours : 00 mins : 00 secs';
+    clearInterval(countdownInterval); // Dừng đếm ngược khi thời gian kết thúc
+    return;
+  }
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  document.getElementById('countdown').innerText = 
+    `${formatNumber(days)} days : ${formatNumber(hours)} hours : ${formatNumber(minutes)} mins : ${formatNumber(seconds)} secs`;
+}
+
+// Cập nhật đồng hồ mỗi giây
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// Cập nhật ngay lập tức khi tải trang
+updateCountdown();
 
 
 
