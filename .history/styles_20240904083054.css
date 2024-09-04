@@ -5477,7 +5477,7 @@ footer.footer__section {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 160px;
+  width: 137px;
 }
 
 .footer__left__service {
@@ -5644,14 +5644,13 @@ footer.footer__section {
   color: #555555;
 }
 
-.footer_categories_option p, .footer_service_option p {
+.footer_newsletter_option p, .footer_service_option p {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.footer_categories_option p:hover, .footer_service_option p:hover {
+.footer_newsletter_option p:hover, .footer_service_option p:hover {
   transform: translateX(20px); /* Trượt sang phải 10px khi hover */
-  color: #111111;
 }
 
 .footer_newsletter_contact {

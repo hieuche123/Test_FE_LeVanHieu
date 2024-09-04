@@ -356,15 +356,14 @@ body {
   height: 100%;
 }
 .btn-layout-shop {
-  height: 45px;
+  height: 50px;
   width: 300px;
   background-color: var(--color-white);
   color: #111111;
   font-size: 16px;
   border-radius: 30px;
   text-align: center;
-  font-weight: 500;
-  line-height: 45px;
+  line-height: 50px;
   position: absolute;
   top: 90%; /* Căn giữa theo chiều dọc */
   left: 50%; /* Căn giữa theo chiều ngang */
@@ -5477,7 +5476,7 @@ footer.footer__section {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 160px;
+  width: 137px;
 }
 
 .footer__left__service {
@@ -5516,8 +5515,6 @@ footer.footer__section {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  color: #555555;
-
 }
 .content_about_social img {
   width: 36px;
@@ -5599,8 +5596,6 @@ footer.footer__section {
   line-height: 23.12px;
   height: 213px;
   justify-content: space-around;
-  color: #555555;
-
 }
 
 
@@ -5621,7 +5616,6 @@ footer.footer__section {
   line-height: 23.12px;
   height: 251px;
   justify-content: space-around;
-  color: #555555;
 }
 
 .footer_newsletter_title span {
@@ -5642,16 +5636,6 @@ footer.footer__section {
   height: 51px;
   justify-content: space-around;
   color: #555555;
-}
-
-.footer_categories_option p, .footer_service_option p {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.footer_categories_option p:hover, .footer_service_option p:hover {
-  transform: translateX(20px); /* Trượt sang phải 10px khi hover */
-  color: #111111;
 }
 
 .footer_newsletter_contact {
