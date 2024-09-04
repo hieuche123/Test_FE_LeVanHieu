@@ -609,25 +609,7 @@ body {
   height: 0;
   width: 0;
 }
-.reduce_quantity, .increase_quantity {
-  height: 100%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #F5F5F5;
-}
 
-.increase_quantity2, .reduce_quantity2 {
-  height: 100%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #F5F5F5;
-}
 /* Create a custom checkbox */
 .checkmark {
   margin-top: 3px;
@@ -1077,7 +1059,7 @@ nav {
     height: 100%;
   }
   .btn__collection:hover, .btn__collection2:hover {
-   cursor: pointer;
+    background-color: #ebb6b6;
   }
  
   .categories__item__double {
@@ -2989,7 +2971,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       height: 40px;
       border-radius: 30px;
       padding: 10px;
-      line-height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -3002,8 +2983,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       height: 100%;
     }
     .btn__collection:hover, .btn__collection2:hover {
-      cursor: pointer;
-     }
+      background-color: #ebb6b6;
+    }
    
     .categories__item__double {
       display: none;
@@ -3745,8 +3726,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 } 
 
 .btn__collection:hover, .btn__collection2:hover {
-  cursor: pointer;
- }
+  background-color: #ebb6b6;
+}
 .categories__item__double .item_img{
   position: relative;
 }
@@ -4331,7 +4312,7 @@ div#openModalBtnbuy {
 } 
 
 .btn__collection:hover, .btn__collection2:hover {
- cursor: pointer;
+  background-color: #ebb6b6;
 }
 .categories__item__double .item_img{
   position: relative;
@@ -5526,7 +5507,7 @@ a.prev:hover svg path {
 .dropdown-left-content, .dropdown-center-content {
   font-size: 16px;
   line-height: 30px;
-  font-weight: 400;
+  font-weight: 400px;
   color: #555555;
   display: flex;
   flex-direction: column;
@@ -5540,7 +5521,6 @@ a.prev:hover svg path {
 
 .dropdown-left-content li:hover, .dropdown-center-content li:hover {
   transform: translateX(20px); /* Trượt sang phải 10px khi hover */
-  font-weight: 500;
 }
 /* shop-dropdown end */
 

@@ -1077,7 +1077,7 @@ nav {
     height: 100%;
   }
   .btn__collection:hover, .btn__collection2:hover {
-   cursor: pointer;
+    background-color: #ebb6b6;
   }
  
   .categories__item__double {
@@ -2989,7 +2989,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       height: 40px;
       border-radius: 30px;
       padding: 10px;
-      line-height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -3002,8 +3001,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       height: 100%;
     }
     .btn__collection:hover, .btn__collection2:hover {
-      cursor: pointer;
-     }
+      background-color: #ebb6b6;
+    }
    
     .categories__item__double {
       display: none;
@@ -3745,8 +3744,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 } 
 
 .btn__collection:hover, .btn__collection2:hover {
-  cursor: pointer;
- }
+  background-color: #ebb6b6;
+}
 .categories__item__double .item_img{
   position: relative;
 }
@@ -4331,7 +4330,7 @@ div#openModalBtnbuy {
 } 
 
 .btn__collection:hover, .btn__collection2:hover {
- cursor: pointer;
+  background-color: #ebb6b6;
 }
 .categories__item__double .item_img{
   position: relative;
@@ -5540,7 +5539,6 @@ a.prev:hover svg path {
 
 .dropdown-left-content li:hover, .dropdown-center-content li:hover {
   transform: translateX(20px); /* Trượt sang phải 10px khi hover */
-  font-weight: 500;
 }
 /* shop-dropdown end */
 

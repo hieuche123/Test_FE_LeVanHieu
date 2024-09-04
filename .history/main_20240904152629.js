@@ -1,36 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const increaseBtn = document.querySelector('.increase_quantity');
-  const reduceBtn = document.querySelector('.reduce_quantity');
-  const totalNumberElem = document.querySelector('.total-number');
-  increaseBtn.addEventListener('click', function() {
-    let currentNumber = parseInt(totalNumberElem.textContent);
-    totalNumberElem.textContent = currentNumber + 1;
-  });
 
-  reduceBtn.addEventListener('click', function() {
-    let currentNumber = parseInt(totalNumberElem.textContent);
-    if (currentNumber > 0) {
-      totalNumberElem.textContent = currentNumber - 1;
-    }
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const increaseBtn2 = document.querySelector('.increase_quantity2');
-  const reduceBtn2 = document.querySelector('.reduce_quantity2');
-  const totalNumberElem2 = document.querySelector('.total-number2');
-  increaseBtn2.addEventListener('click', function() {
-    let currentNumber2 = parseInt(totalNumberElem2.textContent);
-    totalNumberElem2.textContent = currentNumber2 + 1;
-  });
-
-  reduceBtn2.addEventListener('click', function() {
-    let currentNumber2 = parseInt(totalNumberElem2.textContent);
-    if (currentNumber2 > 0) {
-      totalNumberElem2.textContent = currentNumber2 - 1;
-    }
-  });
-});
 // closeModalBtnlayout
 const openModalBtn = document.getElementById('openModalBtn');
 const openModalBtnhome = document.querySelector('.openModalBtnhome');
@@ -503,3 +471,21 @@ nextButtoncustomer.addEventListener('click', () => {
 
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const increaseBtn = document.querySelector('.increase_quantity');
+  const reduceBtn = document.querySelector('.reduce_quantity');
+  const totalNumberElem = document.querySelector('.total-number');
+
+  increaseBtn.addEventListener('click', function() {
+    let currentNumber = parseInt(totalNumberElem.textContent);
+    totalNumberElem.textContent = currentNumber + 1;
+  });
+
+  reduceBtn.addEventListener('click', function() {
+    let currentNumber = parseInt(totalNumberElem.textContent);
+    if (currentNumber > 0) {
+      totalNumberElem.textContent = currentNumber - 1;
+    }
+  });
+});

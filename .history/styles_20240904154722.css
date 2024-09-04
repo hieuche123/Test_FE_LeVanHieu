@@ -2989,7 +2989,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       height: 40px;
       border-radius: 30px;
       padding: 10px;
-      line-height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;

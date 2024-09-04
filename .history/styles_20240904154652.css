@@ -1077,7 +1077,8 @@ nav {
     height: 100%;
   }
   .btn__collection:hover, .btn__collection2:hover {
-   cursor: pointer;
+    background-color: #111111;
+    color: #ffffff;
   }
  
   .categories__item__double {
@@ -2989,7 +2990,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       height: 40px;
       border-radius: 30px;
       padding: 10px;
-      line-height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -3002,8 +3002,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
       height: 100%;
     }
     .btn__collection:hover, .btn__collection2:hover {
-      cursor: pointer;
-     }
+      background-color: #111111;
+      color: #ffffff;
+    }
    
     .categories__item__double {
       display: none;
@@ -3745,8 +3746,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 } 
 
 .btn__collection:hover, .btn__collection2:hover {
-  cursor: pointer;
- }
+  background-color: #111111;
+  color: #ffffff;
+}
 .categories__item__double .item_img{
   position: relative;
 }

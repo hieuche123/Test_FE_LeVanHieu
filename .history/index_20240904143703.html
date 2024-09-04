@@ -368,7 +368,7 @@
         <div class="modal-content-list">
           <div class="modal__header modal__header__home">
             <div class="header__left header__left__home">
-              <svg id="turnModalBtnlayout" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg id="turnModalBtnhome" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.08594 10.5742C7.25521 10.7435 7.33984 10.9453 7.33984 11.1797C7.33984 11.401 7.25521 11.5898 7.08594 11.7461C6.92969 11.9154 6.73438 12 6.5 12C6.26562 12 6.07031 11.9154 5.91406 11.7461L0.914062 6.74609C0.744792 6.58984 0.660156 6.40104 0.660156 6.17969C0.660156 5.94531 0.744792 5.74349 0.914062 5.57422L5.91406 0.574219C6.07031 0.417969 6.26562 0.339844 6.5 0.339844C6.73438 0.339844 6.92969 0.417969 7.08594 0.574219C7.25521 0.74349 7.33984 0.945312 7.33984 1.17969C7.33984 1.40104 7.25521 1.58984 7.08594 1.74609L2.67188 6.16016L7.08594 10.5742Z" fill="#111111"/>
               </svg>
                 
@@ -382,38 +382,56 @@
           </div>
           <div class="modal__home modal__home__item">
             <div class="home__left">
-              <h3 class="home__left__menu">Filter left sidebar</h3>
+              <h3 class="home__left__menu">Main Demo</h3>
             </div>
           </div>
           <div class="modal__home modal__home__item">
             <div class="home__left">
-              <h3 class="home__left__menu">Filter right sidebar</h3>
+              <h3 class="home__left__menu">Skincare</h3>
             </div>
           </div>
           <div class="modal__home modal__home__item">
             <div class="home__left">
-              <h3 class="home__left__menu">Canvas sidebar</h3>
+              <h3 class="home__left__menu">Simple Modern</h3>
             </div>
           </div>
           <div class="modal__home modal__home__item">
             <div class="home__left">
-              <h3 class="home__left__menu">Dropdown sidebar</h3>
+              <h3 class="home__left__menu">TikTok Fashion</h3>
             </div>
           </div>
           <div class="modal__home modal__home__item">
             <div class="home__left">
-              <h3 class="home__left__menu">Grid 2 columns</h3>
+              <h3 class="home__left__menu">Trendy Style</h3>
             </div>
           </div>
           <div class="modal__home modal__home__item">
             <div class="home__left">
-              <h3 class="home__left__menu">Grid 3 columns</h3>
+              <h3 class="home__left__menu">Minimal Clothings</h3>
             </div>
           </div>
           <div class="modal__home modal__home__item">
             <div class="home__left">
-              <h3 class="home__left__menu">List view</h3>
+              <h3 class="home__left__menu">Men’s Luxury</h3>
             </div>
+          </div>
+          <div class="modal__home modal__home__item">
+            <div class="home__left">
+              <h3 class="home__left__menu">Clothing Store</h3>
+            </div>
+          </div>
+          <div class="modal__home modal__home__item">
+            <div class="home__left">
+              <h3 class="home__left__menu">Categories Men’s</h3>
+            </div>
+          </div>
+          <div class="modal__home modal__home__item">
+            <div class="home__left">
+              <h3 class="home__left__menu">Categories Men’s</h3>
+            </div>
+          </div>
+          <div class="modal__home modal__home__btn">
+            VIEW ALL DEMOS
           </div>
         </div>
       </div>
@@ -624,15 +642,15 @@
                       </div>
                       <div class="item-buy-price">$145.00</div>
                       <div class="item-buy-total">
-                        <button class="reduce_quantity"><svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="increase_quantity " id="increase_quantity2" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M9.5 0.5L9.5 1.5L0.5 1.5L0.5 0.5L9.5 0.5Z" fill="#111111"/>
-                          </svg>
-                        </button>
-                        <span class="total-number">1</span>
-                        <button class="increase_quantity"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        </svg>
+                        <div class="total-number " id="total-number2">
+                          1
+                        </div>
+                        <svg class="reduce_quantity " id="reduce_quantity2" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 9.5H5.5L5.5 5.5H9.5V4.5H5.5L5.5 0.5H4.5L4.5 4.5H0.5V5.5H4.5L4.5 9.5Z" fill="#111111"/>
-                          </svg>
-                        </button>
+                        </svg>
                       </div>
                     </div>
                     <div class="item-buy-action">
@@ -660,15 +678,19 @@
                       </div>
                       <div class="item-buy-price">$145.00</div>
                       <div class="item-buy-total">
-                        <button class="reduce_quantity2"><svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.5 0.5L9.5 1.5L0.5 1.5L0.5 0.5L9.5 0.5Z" fill="#111111"/>
+                        <div class="buy-total-decrease">
+                          <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.5 0.5L9.5 1.5L0.5 1.5L0.5 0.5L9.5 0.5Z" fill="#111111"/>
                           </svg>
-                        </button>
-                        <span class="total-number2">1</span>
-                        <button class="increase_quantity2"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 9.5H5.5L5.5 5.5H9.5V4.5H5.5L5.5 0.5H4.5L4.5 4.5H0.5V5.5H4.5L4.5 9.5Z" fill="#111111"/>
+                        </div>
+                        <div class="total-number">
+                          1
+                        </div>
+                        <div class="buy-total-increase">
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 9.5H5.5L5.5 5.5H9.5V4.5H5.5L5.5 0.5H4.5L4.5 4.5H0.5V5.5H4.5L4.5 9.5Z" fill="#111111"/>
                           </svg>
-                        </button>
+                        </div>
                       </div>
                     </div>
                     <div class="item-buy-action">
@@ -760,7 +782,6 @@
 
             <svg
               class="nav__logo__icon__svg"
-              id="openModalBtnbuy5"
               width="32"
               height="25"
               viewBox="0 0 32 25"
