@@ -1131,7 +1131,6 @@ nav {
     flex-direction: column;
     gap: 16px;
     font-weight: 500;
-    color: #111111;
   }
   .new__arrivals__item .img__item {
     position: relative;
@@ -1442,7 +1441,7 @@ footer.footer__section {
 
 .section__instagram__desc {
   font-size: 16px;
-  color: #555555;
+  color: #666;
 }
 
 .section__instagram__list {
@@ -3346,12 +3345,11 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     text-align: center;
     font-weight: 400;
     margin-bottom: 10px;
-    color: #111111;
   }
   
   .section__instagram__desc {
     font-size: 16px;
-    color: #555555;
+    color: #666;
   }
   
   .section__instagram__list {
