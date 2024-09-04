@@ -251,9 +251,6 @@ body {
   align-items: center;
   gap: 20px;
 }
-.header__left__home svg {
-  cursor: pointer;
-}
 .modal__layout__img {
   padding: 0 20px;
   display: flex;
@@ -267,7 +264,6 @@ body {
 .layout__img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 
 .modal__home__btn {
@@ -419,8 +415,7 @@ body {
   color: #111111;
 }
 .ship-tab-freeship span {
-  color: #D73F0F;
-  font-weight: 500;
+  color: #111111;
 }
 
 .time-buy {
@@ -436,13 +431,8 @@ body {
 }
 .time-buy p span {
   color: #D73F0F;
-  font-weight: 500;
+}
 
-}
-.close3 {
-  margin-left: 0;
-  margin-right: -4px;
-}
 .list-buy {
   display: flex;
   flex-direction: column;
@@ -520,7 +510,7 @@ body {
 .buy-title-color {
   font-size: 14px;
   font-weight: 400;
-  color: #999999;
+  color: #111111;
 }
 .buy-title-price {
   font-size: 14px;
@@ -574,14 +564,9 @@ body {
   display: flex;
   align-items: center;
   margin-top: 12px;
-  color: #515D66;
 
 }
-.container-checkbox span {
-  margin-left: 4px;
-  color: #111111;
-  text-decoration: underline;
-}
+
 /* Hide the browser's default checkbox */
 .container-checkbox input {
   position: absolute;
@@ -4276,7 +4261,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 @media (min-width: 1024px) {
   .chat_box, .croll_top {
     display: none;
-    bottom: 78px;
   }
   .modalbuy {
     position: fixed;
@@ -4390,7 +4374,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     flex-direction: row;
     background-color: transparent;
     transform: none;
-    
+    padding-left: 73px;
   }
 
   .nav__links a {
@@ -4418,9 +4402,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     gap: 20px;
 
   }
-  .nav__btn .nav__icon li{
-    cursor: pointer;
-  }
+
   .nav__links li {
     position: relative;
   }
@@ -5967,7 +5949,7 @@ a.prev:hover svg path {
   margin-top: -4px;
 }
 .list-buy {
-  min-height: 160px; /* Chiều cao tối thiểu */
+  max-height: 300px;
   overflow-y: auto;
   padding-bottom: 20px;
 }
@@ -5998,7 +5980,6 @@ a.prev:hover svg path {
     width: 50%;
     flex-direction: column;
     justify-content: space-between;
-    gap: 32px;
   
   }
   
@@ -6011,7 +5992,7 @@ a.prev:hover svg path {
 
 }
 
-@media (min-width: 1450px) {
+/* @media (min-width: 1411px) {
   .section__collections, 
   .section__new__arrivals, 
   .section__new__customer, 
@@ -6026,11 +6007,7 @@ a.prev:hover svg path {
     margin-left: 0;
     margin-right: 0;
   }
-  .nav__links {
-    left: 40px;
-  }
-
-}
+} */
 
 
 @media (min-width: 1860px) {
@@ -6049,5 +6026,4 @@ a.prev:hover svg path {
     margin-left: 0;
     margin-right: 0;
   }
-
 }

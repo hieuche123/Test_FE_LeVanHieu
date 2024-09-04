@@ -267,7 +267,6 @@ body {
 .layout__img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 
 .modal__home__btn {
@@ -580,7 +579,6 @@ body {
 .container-checkbox span {
   margin-left: 4px;
   color: #111111;
-  text-decoration: underline;
 }
 /* Hide the browser's default checkbox */
 .container-checkbox input {

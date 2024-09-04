@@ -1,6 +1,6 @@
 const openModalBtn = document.getElementById('openModalBtn');
 const openModalBtnhome = document.querySelector('.openModalBtnhome');
-const openModalBtnshop = document.querySelector('.openModalBtnshop');
+const openModalBtnshop = document.querySelector('openModalBtnshop');
 const turnModalBtnhome = document.getElementById('turnModalBtnhome');
 const turnModalBtnshop = document.getElementById('turnModalBtnshop');
 

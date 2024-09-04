@@ -251,9 +251,6 @@ body {
   align-items: center;
   gap: 20px;
 }
-.header__left__home svg {
-  cursor: pointer;
-}
 .modal__layout__img {
   padding: 0 20px;
   display: flex;
@@ -267,7 +264,6 @@ body {
 .layout__img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
 
 .modal__home__btn {
@@ -574,14 +570,9 @@ body {
   display: flex;
   align-items: center;
   margin-top: 12px;
-  color: #515D66;
 
 }
-.container-checkbox span {
-  margin-left: 4px;
-  color: #111111;
-  text-decoration: underline;
-}
+
 /* Hide the browser's default checkbox */
 .container-checkbox input {
   position: absolute;
@@ -4276,7 +4267,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 @media (min-width: 1024px) {
   .chat_box, .croll_top {
     display: none;
-    bottom: 78px;
   }
   .modalbuy {
     position: fixed;
@@ -4418,9 +4408,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     gap: 20px;
 
   }
-  .nav__btn .nav__icon li{
-    cursor: pointer;
-  }
+
   .nav__links li {
     position: relative;
   }
@@ -5967,7 +5955,7 @@ a.prev:hover svg path {
   margin-top: -4px;
 }
 .list-buy {
-  min-height: 160px; /* Chiều cao tối thiểu */
+  max-height: 300px;
   overflow-y: auto;
   padding-bottom: 20px;
 }
@@ -5998,7 +5986,6 @@ a.prev:hover svg path {
     width: 50%;
     flex-direction: column;
     justify-content: space-between;
-    gap: 32px;
   
   }
   
@@ -6011,8 +5998,8 @@ a.prev:hover svg path {
 
 }
 
-@media (min-width: 1450px) {
-  .section__collections, 
+@media (min-width: 1411px) {
+  /* .section__collections, 
   .section__new__arrivals, 
   .section__new__customer, 
   .section__instagram,
@@ -6025,9 +6012,17 @@ a.prev:hover svg path {
   .footer__bottom {
     margin-left: 0;
     margin-right: 0;
+  } */
+
+  .section__collections__wrapper {
+    width: 100$;
+    margin: 0 auto;
   }
-  .nav__links {
-    left: 40px;
+  .section__collections {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
 }
