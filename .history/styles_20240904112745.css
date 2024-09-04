@@ -1988,7 +1988,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   flex-direction: column;
   background-color: #ffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .footer__mobile__icon {
@@ -5592,10 +5591,6 @@ a.prev:hover svg path {
 
 }
 @media (min-width: 1200px) and (max-width: 1449px) {
-  .nav__links {
-    left: 44px;
-  }
-}
 @media (min-width: 1450px) {
   .section__collections, 
   .section__new__arrivals, 

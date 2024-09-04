@@ -139,76 +139,51 @@ nextButton.addEventListener('click', () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Sử dụng matchMedia để kiểm tra kích thước màn hình
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  // Sử dụng matchMedia để kiểm tra kích thước màn hình (dưới 768px thường là kích thước điện thoại)
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-  function handleScreenSizeChange(e) {
-      if (e.matches) {
-          console.log('Running on a mobile device'); // Debug
+  if (isMobile) {
+      console.log('Running on a mobile device'); // Debug
 
-          function toggleServiceOption(imgSelector, optionSelector) {
-              const imgAdd = document.querySelector(imgSelector);
-              const serviceOption = document.querySelector(optionSelector);
+      function toggleServiceOption(imgSelector, optionSelector) {
+          const imgAdd = document.querySelector(imgSelector);
+          const serviceOption = document.querySelector(optionSelector);
 
-              if (!imgAdd || !serviceOption) {
-                  console.error(`Could not find elements: ${imgSelector} or ${optionSelector}`); // Debug
-                  return;
-              }
-
-              console.log(`Found elements: ${imgSelector} and ${optionSelector}`); // Debug
-
-              // Đặt max-height mặc định
-              const defaultHeight = serviceOption.scrollHeight + 'px';
-              serviceOption.style.maxHeight = defaultHeight; // Hiển thị phần tử ngay từ đầu
-
-              imgAdd.addEventListener('click', function() {
-                  // Toggle max-height for slide down/up effect
-                  if (serviceOption.style.maxHeight === '0px' || serviceOption.style.maxHeight === '') {
-                      serviceOption.style.maxHeight = defaultHeight;
-                      imgAdd.src = './assets/tru.png'; // Đổi src khi mở
-                      serviceOption.style.marginBottom = '10px';
-                  } else {
-                      serviceOption.style.maxHeight = '0px';
-                      imgAdd.src = './assets/cong.png'; // Đổi src khi đóng
-                      serviceOption.style.marginBottom = '0px';
-                  }
-              });
+          if (!imgAdd || !serviceOption) {
+              console.error(`Could not find elements: ${imgSelector} or ${optionSelector}`); // Debug
+              return;
           }
 
-          // Apply to all sections
-          toggleServiceOption('.img_add_categories', '.footer_categories_option');
-          toggleServiceOption('.img_add_service', '.footer_service_option');
-          toggleServiceOption('.img_add_newsletter', '.footer_newsletter_option');
-      } else {
-          console.log('Running on a desktop device'); // Debug
+          console.log(`Found elements: ${imgSelector} and ${optionSelector}`); // Debug
 
-          // Reset tất cả các trạng thái khi không ở giao diện mobile
-          function resetServiceOption(imgSelector, optionSelector) {
-              const imgAdd = document.querySelector(imgSelector);
-              const serviceOption = document.querySelector(optionSelector);
+          // Đặt max-height mặc định
+          const defaultHeight = serviceOption.scrollHeight + 'px';
+          serviceOption.style.maxHeight = defaultHeight; // Hiển thị phần tử ngay từ đầu
 
-              if (!imgAdd || !serviceOption) {
-                  return;
+          imgAdd.addEventListener('click', function() {
+              // Toggle max-height for slide down/up effect
+              if (serviceOption.style.maxHeight === '0px' || serviceOption.style.maxHeight === '') {
+                  serviceOption.style.maxHeight = defaultHeight;
+                  imgAdd.src = './assets/tru.png'; // Đổi src khi mở
+                  serviceOption.style.marginBottom = '10px';
+              } else {
+                  serviceOption.style.maxHeight = '0px';
+                  imgAdd.src = './assets/cong.png'; // Đổi src khi đóng
+                  serviceOption.style.marginBottom = '0px';
               }
-
-              // Reset các thuộc tính về mặc định
-              serviceOption.style.maxHeight = null;
-              serviceOption.style.marginBottom = null;
-              imgAdd.src = './assets/cong.png'; // Đặt lại hình ảnh mặc định
-          }
-
-          // Reset all sections
-          resetServiceOption('.img_add_categories', '.footer_categories_option');
-          resetServiceOption('.img_add_service', '.footer_service_option');
-          resetServiceOption('.img_add_newsletter', '.footer_newsletter_option');
+          });
       }
+     
+  } else {
+    const footer_categories_option = document.querySelector('.footer_categories_option')
+    footer_categories_option.style.maxHeight = footer_categories_option.scrollHeight + '100px';;
+      console.log('Not running on a mobile device'); // Debug
   }
 
-  // Lắng nghe thay đổi kích thước màn hình
-  mediaQuery.addListener(handleScreenSizeChange);
-
-  // Gọi hàm một lần để xử lý ngay lập tức khi trang được tải
-  handleScreenSizeChange(mediaQuery);
+   // Apply to all sections
+   toggleServiceOption('.img_add_categories', '.footer_categories_option');
+   toggleServiceOption('.img_add_service', '.footer_service_option');
+   toggleServiceOption('.img_add_newsletter', '.footer_newsletter_option');
 });
 
 

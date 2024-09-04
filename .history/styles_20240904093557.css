@@ -1720,6 +1720,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .footer__left__newsletter{
     display: flex;
     flex-direction: column;
+    gap: 25px;
     width: 100%;
 
   }
@@ -1749,8 +1750,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .footer__left__newsletter {
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #EBEBEB;
+    gap: 25px;
   }
   .footer_service_title {
     display: flex;
@@ -1771,7 +1771,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .content_about_info {
     font-size: 16px;
     font-weight: 400;
-    color: #555555;
   }
   .content_about_social img {
     width: 36px;
@@ -1876,6 +1875,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 6px;
   }
   .footer_newsletter_option {
     display: flex;
@@ -1885,7 +1885,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     font-weight: 400;
     cursor: pointer;
     line-height: 23.12px;
-    height: 70px;
+    height: 51px;
     justify-content: space-around;
     color: #555555;
   }
@@ -1935,9 +1935,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     gap: 15px;
-    color: #555555;
   
   }
   
@@ -1970,14 +1969,12 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
 
 
-.footer_categories_option,
+  .footer_categories_option,
 .footer_service_option,
 .footer_newsletter_option {
     overflow: hidden; /* Ẩn phần nội dung vượt quá chiều cao */
     transition: max-height 0.3s ease; /* Đảm bảo hiệu ứng trượt mượt mà */
     max-height: none; /* Đặt mặc định để hiển thị phần tử ngay từ đầu */
-    color: #555555;
-    margin-bottom: 10px;
 }
   /* section__footer end */
 
@@ -1988,7 +1985,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   flex-direction: column;
   background-color: #ffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .footer__mobile__icon {
@@ -3559,7 +3555,402 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     text-align: center;
   }
   /* section__new__customer end */
-
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    /* section__footer start */
+   
+    .section__footer {
+      margin: 0 20px;
+      margin-top: 20px;
+      flex-direction: column;
+      display: flex;
+      gap: 30px;
+      justify-content: space-around;
+    }
+    
+    .section__footer .footer__left {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+    
+    }
+    
+    .section__footer .footer__right {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content:space-between
+    }
+    
+    .footer__left__about {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+      
+    }
+    .footer__left__about img {
+      width: 92.41px;
+      height: 20px;
+      cursor: pointer;
+    }
+    .footer__left__categories {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+    }
+    
+    .footer__right__service {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+  
+    }
+    
+    .footer__left__service {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .footer__left__newsletter{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+  
+    }
+    .img_add {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+    }
+    .footer_service_option {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease;
+    }
+    .footer_categories_option {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease;
+    }
+    .footer_newsletter_option {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease;
+    }
+    .footer_service_option.show {
+        max-height: 300px; /* Điều chỉnh giá trị này cho phù hợp với nội dung */
+    }
+    .footer__left__newsletter {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    .footer_service_title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+    }
+    .content_about {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .content_about_social {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .content_about_info {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .content_about_social img {
+      width: 36px;
+      height: 36px;
+    }
+    .content_about_react {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    
+    .content_about_react .img_love {
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+    }
+    
+    .content_about_react .img_shop {
+      width: 40px;
+      height: 16px;
+      cursor: pointer;
+    }
+  
+    .footer_categories_title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer_categories_title div {
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      line-height: 20.23px;
+    }
+  
+    .footer__left__categories__mobile {
+      margin-top: 40px;
+    }
+    .footer__right__service__mobile {
+      margin-top:0px;
+    }
+  
+    .footer__left__newsletter__mobile {
+      margin-top: 40px;
+    }
+  
+    .footer__left__newsletter .title_span {
+      padding: 20px 0;
+      width: 100%;
+      border-top: 1px solid #EBEBEB;
+      border-bottom: 1px solid #EBEBEB;
+    }
+    .footer_categories_title .title_span {
+      padding: 20px 0;
+      width: 100%;
+      border-top: 1px solid #EBEBEB;
+    }
+    .footer__right__service .title_span {
+      padding: 20px 0;
+      width: 100%;
+      border-top: 1px solid #EBEBEB;
+    }
+    
+    .footer_categories_option {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      line-height: 23.12px;
+      height: 213px;
+      justify-content: space-around;
+    }
+    
+    
+    .footer_service_title div {
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      line-height: 20.23px;
+    }
+    
+    .footer_service_option {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      line-height: 23.12px;
+      height: 251px;
+      justify-content: space-around;
+    }
+  
+    
+    .footer_newsletter_title div {
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      line-height: 20.23px;
+    }
+    .footer_newsletter_title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+    }
+    .footer_newsletter_option {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      line-height: 23.12px;
+      height: 51px;
+      justify-content: space-around;
+      color: #555555;
+    }
+    
+    .footer_newsletter_contact {
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer_newsletter_contact input {
+      border-radius: 30px;
+      height: 50px;
+      width: 290px;
+      line-height: 20.23px;
+      color: #111111;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 10px 20px;
+      border: 1px solid #EBEBEB;
+    }
+    
+    .footer_newsletter_contact .btn_subscribe {
+      height: 50px;
+      width: 150px;
+      border-radius: 30px;
+      padding: 10px;
+      background: #111111;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 17.34px;
+      color: #ffff;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn_subscribe:hover {
+      background: #252424;
+    
+    }
+    
+    
+    .footer__bottom {
+      align-items: center;
+      max-width: 370px;
+      margin: 0 auto;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      gap: 15px;
+    
+    }
+    
+    
+    .footer__bottom__left {
+      display: flex;
+      gap: 20px;
+    }
+    .bottom__left_item {
+      display: flex;
+      gap: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.12px;
+      align-items: center;
+    }
+    .bottom__left_item img {
+      width: 6px;
+      height: 5px;
+    }
+    
+    .footer__bottom__right {
+      display: flex;
+      gap: 5px;
+    }
+    
+    .footer__bottom__right img {
+      width: 43px;
+      height: 26px;
+    }
+  
+  
+    .footer_categories_option,
+  .footer_service_option,
+  .footer_newsletter_option {
+      overflow: hidden; /* Ẩn phần nội dung vượt quá chiều cao */
+      transition: max-height 0.3s ease; /* Đảm bảo hiệu ứng trượt mượt mà */
+      max-height: none; /* Đặt mặc định để hiển thị phần tử ngay từ đầu */
+  }
+    /* section__footer end */
+  
+  
+   /* footer__mobile start */
+    .footer__mobile {
+      height: 75px;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .footer__mobile__icon {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .footer__mobile__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      width: 77px;
+      height: 30px;
+      cursor: pointer;
+      transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  
+  
+  .footer__mobile__item.active {
+      color: #abe212;
+  }
+  
+  .footer__mobile__item img {
+      width: 17px;
+      height: 17px;
+  }
+  
+  .footer__mobile__item1 img {
+    width: 25px;
+    height: 25px;
+  }
+  .footer__mobile__item1 {
+    margin-bottom: 4px;
+  }
+  .footer__mobile__item span {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17.34px;
+      color: #111111;
+  }
+  
+  .footer_scroll {
+      height: 3px;
+      background-color: #111111;
+      width: 77px; /* Chiều rộng của footer_scroll bằng với .footer__mobile__item */
+      transition: transform 0.3s ease;
+  }
+  .footer__mobile {
+    display: none;
+  }
+  
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .modalbuy {
@@ -3832,7 +4223,43 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 /* section__new__arrivals end */
 
 
- 
+  .section__footer {
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+    .section__footer {
+        max-width: 1410px;
+        margin: 0px auto;
+        display: flex;
+        gap: 50px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer__left, .footer__right {
+      width: 50%;
+    }
+
+    .section__footer .footer__left {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+    
+    }
+    
+    .section__footer .footer__right {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      justify-content:space-between
+    }
+    .footer__mobile {
+      display: none;
+    }
 }
 
 
@@ -5129,7 +5556,6 @@ footer.footer__section {
 .footer__left__newsletter__mobile {
   margin-top: 0;
   width: 415px;
-  border: none;
 }
 
 .footer__left__newsletter .title_span {
@@ -5591,11 +6017,7 @@ a.prev:hover svg path {
   }
 
 }
-@media (min-width: 1200px) and (max-width: 1449px) {
-  .nav__links {
-    left: 44px;
-  }
-}
+
 @media (min-width: 1450px) {
   .section__collections, 
   .section__new__arrivals, 

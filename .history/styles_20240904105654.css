@@ -1771,7 +1771,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .content_about_info {
     font-size: 16px;
     font-weight: 400;
-    color: #555555;
   }
   .content_about_social img {
     width: 36px;
@@ -1937,7 +1936,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     justify-content: space-between;
     margin-bottom: 30px;
     gap: 15px;
-    color: #555555;
   
   }
   
@@ -1970,14 +1968,12 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
 
 
-.footer_categories_option,
+  .footer_categories_option,
 .footer_service_option,
 .footer_newsletter_option {
     overflow: hidden; /* Ẩn phần nội dung vượt quá chiều cao */
     transition: max-height 0.3s ease; /* Đảm bảo hiệu ứng trượt mượt mà */
     max-height: none; /* Đặt mặc định để hiển thị phần tử ngay từ đầu */
-    color: #555555;
-    margin-bottom: 10px;
 }
   /* section__footer end */
 
@@ -1988,7 +1984,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   flex-direction: column;
   background-color: #ffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .footer__mobile__icon {
@@ -5129,7 +5124,6 @@ footer.footer__section {
 .footer__left__newsletter__mobile {
   margin-top: 0;
   width: 415px;
-  border: none;
 }
 
 .footer__left__newsletter .title_span {
@@ -5591,11 +5585,7 @@ a.prev:hover svg path {
   }
 
 }
-@media (min-width: 1200px) and (max-width: 1449px) {
-  .nav__links {
-    left: 44px;
-  }
-}
+
 @media (min-width: 1450px) {
   .section__collections, 
   .section__new__arrivals, 

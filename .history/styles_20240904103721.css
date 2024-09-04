@@ -1720,6 +1720,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .footer__left__newsletter{
     display: flex;
     flex-direction: column;
+    gap: 25px;
     width: 100%;
 
   }
@@ -1749,8 +1750,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .footer__left__newsletter {
     display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #EBEBEB;
+    gap: 25px;
   }
   .footer_service_title {
     display: flex;
@@ -1771,7 +1771,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .content_about_info {
     font-size: 16px;
     font-weight: 400;
-    color: #555555;
   }
   .content_about_social img {
     width: 36px;
@@ -1935,9 +1934,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     gap: 15px;
-    color: #555555;
   
   }
   
@@ -1970,14 +1968,12 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
 
 
-.footer_categories_option,
+  .footer_categories_option,
 .footer_service_option,
 .footer_newsletter_option {
     overflow: hidden; /* Ẩn phần nội dung vượt quá chiều cao */
     transition: max-height 0.3s ease; /* Đảm bảo hiệu ứng trượt mượt mà */
     max-height: none; /* Đặt mặc định để hiển thị phần tử ngay từ đầu */
-    color: #555555;
-    margin-bottom: 10px;
 }
   /* section__footer end */
 
@@ -1988,7 +1984,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   flex-direction: column;
   background-color: #ffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .footer__mobile__icon {
@@ -3559,7 +3554,17 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     text-align: center;
   }
   /* section__new__customer end */
-
+  
+  
+  
+  
+  
+  
+  
+  
+    
+   
+  
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .modalbuy {
@@ -3832,7 +3837,43 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 /* section__new__arrivals end */
 
 
- 
+  .section__footer {
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+    .section__footer {
+        max-width: 1410px;
+        margin: 0px auto;
+        display: flex;
+        gap: 50px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer__left, .footer__right {
+      width: 50%;
+    }
+
+    .section__footer .footer__left {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+    
+    }
+    
+    .section__footer .footer__right {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      justify-content:space-between
+    }
+    .footer__mobile {
+      display: none;
+    }
 }
 
 
@@ -5129,7 +5170,6 @@ footer.footer__section {
 .footer__left__newsletter__mobile {
   margin-top: 0;
   width: 415px;
-  border: none;
 }
 
 .footer__left__newsletter .title_span {
@@ -5591,11 +5631,7 @@ a.prev:hover svg path {
   }
 
 }
-@media (min-width: 1200px) and (max-width: 1449px) {
-  .nav__links {
-    left: 44px;
-  }
-}
+
 @media (min-width: 1450px) {
   .section__collections, 
   .section__new__arrivals, 

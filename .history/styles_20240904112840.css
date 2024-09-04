@@ -1988,7 +1988,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   flex-direction: column;
   background-color: #ffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .footer__mobile__icon {

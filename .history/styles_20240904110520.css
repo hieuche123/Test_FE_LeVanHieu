@@ -1970,7 +1970,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
 
 
-.footer_categories_option,
+  .footer_categories_option,
 .footer_service_option,
 .footer_newsletter_option {
     overflow: hidden; /* Ẩn phần nội dung vượt quá chiều cao */
@@ -1988,7 +1988,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   display: flex;
   flex-direction: column;
   background-color: #ffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .footer__mobile__icon {
@@ -5129,7 +5128,6 @@ footer.footer__section {
 .footer__left__newsletter__mobile {
   margin-top: 0;
   width: 415px;
-  border: none;
 }
 
 .footer__left__newsletter .title_span {
@@ -5591,11 +5589,7 @@ a.prev:hover svg path {
   }
 
 }
-@media (min-width: 1200px) and (max-width: 1449px) {
-  .nav__links {
-    left: 44px;
-  }
-}
+
 @media (min-width: 1450px) {
   .section__collections, 
   .section__new__arrivals, 
