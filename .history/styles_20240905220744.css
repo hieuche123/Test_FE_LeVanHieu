@@ -5059,7 +5059,7 @@ li.nav__links__item.nav__links__item2 {
   left: 50%;
   transform: translateX(-50%) translateY(50%); /* Nằm giữa theo chiều ngang và trượt xuống dưới */
   opacity: 0; /* Ban đầu ẩn */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Hiệu ứng trượt và mờ dần */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
 }
 .new__customer__item .img__item:hover .new_icon {
   opacity: 1; /* Hiển thị khi hover */

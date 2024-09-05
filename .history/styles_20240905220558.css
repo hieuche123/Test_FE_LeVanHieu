@@ -1488,12 +1488,12 @@ button#prevBtn {
   width: 300px;
   overflow: hidden;
   position: relative;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 
 }
 
 .news__img__item img {
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
   border-radius: 10px;
   object-fit: cover;
 
@@ -4984,18 +4984,18 @@ li.nav__links__item.nav__links__item2 {
   height: auto;
   overflow: hidden; /* Ngăn chặn hình ảnh tràn ra ngoài */
   border-radius: 10px;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 .instagram__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 
 }
 .instagram__list__img:hover .instagram__img {
   transform: scale(1.1);
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 .section__instagram__item {
   flex: 0 0 calc(16.66% - 5px); /* Hiển thị 6 mục trên một hàng, trừ đi khoảng cách giữa các mục */
@@ -5040,7 +5040,7 @@ li.nav__links__item.nav__links__item2 {
   top: 15px;
   opacity: 0; /* Ban đầu ẩn */
   transform: translateX(20px); /* Dịch sang trái */
-  transition: opacity 0.5s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
 }
 .addtocard {
   cursor: pointer;
@@ -5059,7 +5059,7 @@ li.nav__links__item.nav__links__item2 {
   left: 50%;
   transform: translateX(-50%) translateY(50%); /* Nằm giữa theo chiều ngang và trượt xuống dưới */
   opacity: 0; /* Ban đầu ẩn */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Hiệu ứng trượt và mờ dần */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng trượt và mờ dần */
 }
 .new__customer__item .img__item:hover .new_icon {
   opacity: 1; /* Hiển thị khi hover */
