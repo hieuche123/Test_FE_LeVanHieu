@@ -192,32 +192,31 @@ modalshop.addEventListener('click', (event) => {
 
 
 
-  // Lấy phần tử header
+const navItems = document.querySelectorAll('.trending__nav__item');
+
+  // Lặp qua từng thẻ li và thêm sự kiện click
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Loại bỏ class trending-active từ tất cả các thẻ li
+      navItems.forEach(nav => nav.classList.remove('trending-active'));
+
+      // Thêm class trending-active vào thẻ li được click
+      this.classList.add('trending-active');
+    });
+  });
+
+
+
+
   const navHeader = document.querySelector('.nav_header');
-  let isFixed = false; // Biến để theo dõi trạng thái có đang fixed hay không
 
   // Hàm xử lý khi cuộn chuột
   function handleScroll() {
-    if (window.scrollY > 170) {
-      // Kiểm tra nếu chưa có class fixed-header thì mới thêm
-      if (!isFixed) {
-        isFixed = true; // Cập nhật trạng thái
-        navHeader.classList.add('fixed-header');
-
-        // Thêm class show để header trượt xuống sau một chút delay
-        setTimeout(() => {
-          navHeader.classList.add('show');
-        }, 80); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
-      }
+    // Kiểm tra nếu vị trí cuộn lớn hơn 80px
+    if (window.scrollY > 80) {
+      navHeader.classList.add('fixed-header');
     } else {
-      // Kiểm tra nếu đang fixed thì mới xóa class
-      if (isFixed) {
-        isFixed = false; // Cập nhật trạng thái
-        navHeader.classList.remove('show');
-
-        // Sau khi hiệu ứng trượt lên kết thúc thì xóa class fixed-header
-          navHeader.classList.remove('fixed-header');
-      }
+      navHeader.classList.remove('fixed-header');
     }
   }
 

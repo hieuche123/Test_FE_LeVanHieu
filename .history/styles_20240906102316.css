@@ -661,6 +661,7 @@ body {
   align-items: center;
   margin-top: 12px;
   color: #515D66;
+
 }
 .container-checkbox span {
   margin-left: 4px;
@@ -720,7 +721,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .container-checkbox input:checked ~ .checkmark {
-  background-color: #111111;
+  background-color: #2196F3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -976,7 +977,7 @@ nav {
   position: relative;
   width: 100%;
   height: 550px;
-  min-width: 367px;
+  min-width: 365px;
 }
 
 .slides {

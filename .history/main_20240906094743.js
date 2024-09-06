@@ -207,7 +207,7 @@ modalshop.addEventListener('click', (event) => {
         // Thêm class show để header trượt xuống sau một chút delay
         setTimeout(() => {
           navHeader.classList.add('show');
-        }, 80); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
+        }, 10); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
       }
     } else {
       // Kiểm tra nếu đang fixed thì mới xóa class
@@ -216,7 +216,9 @@ modalshop.addEventListener('click', (event) => {
         navHeader.classList.remove('show');
 
         // Sau khi hiệu ứng trượt lên kết thúc thì xóa class fixed-header
+        setTimeout(() => {
           navHeader.classList.remove('fixed-header');
+        }, 200); // Thời gian trùng với hiệu ứng chuyển động
       }
     }
   }

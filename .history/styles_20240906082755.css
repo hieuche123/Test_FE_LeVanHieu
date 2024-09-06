@@ -178,7 +178,6 @@ body {
 .modal-content-list {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
 }
 .modal__header {
   padding: 0 20px;
@@ -212,7 +211,9 @@ body {
   border-bottom: 1px solid #EBEBEB;
 }
 
-
+.modal__home__open {
+  border-bottom: none;
+}
 .home__left, 
 .shop__left, 
 .sale__left, 
@@ -276,7 +277,6 @@ body {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
   gap: 20px;
   background-color: var(--color-white);
 }
@@ -594,14 +594,12 @@ body {
 .confirm-delete1-right,
 .confirm-delete2-right {
   cursor: pointer;
-  margin-top: 2px;
 }
 .buy-title-name {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: #111111;
   margin-bottom: 3px;
-  line-height: 18px;
 }
 .buy-title-color {
   font-size: 14px;
@@ -661,6 +659,7 @@ body {
   align-items: center;
   margin-top: 12px;
   color: #515D66;
+
 }
 .container-checkbox span {
   margin-left: 4px;
@@ -720,7 +719,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .container-checkbox input:checked ~ .checkmark {
-  background-color: #111111;
+  background-color: #2196F3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -738,9 +737,9 @@ body {
 /* Style the checkmark/indicator */
 .container-checkbox .checkmark:after {
   left: 5px;
-  top: 2px;
-  width: 6px;
-  height: 9px;
+  top: 1px;
+  width: 4px;
+  height: 7px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -976,7 +975,7 @@ nav {
   position: relative;
   width: 100%;
   height: 550px;
-  min-width: 367px;
+  min-width: 365px;
 }
 
 .slides {
@@ -1450,8 +1449,6 @@ button#prevBtn {
     padding: 7px 25px;
     border-radius: 30px;
     color: #111111;
-    transition: transform 0.3s ease;
-    
   }
   .trending__nav__item a {
     line-height: 20.8px;
@@ -2026,12 +2023,11 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .footer_newsletter_contact {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
   }
   .footer_newsletter_contact input {
     border-radius: 30px;
     height: 50px;
-    flex: 1;
+    width: 290px;
     line-height: 20.23px;
     color: #111111;
     font-size: 14px;
@@ -2574,11 +2570,10 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
   
   .buy-title-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: #111111;
     margin-bottom: 3px;
-    line-height: 18px;
   }
   .buy-title-color {
     font-size: 14px;
@@ -2692,10 +2687,10 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   
   /* Style the checkmark/indicator */
   .container-checkbox .checkmark:after {
-    left: 5px;
+    left: 4px;
     top: 2px;
-    width: 6px;
-    height: 9px;
+    width: 4px;
+    height: 7px;
     border: solid white;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -3825,12 +3820,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   gap: 20px;
 }
 
-.container-checkbox .checkmark:after {
-  left: 5px;
-  top: 2px;
-  width: 6px;
-  height: 9px;
-}
+
 .section__collections  .categories__list .categories__item__double{
   display: flex;
   flex-direction: column;
@@ -3958,7 +3948,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .croll_top {
   display: none;
-  bottom: 78px;
 }
 .chat_box {
   display: none;
@@ -4001,28 +3990,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 @media (min-width: 1024px) {
-  
-  .nav_header {
-    transition: top 1s ease;
-  }
-  .fixed-header {
-    position: fixed;
-    top: -200px; /* Đặt ngoài màn hình ngay lập tức */
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Đảm bảo nằm trên các thành phần khác */
-    background-color: #fff;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05); /* Thêm hiệu ứng đổ bóng */
-    
-    /* Không có transition cho top ở đây */
-    transition: none;
-  }
-  
-  /* Khi thêm class show, hiệu ứng trượt xuống sẽ xảy ra */
-  .fixed-header.show {
-    top: 0;
-    transition: top 0.4s ease, box-shadow 0.4s ease; /* Thêm hiệu ứng khi trượt xuống */
-  }
   .chat_box, .croll_top {
     display: none;
     bottom: 78px;
@@ -5341,9 +5308,7 @@ footer.footer__section {
   font-size: 16px;
   font-weight: 400;
 }
-.content_about_react p {
-  color: #555555;
-}
+
 .content_about_react .img_love {
   width: 36px;
   height: 36px;
@@ -5814,7 +5779,6 @@ a.prev:hover svg path {
 .buy-title-name {
   font-size: 16px;
   margin-top: -4px;
-  line-height: 22px;
 }
 .list-buy {
   min-height: 160px; /* Chiều cao tối thiểu */
@@ -5835,12 +5799,6 @@ a.prev:hover svg path {
   padding: 14px;
   margin-top: 32px;
   padding: -13px 40px;
-}
-.container-checkbox .checkmark:after {
-  left: 5px;
-  top: 2px;
-  width: 6px;
-  height: 9px;
 }
 
 }
@@ -5864,23 +5822,11 @@ a.prev:hover svg path {
     flex-direction: column;
     justify-content:space-between
   }
-  .container-checkbox .checkmark:after {
-    left: 5px;
-    top: 2px;
-    width: 6px;
-    height: 9px;
-  }
 
 }
 @media (min-width: 1200px) and (max-width: 1449px) {
   .nav__links {
     left: 44px;
-  }
-  .container-checkbox .checkmark:after {
-    left: 5px;
-    top: 2px;
-    width: 6px;
-    height: 9px;
   }
 }
 @media (min-width: 1450px) {
@@ -5900,12 +5846,6 @@ a.prev:hover svg path {
   }
   .nav__links {
     left: 40px;
-  }
-  .container-checkbox .checkmark:after {
-    left: 5px;
-    top: 2px;
-    width: 6px;
-    height: 9px;
   }
 
 }

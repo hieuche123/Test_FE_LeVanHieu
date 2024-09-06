@@ -207,7 +207,7 @@ modalshop.addEventListener('click', (event) => {
         // Thêm class show để header trượt xuống sau một chút delay
         setTimeout(() => {
           navHeader.classList.add('show');
-        }, 80); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
+        }, 100); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
       }
     } else {
       // Kiểm tra nếu đang fixed thì mới xóa class

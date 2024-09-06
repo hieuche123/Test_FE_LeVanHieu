@@ -192,37 +192,6 @@ modalshop.addEventListener('click', (event) => {
 
 
 
-  // Lấy phần tử header
-  const navHeader = document.querySelector('.nav_header');
-  let isFixed = false; // Biến để theo dõi trạng thái có đang fixed hay không
-
-  // Hàm xử lý khi cuộn chuột
-  function handleScroll() {
-    if (window.scrollY > 170) {
-      // Kiểm tra nếu chưa có class fixed-header thì mới thêm
-      if (!isFixed) {
-        isFixed = true; // Cập nhật trạng thái
-        navHeader.classList.add('fixed-header');
-
-        // Thêm class show để header trượt xuống sau một chút delay
-        setTimeout(() => {
-          navHeader.classList.add('show');
-        }, 80); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
-      }
-    } else {
-      // Kiểm tra nếu đang fixed thì mới xóa class
-      if (isFixed) {
-        isFixed = false; // Cập nhật trạng thái
-        navHeader.classList.remove('show');
-
-        // Sau khi hiệu ứng trượt lên kết thúc thì xóa class fixed-header
-          navHeader.classList.remove('fixed-header');
-      }
-    }
-  }
-
-  // Gán sự kiện scroll vào window
-  window.addEventListener('scroll', handleScroll);
 
 
 

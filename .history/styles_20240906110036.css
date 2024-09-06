@@ -661,6 +661,7 @@ body {
   align-items: center;
   margin-top: 12px;
   color: #515D66;
+
 }
 .container-checkbox span {
   margin-left: 4px;
@@ -976,7 +977,7 @@ nav {
   position: relative;
   width: 100%;
   height: 550px;
-  min-width: 367px;
+  min-width: 365px;
 }
 
 .slides {

@@ -192,32 +192,39 @@ modalshop.addEventListener('click', (event) => {
 
 
 
+const navItems = document.querySelectorAll('.trending__nav__item');
+
+  // Lặp qua từng thẻ li và thêm sự kiện click
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Loại bỏ class trending-active từ tất cả các thẻ li
+      navItems.forEach(nav => nav.classList.remove('trending-active'));
+
+      // Thêm class trending-active vào thẻ li được click
+      this.classList.add('trending-active');
+    });
+  });
+
+
+
+
   // Lấy phần tử header
   const navHeader = document.querySelector('.nav_header');
-  let isFixed = false; // Biến để theo dõi trạng thái có đang fixed hay không
 
   // Hàm xử lý khi cuộn chuột
   function handleScroll() {
-    if (window.scrollY > 170) {
-      // Kiểm tra nếu chưa có class fixed-header thì mới thêm
-      if (!isFixed) {
-        isFixed = true; // Cập nhật trạng thái
-        navHeader.classList.add('fixed-header');
-
-        // Thêm class show để header trượt xuống sau một chút delay
-        setTimeout(() => {
-          navHeader.classList.add('show');
-        }, 80); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
-      }
+    if (window.scrollY > 150) {
+      // Thêm class fixed-header
+      navHeader.classList.add('fixed-header');
+      // Thêm class show để header trượt xuống
+      setTimeout(() => {
+        navHeader.classList.add('show');
+      }, 200); // Thêm delay ngắn để đảm bảo animation hoạt động
     } else {
-      // Kiểm tra nếu đang fixed thì mới xóa class
-      if (isFixed) {
-        isFixed = false; // Cập nhật trạng thái
-        navHeader.classList.remove('show');
-
-        // Sau khi hiệu ứng trượt lên kết thúc thì xóa class fixed-header
-          navHeader.classList.remove('fixed-header');
-      }
+      // Xóa class show trước
+      navHeader.classList.remove('show');
+      // Sau khi ẩn xong mới xóa class fixed-header
+        navHeader.classList.remove('fixed-header');
     }
   }
 
