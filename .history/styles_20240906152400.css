@@ -3867,7 +3867,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   align-items: center;
   background-color: #FFFFFF;
   color: #111111;
-  line-height: 50px;
   cursor: pointer;
 } 
 

@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const footerScroll = document.querySelector('.footer_scroll');
 
   // Thiết lập vị trí mặc định cho footer_scroll (vị trí của mục thứ 3)
-  const defaultActiveItem = items[2];
+  const defaultActiveItem = items[1];
   const itemWidth = defaultActiveItem.offsetWidth;
   const defaultScrollPosition = defaultActiveItem.offsetLeft;
   footerScroll.style.transform = `translateX(${defaultScrollPosition}px)`;
