@@ -321,7 +321,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 9999;
+  z-index: 999;
   display: none;
 }
 
@@ -4069,7 +4069,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     background-color: white;
     /* overflow-y: auto; */
     transition: right 0.5s ease;
-    z-index: 9999;
+    z-index: 1000;
   }
   
 /* toplink start */
