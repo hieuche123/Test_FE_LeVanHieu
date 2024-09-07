@@ -4218,7 +4218,10 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .nav__btn .nav__icon li{
     cursor: pointer;
   }
-  
+
+  .nav__icon .nav__icon_li svg path {
+    fill: #111111;
+  }
   .nav__links li {
     position: relative;
   }
@@ -5882,7 +5885,9 @@ a.prev:hover svg path {
   .footer__left, .footer__right {
     width: 50%;
   }
-
+  .nav__icon .nav__icon_li svg path {
+    fill: #111111;
+  }
   .section__footer .footer__left {
     display: flex;
     width: 50%;
@@ -5907,6 +5912,9 @@ a.prev:hover svg path {
 
 }
 @media (min-width: 1200px) and (max-width: 1449px) {
+  .nav__icon .nav__icon_li svg path {
+    fill: #111111;
+  }
   .nav__links {
     left: 44px;
   }
@@ -5918,6 +5926,9 @@ a.prev:hover svg path {
   }
 }
 @media (min-width: 1450px) {
+  .nav__icon .nav__icon_li svg path {
+    fill: #111111;
+  }
   .section__collections, 
   .section__new__arrivals, 
   .section__new__customer, 
@@ -5946,6 +5957,9 @@ a.prev:hover svg path {
 
 
 @media (min-width: 1860px) {
+  .nav__icon .nav__icon_li svg path {
+    fill: #111111;
+  }
   
   .section__footer,
   .section__instagram,

@@ -3071,7 +3071,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     .new_discount {
       color: #999999; /* Màu chữ cho new_discount */
       text-decoration: line-through; /* Gạch ngang ở giữa chữ */
-      font-weight: 400;
     }
     .section__collections .collections__title h2 {
       font-size: 36px;
@@ -4218,7 +4217,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .nav__btn .nav__icon li{
     cursor: pointer;
   }
-  
   .nav__links li {
     position: relative;
   }

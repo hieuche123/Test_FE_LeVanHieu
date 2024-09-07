@@ -4218,7 +4218,10 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .nav__btn .nav__icon li{
     cursor: pointer;
   }
-  
+
+  .nav__icon .nav__icon_li svg path {
+    fill: #111111;
+  }
   .nav__links li {
     position: relative;
   }
