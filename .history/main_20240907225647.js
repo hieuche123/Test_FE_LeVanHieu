@@ -591,7 +591,7 @@ let scrollPositioncustomer = 0;
 
 prevButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer > 0) {
-    scrollPositioncustomer -= (listcustomer.clientWidth + 10);
+    scrollPositioncustomer -= (listcustomer.clientWidth);
     if (scrollPositioncustomer < 0) {
       scrollPositioncustomer = 0;
     }
@@ -604,7 +604,7 @@ prevButtoncustomer.addEventListener('click', () => {
 
 nextButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += (listcustomer.clientWidth + 11);
+    scrollPositioncustomer += (listcustomer.clientWidth + 10);
     if (scrollPositioncustomer > listcustomer.scrollWidth - listcustomer.clientWidth) {
       scrollPositioncustomer = listcustomer.scrollWidth - listcustomer.clientWidth;
     }

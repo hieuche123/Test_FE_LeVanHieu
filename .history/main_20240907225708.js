@@ -551,37 +551,7 @@ function formatNumber(number) {
 
 
 
-const prevBtn = document.getElementById('prevBtn-customer');
-const nextBtn = document.getElementById('nextBtn-customer');
-const sliderList = document.querySelector('.section__customer__list');
-const itemss = document.querySelectorAll('.section__customer__item');
-const itemCount = itemss.length;
-let index = 0;
 
-function updateSlider() {
-  if (itemss.length > 0 && itemss[0]) {
-    const itemWidth = itemss[0].offsetWidth;
-    sliderList.style.transform = `translateX(-${index * itemWidth}px)`;
-  } 
-}
-
-// Event listeners for the previous and next buttons
-// Event listeners for the previous and next buttons
-prevBtn.addEventListener('click', () => {
-  if (itemss.length > 0) {
-    index = (index > 0) ? index - 1 : itemCount - 1;
-    updateSlider();
-  }
-});
-
-nextBtn.addEventListener('click', () => {
-  if (itemss.length > 0) {
-    index = (index < itemCount - 1) ? index + 1 : 0;
-    updateSlider();
-  }
-});
-// Initial call to set up the slider position
-updateSlider();
 
 const listcustomer = document.querySelector('.new__customer__list');
 const prevButtoncustomer = document.querySelector('.prev-customer');
@@ -604,7 +574,7 @@ prevButtoncustomer.addEventListener('click', () => {
 
 nextButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += (listcustomer.clientWidth + 11);
+    scrollPositioncustomer += (listcustomer.clientWidth + 10);
     if (scrollPositioncustomer > listcustomer.scrollWidth - listcustomer.clientWidth) {
       scrollPositioncustomer = listcustomer.scrollWidth - listcustomer.clientWidth;
     }

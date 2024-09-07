@@ -591,7 +591,7 @@ let scrollPositioncustomer = 0;
 
 prevButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer > 0) {
-    scrollPositioncustomer -= (listcustomer.clientWidth + 10);
+    scrollPositioncustomer -= (listcustomer.clientWidth + 11);
     if (scrollPositioncustomer < 0) {
       scrollPositioncustomer = 0;
     }

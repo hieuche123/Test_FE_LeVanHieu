@@ -4035,9 +4035,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 @media (min-width: 1024px) {
-  .overlay {
-    z-index: 9999;
-  }
+  
   .nav_header {
     transition: top 1s ease;
   }

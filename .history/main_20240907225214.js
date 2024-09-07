@@ -561,7 +561,7 @@ let index = 0;
 function updateSlider() {
   if (itemss.length > 0 && itemss[0]) {
     const itemWidth = itemss[0].offsetWidth;
-    sliderList.style.transform = `translateX(-${index * itemWidth}px)`;
+    sliderList.style.transform = `translateX(-${(index * itemWidth) -100}px)`;
   } 
 }
 
@@ -604,7 +604,7 @@ prevButtoncustomer.addEventListener('click', () => {
 
 nextButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += (listcustomer.clientWidth + 11);
+    scrollPositioncustomer += (listcustomer.clientWidth + 10);
     if (scrollPositioncustomer > listcustomer.scrollWidth - listcustomer.clientWidth) {
       scrollPositioncustomer = listcustomer.scrollWidth - listcustomer.clientWidth;
     }

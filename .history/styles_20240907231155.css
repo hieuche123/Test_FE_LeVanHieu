@@ -321,7 +321,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 100;
+  z-index: 9999;
   display: none;
 }
 
@@ -4035,9 +4035,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 @media (min-width: 1024px) {
-  .overlay {
-    z-index: 9999;
-  }
+  
   .nav_header {
     transition: top 1s ease;
   }

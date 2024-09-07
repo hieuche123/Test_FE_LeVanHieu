@@ -321,7 +321,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 100;
+  z-index: 9999;
   display: none;
 }
 
@@ -2400,7 +2400,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: opacity 0.5s ease;
-    z-index: 100;
+    z-index: 999;
     display: none;
   }
   
@@ -4035,9 +4035,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 
 @media (min-width: 1024px) {
-  .overlay {
-    z-index: 9999;
-  }
+  
   .nav_header {
     transition: top 1s ease;
   }
@@ -5842,7 +5840,6 @@ a.prev:hover svg path {
 
 .btn-layout-shop {
   width: 208px;
-  line-height: 43px;
 }
 .slider__controls-customer {
   display: none;

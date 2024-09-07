@@ -604,7 +604,7 @@ prevButtoncustomer.addEventListener('click', () => {
 
 nextButtoncustomer.addEventListener('click', () => {
   if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
-    scrollPositioncustomer += (listcustomer.clientWidth + 11);
+    scrollPositioncustomer += (listcustomer.clientWidth + 5);
     if (scrollPositioncustomer > listcustomer.scrollWidth - listcustomer.clientWidth) {
       scrollPositioncustomer = listcustomer.scrollWidth - listcustomer.clientWidth;
     }
