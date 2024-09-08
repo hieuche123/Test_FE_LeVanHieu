@@ -554,7 +554,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 3px;
 }
 
 .buy-total-decrease {
@@ -642,7 +641,7 @@ body {
   padding: 30px;
 }
 .comfirm-buy {
-  margin-top: 18px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
 }
@@ -755,7 +754,6 @@ body {
   transform: rotate(45deg);
 }
 .comfirm-buy {
-  margin-top: 18px;
   display: flex;
 }
 .product__des .product__start {
@@ -2643,7 +2641,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     padding: 30px;
   }
   .comfirm-buy {
-    margin-top: 18px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
   }
@@ -2737,7 +2735,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     display: flex;
   }
   .btn-confirm-buy {
-    margin-top: 6px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -5062,7 +5060,6 @@ li.nav__links__item.nav__links__item2 {
   overflow: hidden; /* Ngăn chặn hình ảnh tràn ra ngoài */
   border-radius: 10px;
   transition: transform 0.5s ease;
-  cursor: pointer;
 }
 .instagram__img {
   width: 100%;

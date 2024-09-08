@@ -2737,7 +2737,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     display: flex;
   }
   .btn-confirm-buy {
-    margin-top: 6px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
