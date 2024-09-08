@@ -4214,9 +4214,6 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     border-radius: 100%;
   }
 
-  li#btnOpenCart {
-    margin-left: -10px;
-  }
   .nav__btn .nav__icon {
     display: flex;
     align-items: center;
