@@ -474,7 +474,14 @@ span.iconcart-quatity-span {
 .footer__mobile__item1 {
   position: relative;
 }
-
+span.iconcart-quatity-span2 {
+  position: absolute;
+  font-size: 10px;
+  top: 22px;
+  right: 26px;
+  color: var(--color-white);
+  font-weight: 300;
+}
 .chat_box, .croll_top {
   width: 60px; /* Thay đổi kích thước nếu cần */
   height: 60px; /* Thay đổi kích thước nếu cần */
@@ -1294,8 +1301,6 @@ nav {
     color: var(--text-dark);
     cursor: pointer;
     font-weight: 500;
-    outline: none;
-    border: none;
   } 
   .item_img img {
     width: 100%;
@@ -2355,14 +2360,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     line-height: 17.34px;
     color: var(--text-dark);
 }
-span.iconcart-quatity-span2 {
-  position: absolute;
-  font-size: 9px;
-  top: 1px;
-  right: 29px;
-  color: var(--color-white);
-  font-weight: 300;
-}
+
 .footer_scroll {
     height: 3px;
     background-color: #999999;

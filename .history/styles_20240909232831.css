@@ -1294,8 +1294,6 @@ nav {
     color: var(--text-dark);
     cursor: pointer;
     font-weight: 500;
-    outline: none;
-    border: none;
   } 
   .item_img img {
     width: 100%;
@@ -1639,7 +1637,6 @@ button#prevBtn {
   margin: 0 20px; /* Padding cho container */
   padding-bottom: 60px;
   padding-top: 60px;
-  overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
   scroll-snap-type: x mandatory; /* Snap vào các phần tử khi cuộn */
   -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên iOS */
   margin-top: 7px;

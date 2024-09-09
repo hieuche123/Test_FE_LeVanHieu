@@ -467,7 +467,7 @@ span.iconcart-quatity-span {
   position: absolute;
   font-size: 10px;
   top: 22px;
-  right: 26px;
+  right: 27px;
   color: var(--color-white);
   font-weight: 300;
 }
@@ -1294,8 +1294,6 @@ nav {
     color: var(--text-dark);
     cursor: pointer;
     font-weight: 500;
-    outline: none;
-    border: none;
   } 
   .item_img img {
     width: 100%;

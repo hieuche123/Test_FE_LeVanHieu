@@ -112,7 +112,6 @@ const cartItems = [
 
   function removeItem(itemId) {
     const element = document.querySelector('.iconcart-quatity-span');
-    const element2 = document.querySelector('.iconcart-quatity-span2');
     const itemIndex = cartItems.findIndex(item => item.id === itemId);
     if (itemIndex !== -1) {
         cartItems.splice(itemIndex, 1); // Xóa sản phẩm khỏi giỏ hàng
@@ -127,36 +126,6 @@ const cartItems = [
         
             // Cập nhật giá trị mới vào phần tử
             element.textContent = newValue;
-            if(newValue ===1) {
-              element.style.right = '27px';
-            }
-            else {
-              element.style.right = '26px';
-            }
-
-          } else {
-            console.error('Giá trị hiện tại không phải là số.');
-          }
-        } else {
-          console.error('Không tìm thấy phần tử với lớp iconcart-quatity-span.');
-        }
-        if (element2) {
-          // Lấy giá trị hiện tại và chuyển đổi từ chuỗi sang số nguyên
-          var currentValue2 = parseInt(element2.textContent, 10);
-        
-          // Kiểm tra xem giá trị có phải là số không
-          if (!isNaN(currentValue2)) {
-            // Trừ đi 1
-            var newValue2 = currentValue2 - 1;
-            
-            // Cập nhật giá trị mới vào phần tử
-            element2.textContent = newValue2;
-            if(newValue2===1) {
-              element2.style.right = '29px';
-            }
-            else {
-              element2.style.right = '28px';
-            }
           } else {
             console.error('Giá trị hiện tại không phải là số.');
           }

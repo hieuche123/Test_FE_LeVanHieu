@@ -147,11 +147,11 @@ const cartItems = [
           // Kiểm tra xem giá trị có phải là số không
           if (!isNaN(currentValue2)) {
             // Trừ đi 1
-            var newValue2 = currentValue2 - 1;
+            var newValue = currentValue2 - 1;
             
             // Cập nhật giá trị mới vào phần tử
-            element2.textContent = newValue2;
-            if(newValue2===1) {
+            element2.textContent = newValue;
+            if(newValue2 ===1) {
               element2.style.right = '29px';
             }
             else {

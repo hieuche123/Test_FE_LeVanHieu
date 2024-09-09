@@ -1294,8 +1294,6 @@ nav {
     color: var(--text-dark);
     cursor: pointer;
     font-weight: 500;
-    outline: none;
-    border: none;
   } 
   .item_img img {
     width: 100%;
@@ -1636,7 +1634,7 @@ button#prevBtn {
 .section__news {
   display: flex;
   gap: 20px; /* Khoảng cách giữa các phần tử */
-  margin: 0 20px; /* Padding cho container */
+  margin-left: 20px;
   padding-bottom: 60px;
   padding-top: 60px;
   overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */

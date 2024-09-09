@@ -11,28 +11,13 @@
   --max-width: 1920px;
 }
 
-.d-flex {
-  display: flex;
-}
-.d-flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.d-flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 a {
-  color: var(--text-dark);
+  color: #111111;
 }
 .section__container {
   max-width: var(--max-width);
@@ -57,6 +42,7 @@ a {
   left: 50%;
   bottom: 20px;
   transform: translateX(-50%);
+  display: flex;
   gap: 5px;
   justify-content: center;
 }
@@ -73,7 +59,7 @@ a {
 }
 
 .dot.active {
-  background-color: var(--text-dark);
+  background-color: #111111;
 }
 
 .section__description {
@@ -264,7 +250,7 @@ body {
   gap: 30px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #111111;
 }
 .modal__home__item, .home__left, .home__left__menu {
   font-size: 16px;
@@ -298,16 +284,17 @@ body {
 }
 .header-language h3{
   font-size: 16px;
-  color: var(--text-dark);
+  color: #111111;
   font-weight: 500;
 }
 .modal__header__home {
   background-color: #F5F5F5;
 }
 .header__menu__home {
-  color: var(--text-dark);
+  color: #111111;
 }
 .header__left__home {
+  display: flex;
   align-items: center;
   gap: 20px;
 }
@@ -332,23 +319,21 @@ body {
 }
 
 .modal__home__btn {
-  background-color: var(--text-dark);
+  background-color: #111111;
   border-radius: 30px;
-  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
   font-size: 12px;
   font-weight: 600;
-  height: 100%;
-  width: 100%;
-  border-bottom: 1px solid #EBEBEB;
+  margin-top: 20px;
 }
-.modal__home__button {
-  margin-top: 30px;
-  border-bottom: none;
-}
+
 .modal__home__item {
   font-weight: 400;
   font-size: 16px;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .delete1, .delete2 {
@@ -422,7 +407,7 @@ body {
 }
 .item-buy-price {
   font-weight: 500;
-  color: var(--text-dark)
+  color: #111111
 }
 
 .ship-tab-progress svg {
@@ -439,7 +424,7 @@ body {
   height: 45px;
   width: 300px;
   background-color: var(--color-white);
-  color: var(--text-dark);
+  color: #111111;
   font-size: 16px;
   border-radius: 30px;
   text-align: center;
@@ -452,7 +437,7 @@ body {
   cursor: pointer;
 }
 .btn-layout-shop:hover {
-  background-color: var(--text-dark);
+  background-color: #111111;
   color: var(--color-white);
 }
 .modalbuy.showbuy {
@@ -466,16 +451,15 @@ body {
 span.iconcart-quatity-span {
   position: absolute;
   font-size: 10px;
-  top: 22px;
-  right: 26px;
+  top: 18px;
+  right: 36px;
   color: var(--color-white);
   font-weight: 300;
 }
-.footer__mobile__item1 {
-  position: relative;
-}
-
 .chat_box, .croll_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px; /* Thay đổi kích thước nếu cần */
   height: 60px; /* Thay đổi kích thước nếu cần */
   position: fixed;
@@ -486,11 +470,14 @@ span.iconcart-quatity-span {
 }
 .header-tab {
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 30px;
 
 }
 .header-tab .tab-title{
-  color: var(--text-dark);
+  color: #111111;
   font-size: 18px;
   font-weight: 500;
   line-height: 60px;
@@ -509,7 +496,7 @@ span.iconcart-quatity-span {
 .ship-tab-freeship {
   font-size: 14px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
 }
 .ship-tab-freeship span {
   color: #D73F0F;
@@ -525,7 +512,7 @@ span.iconcart-quatity-span {
   border: 1px dashed #EBEBEB;
   font-size: 14px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
 }
 .time-buy p span {
   color: #D73F0F;
@@ -661,7 +648,7 @@ span#item2-total, span#item1-total {
   text-align: center;
 }
 .item-buy-total button {
-  color: var(--text-dark);
+  color: #111111;
 }
 .item-buy-action {
   display: flex;
@@ -706,7 +693,7 @@ span#item2-total, span#item1-total {
   border-radius: 50px;
   font-size: 12px;
   color: var(--color-white);
-  background-color: var(--text-dark);
+  background-color: #111111;
   font-family: "Jost";
   font-weight: 500;
   cursor: pointer;
@@ -719,7 +706,7 @@ span#item2-total, span#item1-total {
 .buy-title-name {
   font-size: 16px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-bottom: 3px;
   line-height: 18px;
 }
@@ -731,7 +718,7 @@ span#item2-total, span#item1-total {
 .buy-title-price {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .action-buy {
@@ -764,7 +751,7 @@ span#item2-total, span#item1-total {
   justify-content: space-between;
   font-size: 18px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: #111111;
 }
 /* Customize the label (the container) */
 .container-checkbox {
@@ -784,7 +771,7 @@ span#item2-total, span#item1-total {
 }
 .container-checkbox span {
   margin-left: 4px;
-  color: var(--text-dark);
+  color: #111111;
   text-decoration: underline;
 }
 /* Hide the browser's default checkbox */
@@ -830,7 +817,7 @@ span#item2-total, span#item1-total {
 .comfirm-buy p  {
   font-size: 16px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-top: 12px;
 }
 /* On mouse-over, add a grey background color */
@@ -840,7 +827,7 @@ span#item2-total, span#item1-total {
 
 /* When the checkbox is checked, add a blue background */
 .container-checkbox input:checked ~ .checkmark {
-  background-color: var(--text-dark);
+  background-color: #111111;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -887,7 +874,7 @@ span#item2-total, span#item1-total {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--text-dark);
+  background-color: #111111;
   color: var(--color-white);
   font-size: 12px;
   height: 50px;
@@ -896,16 +883,16 @@ span#item2-total, span#item1-total {
 }
 .btn-confirm1 {
   background-color: var(--color-white);
-  border: 1px solid var(--text-dark);
-  color: var(--text-dark);
+  border: 1px solid #111111;
+  color: #111111;
 }
 .btn-confirm2:hover {
   background-color: var(--color-white);
-  border: 1px solid var(--text-dark);
-  color: var(--text-dark);
+  border: 1px solid #111111;
+  color: #111111;
 }
 .btn-confirm1:hover {
-  background-color: var(--text-dark);
+  background-color: #111111;
   color: var(--color-white);
 }
 /* tabbuy css end */
@@ -914,7 +901,7 @@ span#item2-total, span#item1-total {
 .croll_top {
   width: 50px; /* Thay đổi kích thước nếu cần */
   height: 50px; /* Thay đổi kích thước nếu cần */
-  background-color: var(--text-dark); /* Màu nền cho croll_top */
+  background-color: #111111; /* Màu nền cho croll_top */
 }
 
 /* Hiệu ứng khi hover cho chat_box */
@@ -1138,7 +1125,7 @@ nav {
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .banner__text__list  h1 {
@@ -1168,7 +1155,7 @@ nav {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-color: var(--text-dark);
+  background-color: #111111;
   cursor: pointer;
   line-height: 52px;
 }
@@ -1249,7 +1236,7 @@ nav {
     margin: 0 ;
     padding: 0;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
     margin-bottom: 5px;
   }
   
@@ -1291,11 +1278,9 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
-    color: var(--text-dark);
+    color: #111111;
     cursor: pointer;
     font-weight: 500;
-    outline: none;
-    border: none;
   } 
   .item_img img {
     width: 100%;
@@ -1370,7 +1355,7 @@ nav {
     line-height: 52.02px;
     margin: 0 ;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
     margin-bottom: 5px;
   }
   
@@ -1398,7 +1383,7 @@ nav {
     flex-direction: column;
     gap: 16px;
     font-weight: 500;
-    color: var(--text-dark);
+    color: #111111;
   }
 .product__des span {
   font-weight: 400;
@@ -1483,7 +1468,7 @@ nav {
 }
 
 .new_icon div:hover {
-    background-color: var(--text-dark); /* Màu xanh dương nhạt */
+    background-color: #111111; /* Màu xanh dương nhạt */
     transform: scale(1.1); /* Phóng to nhẹ khi hover */
 }
 
@@ -1615,7 +1600,7 @@ button#prevBtn {
     line-height: 22.23px;
     padding: 7px 25px;
     border-radius: 30px;
-    color: var(--text-dark);
+    color: #111111;
     transition: transform 0.3s ease;
     
   }
@@ -1686,7 +1671,7 @@ button#prevBtn {
   font-size: 12px;
   font-weight: 500;
   line-height: 17.34px;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .section__news__content .content-name {
@@ -1694,7 +1679,7 @@ button#prevBtn {
   font-weight: 400;
   line-height: 50px;
   margin-top: -3px;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .section__news__content .btn-look {
@@ -1705,7 +1690,7 @@ button#prevBtn {
 
 .btn-look a {
   /* padding-bottom: 2px; */
-  border-bottom: 2px solid var(--text-dark);
+  border-bottom: 2px solid #111111;
   font-weight: 600;
 }
 
@@ -1713,7 +1698,7 @@ button#prevBtn {
 
 
 .content_about_react p{
-  color: var(--text-dark);
+  color: #111111;
 }
 span.new_prices.new_prices_new {
   font-weight: 500;
@@ -1738,7 +1723,7 @@ span.new_prices.new_prices_new {
   text-align: center;
   font-weight: 400;
   margin-bottom: 4px;
-  color: var(--text-dark);
+  color: #111111;
 }
 footer.footer__section {
   margin-top: 41px;
@@ -1816,7 +1801,7 @@ footer.footer__section {
   line-height: 52.02px;
   margin: 0 ;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-bottom: 5px;
 }
 
@@ -1847,7 +1832,7 @@ footer.footer__section {
   align-items: center;
   justify-content: center;
   padding: 0 40px;
-  color: var(--text-dark);
+  color: #111111;
 }
 .new__customer__item .img__item {
   position: relative;
@@ -2130,21 +2115,21 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     padding: 20px 0;
     width: 100%;
     border-top: 1px solid #EBEBEB;
-    color: var(--text-dark);
+    color: #111111;
     text-transform: uppercase;
   }
   .footer_categories_title .title_span {
     padding: 20px 0;
     width: 100%;
     border-top: 1px solid #EBEBEB;
-    color: var(--text-dark);
+    color: #111111;
     text-transform: uppercase;
   }
   .footer__right__service .title_span {
     padding: 20px 0;
     width: 100%;
     border-top: 1px solid #EBEBEB;
-    color: var(--text-dark);
+    color: #111111;
     text-transform: uppercase;
   }
   
@@ -2215,7 +2200,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     height: 50px;
     flex: 1;
     line-height: 20.23px;
-    color: var(--text-dark);
+    color: #111111;
     font-size: 14px;
     font-weight: 400;
     padding: 10px 20px;
@@ -2227,11 +2212,11 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     width: 150px;
     border-radius: 30px;
     padding: 10px;
-    background: var(--text-dark);
+    background: #111111;
     font-size: 12px;
     font-weight: 600;
     line-height: 50px;
-    color: var(--color-white);
+    color: #ffff;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -2307,7 +2292,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   left: 0;
   right: 0;
   flex-direction: column;
-  background-color: var(--color-white);
+  background-color: #ffff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   min-width: 365px;
 }
@@ -2353,16 +2338,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     font-size: 12px;
     font-weight: 500;
     line-height: 17.34px;
-    color: var(--text-dark);
+    color: #111111;
 }
-span.iconcart-quatity-span2 {
-  position: absolute;
-  font-size: 9px;
-  top: 1px;
-  right: 29px;
-  color: var(--color-white);
-  font-weight: 300;
-}
+
 .footer_scroll {
     height: 3px;
     background-color: #999999;
@@ -2479,12 +2457,12 @@ span.iconcart-quatity-span2 {
     gap: 30px;
     font-size: 14px;
     font-weight: 500;
-    color: var(--text-dark);
+    color: #111111;
   }
   .modal__home__item, .home__left, .home__left__menu {
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
   }
   .header__menu__home {
     font-size: 16px;
@@ -2514,10 +2492,11 @@ span.iconcart-quatity-span2 {
     background-color: #F5F5F5;
   }
   .header__menu__home {
-    color: var(--text-dark);
+    color: #111111;
     font-weight: 500;
   }
   .header__left__home {
+    display: flex;
     align-items: center;
     gap: 20px;
   }
@@ -2537,23 +2516,21 @@ span.iconcart-quatity-span2 {
   }
   
   .modal__home__btn {
-    background-color: var(--text-dark);
+    background-color: #111111;
     border-radius: 30px;
-    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
     font-size: 12px;
     font-weight: 600;
-    height: 100%;
-    width: 100%;
-    border-bottom: 1px solid #EBEBEB;
+    margin-top: 20px;
   }
-  .modal__home__button {
-    margin-top: 30px;
-    border-bottom: none;
-  }
+  
   .modal__home__item {
     font-weight: 400;
     font-size: 16px;
-    color: var(--text-dark);
+    color: #111111;
   }
   
   
@@ -2627,7 +2604,7 @@ span.iconcart-quatity-span2 {
     height: 50px;
     width: 300px;
     background-color: var(--color-white);
-    color: var(--text-dark);
+    color: #111111;
     font-size: 16px;
     border-radius: 30px;
     text-align: center;
@@ -2639,7 +2616,7 @@ span.iconcart-quatity-span2 {
     cursor: pointer;
   }
   .btn-layout-shop:hover {
-    background-color: var(--text-dark);
+    background-color: #111111;
     color: var(--color-white);
   }
   .modalbuy.showbuy {
@@ -2652,6 +2629,9 @@ span.iconcart-quatity-span2 {
   }
   
   .chat_box, .croll_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60px; /* Thay đổi kích thước nếu cần */
     height: 60px; /* Thay đổi kích thước nếu cần */
     position: fixed;
@@ -2662,6 +2642,9 @@ span.iconcart-quatity-span2 {
   }
   .header-tab {
     height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 30px;
   }
   .ship-tab {
@@ -2678,7 +2661,7 @@ span.iconcart-quatity-span2 {
   .ship-tab-freeship {
     font-size: 14px;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
   }
   .ship-tab-freeship span {
     color: #D73F0F;
@@ -2693,7 +2676,7 @@ span.iconcart-quatity-span2 {
     border: 1px dashed #EBEBEB;
     font-size: 14px;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
   }
   .time-buy p span {
     color: #D73F0F;
@@ -2766,7 +2749,7 @@ span.iconcart-quatity-span2 {
   .buy-title-name {
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
     margin-bottom: 3px;
     line-height: 18px;
   }
@@ -2778,7 +2761,7 @@ span.iconcart-quatity-span2 {
   .buy-title-price {
     font-size: 14px;
     font-weight: 500;
-    color: var(--text-dark);
+    color: #111111;
   }
   
   .action-buy {
@@ -2811,7 +2794,7 @@ span.iconcart-quatity-span2 {
     justify-content: space-between;
     font-size: 18px;
     font-weight: 500;
-    color: var(--text-dark);
+    color: #111111;
   }
   /* Customize the label (the container) */
   .container-checkbox {
@@ -2855,7 +2838,7 @@ span.iconcart-quatity-span2 {
   .comfirm-buy p  {
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
     margin-top: 12px;
   }
   /* On mouse-over, add a grey background color */
@@ -2865,7 +2848,7 @@ span.iconcart-quatity-span2 {
   
   /* When the checkbox is checked, add a blue background */
   .container-checkbox input:checked ~ .checkmark {
-    background-color: var(--text-dark);
+    background-color: #111111;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -2906,7 +2889,7 @@ span.iconcart-quatity-span2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--text-dark);
+    background-color: #111111;
     color: var(--color-white);
     font-size: 12px;
     height: 50px;
@@ -2915,16 +2898,16 @@ span.iconcart-quatity-span2 {
   }
   .btn-confirm1 {
     background-color: var(--color-white);
-    border: 1px solid var(--text-dark);
-    color: var(--text-dark);
+    border: 1px solid #111111;
+    color: #111111;
   }
   .btn-confirm2:hover {
     background-color: var(--color-white);
-    border: 1px solid var(--text-dark);
-    color: var(--text-dark);
+    border: 1px solid #111111;
+    color: #111111;
   }
   .btn-confirm1:hover {
-    background-color: var(--text-dark);
+    background-color: #111111;
     color: var(--color-white);
   }
   /* tabbuy css end */
@@ -2933,7 +2916,7 @@ span.iconcart-quatity-span2 {
   .croll_top {
     width: 50px; /* Thay đổi kích thước nếu cần */
     height: 50px; /* Thay đổi kích thước nếu cần */
-    background-color: var(--text-dark); /* Màu nền cho croll_top */
+    background-color: #111111; /* Màu nền cho croll_top */
   }
   
   /* Hiệu ứng khi hover cho chat_box */
@@ -3159,7 +3142,7 @@ span.iconcart-quatity-span2 {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    color: var(--text-dark);
+    color: #111111;
   }
   
   .banner__text__list  h1 {
@@ -3189,7 +3172,7 @@ span.iconcart-quatity-span2 {
     justify-content: center;
     align-items: center;
     color: #fff;
-    background-color: var(--text-dark);
+    background-color: #111111;
     cursor: pointer;
   }
   
@@ -3242,7 +3225,7 @@ span.iconcart-quatity-span2 {
       margin: 0 ;
       padding: 0;
       font-weight: 400;
-      color: var(--text-dark);
+      color: #111111;
       margin-bottom: 5px;
     }
     
@@ -3284,7 +3267,7 @@ span.iconcart-quatity-span2 {
       justify-content: center;
       align-items: center;
       background-color: #FFFFFF;
-      color: var(--text-dark);
+      color: #111111;
       cursor: pointer;
     } 
     .item_img img {
@@ -3366,7 +3349,7 @@ span.iconcart-quatity-span2 {
       line-height: 52.02px;
       margin: 0 ;
       font-weight: 400;
-      color: var(--text-dark);
+      color: #111111;
       margin-bottom: 5px;
     }
     
@@ -3471,7 +3454,7 @@ span.iconcart-quatity-span2 {
   }
   
   .new_icon div:hover {
-      background-color: var(--text-dark); /* Màu xanh dương nhạt */
+      background-color: #111111; /* Màu xanh dương nhạt */
       transform: scale(1.1); /* Phóng to nhẹ khi hover */
   }
   
@@ -3589,7 +3572,7 @@ span.iconcart-quatity-span2 {
       line-height: 20.23px;
       padding: 7.5px 25px;
       border-radius: 30px;
-      color: var(--text-dark);
+      color: #111111;
     }
     .trending-active {
       background-color: #F5F5F5;
@@ -3653,26 +3636,26 @@ span.iconcart-quatity-span2 {
     font-size: 12px;
     font-weight: 500;
     line-height: 17.34px;
-    color: var(--text-dark);
+    color: #111111;
   }
   
   .section__news__content .content-name {
     font-size: 30px;
     font-weight: 400;
     line-height: 50px;
-    color: var(--text-dark);
+    color: #111111;
   }
   
   .section__news__content .btn-look {
     font-size: 12px;
     font-weight: 600;
     line-height: 24px;
-    color: var(--text-dark);
+    color: #111111;
   }
   
   .btn-look a {
     padding-bottom: 2px;
-    border-bottom: 2px solid var(--text-dark);
+    border-bottom: 2px solid #111111;
   }
   
   /* section__news end */
@@ -3698,7 +3681,7 @@ span.iconcart-quatity-span2 {
     text-align: center;
     font-weight: 400;
     margin-bottom: 10px;
-    color: var(--text-dark);
+    color: #111111;
   }
   
   .section__instagram__desc {
@@ -3770,7 +3753,7 @@ span.iconcart-quatity-span2 {
     line-height: 52.02px;
     margin: 0 ;
     font-weight: 400;
-    color: var(--text-dark);
+    color: #111111;
     margin-bottom: 5px;
   }
   
@@ -4014,7 +3997,7 @@ span.iconcart-quatity-span2 {
   margin: 0 ;
   padding: 0;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-bottom: 5px;
 }
 
@@ -4057,7 +4040,7 @@ span.iconcart-quatity-span2 {
   justify-content: center;
   align-items: center;
   background-color: #FFFFFF;
-  color: var(--text-dark);
+  color: #111111;
   line-height: 50px;
   cursor: pointer;
 } 
@@ -4126,7 +4109,7 @@ span.iconcart-quatity-span2 {
   text-align: center;
   margin: 0 ;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-bottom: 5px;
 }
 
@@ -4218,14 +4201,6 @@ span.iconcart-quatity-span2 {
 
 
 @media (min-width: 1024px) {
-  span.iconcart-quatity-span {
-    position: absolute;
-    font-size: 10px;
-    top: 18px;
-    right: 36px;
-    color: var(--color-white);
-    font-weight: 300;
-  }
   .overlay {
     z-index: 9999;
   }
@@ -4270,7 +4245,7 @@ span.iconcart-quatity-span2 {
 .toplink {
   font-size: 14px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   height: 40px;
   padding: 0 30px;
   margin: 0 auto;
@@ -4323,7 +4298,7 @@ span.iconcart-quatity-span2 {
   height: 40px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   background-color: #D0473E;
   color: var(--color-white);
   display: flex;
@@ -4558,7 +4533,7 @@ div#openModalBtnbuy {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-color: var(--text-dark);
+  background-color: #111111;
   cursor: pointer;
   text-align: center;
   transition: background-color 0.3s ease;
@@ -4622,6 +4597,7 @@ div#openModalBtnbuy {
   left: 50%;
   bottom: 30px;
   transform: translateX(-50%);
+  display: flex;
   gap: 5px;
   justify-content: center;
 }
@@ -4638,7 +4614,7 @@ div#openModalBtnbuy {
 }
 
 .dot.active {
-  background-color: var(--text-dark);
+  background-color: #111111;
 }
 
   
@@ -4670,7 +4646,7 @@ div#openModalBtnbuy {
   margin: 0 ;
   padding: 0;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-bottom: 8px;
 }
 
@@ -4709,7 +4685,7 @@ div#openModalBtnbuy {
   justify-content: center;
   align-items: center;
   background-color: #FFFFFF;
-  color: var(--text-dark);
+  color: #111111;
   cursor: pointer;
   line-height: 50px;
 } 
@@ -4727,7 +4703,7 @@ div#openModalBtnbuy {
   transform: translate(-50%); /* Dịch chuyển để căn giữa hoàn toàn */
   font-size: 16px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: #111111;
 }
 .categories__item__double .item_img .btn__collection2{
   position: absolute;
@@ -4736,7 +4712,7 @@ div#openModalBtnbuy {
   transform: translate(-50%);
   font-size: 16px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .categories__item .item_img_mobile {
@@ -4903,7 +4879,7 @@ li.nav__links__item.nav__links__item2 {
   transform: translateX(0); /* Trượt vào từ trái */
 }
 .addtocard:hover {
-  background-color: var(--text-dark);
+  background-color: #111111;
   color: #fff;
   transition: 0.2s ease
 }
@@ -4937,7 +4913,7 @@ li.nav__links__item.nav__links__item2 {
   text-align: center;
   margin: 0 ;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-bottom: 11px;
 }
 .section__new__arrivals .new__arrivals__title .section__header-trending {
@@ -5055,7 +5031,7 @@ li.nav__links__item.nav__links__item2 {
   top: 50%;
   left: -20%; /* Di chuyển tooltip sang bên trái phần tử */
   transform: translate(-100%, -50%); /* Điều chỉnh vị trí chính xác của tooltip */
-  background-color: var(--text-dark);
+  background-color: #111111;
   color: #fff;
   padding: 5px 10px;
   border-radius: 4px;
@@ -5168,7 +5144,7 @@ li.nav__links__item.nav__links__item2 {
   height: 98px;
   bottom: 50px;
   left: 50px;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .section__news__content .subtext {
@@ -5216,7 +5192,7 @@ li.nav__links__item.nav__links__item2 {
   font-size: 45px;
   line-height: 65.03px;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
 }
 .section__customer__desc {
   text-align: center;
@@ -5249,7 +5225,7 @@ li.nav__links__item.nav__links__item2 {
   text-align: center;
   font-weight: 400;
   margin-bottom: 4px;
-  color: var(--text-dark);
+  color: #111111;
 }
 .section__instagram__list {
   height: 231px;
@@ -5346,7 +5322,7 @@ li.nav__links__item.nav__links__item2 {
   transform: translateX(0); /* Trượt vào từ trái */
 }
 .addtocard:hover {
-  background-color: var(--text-dark);
+  background-color: #111111;
   color: #fff;
   transition: 0.2s ease
 }
@@ -5368,7 +5344,7 @@ li.nav__links__item.nav__links__item2 {
   text-align: center;
   margin: 0 ;
   font-weight: 400;
-  color: var(--text-dark);
+  color: #111111;
   margin-top: -4px;
   margin-bottom: 22px;
 }
@@ -5630,7 +5606,7 @@ footer.footer__section {
   border-top: 0;
   border-bottom: 0;
   text-transform: uppercase;
-  color: var(--text-dark);
+  color: #111111;
 
 }
 .footer__right__service__mobile {
@@ -5642,7 +5618,7 @@ footer.footer__section {
   border-top: none;
   border-bottom: none;
   text-transform: uppercase;
-  color: var(--text-dark);
+  color: #111111;
 }
 .footer_categories_title .title_span {
   padding: 0;
@@ -5650,7 +5626,7 @@ footer.footer__section {
   border-top: none;
   border-bottom: none;
   text-transform: uppercase;
-  color: var(--text-dark);
+  color: #111111;
 
 }
 .footer_categories_option {
@@ -5716,16 +5692,14 @@ footer.footer__section {
 .footer_categories_option li, .footer_service_option li {
   cursor: pointer;
   transition: transform 0.3s ease;
-}
-.footer_categories_option li a, .footer_service_option li a{
   color: var(--color-text-a);
 }
-.footer_categories_option li:hover, .footer_service_option li:hover{
+
+.footer_categories_option li:hover, .footer_service_option li:hover {
   transform: translateX(20px); /* Trượt sang phải 10px khi hover */
+  color: #111111;
 }
-.footer_categories_option li a:hover, .footer_service_option li a:hover{
-  color: var(--text-dark);
-}
+
 .footer_newsletter_contact {
   display: flex;
   gap: 10px;
@@ -5735,7 +5709,7 @@ footer.footer__section {
   height: 50px;
   width: 290px;
   line-height: 20.23px;
-  color: var(--text-dark);
+  color: #111111;
   font-size: 14px;
   font-weight: 400;
   padding: 10px 20px;
@@ -5747,7 +5721,7 @@ footer.footer__section {
   width: 150px;
   border-radius: 30px;
   padding: 10px;
-  background: var(--text-dark);
+  background: #111111;
   font-size: 12px;
   font-weight: 600;
   color: #ffff;
@@ -5866,7 +5840,7 @@ footer.footer__section {
   left: 30%;
   transform: translate(-42%, -45%);
   text-align: center;
-  color: var(--text-dark);
+  color: #111111;
 }
 .banner__text__list {
   display: flex;
@@ -5983,7 +5957,7 @@ a.prev:hover svg path {
   font-size: 16px;
   line-height: 23.12px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: #111111;
 }
 
 .dropdown-left-content, .dropdown-center-content {
@@ -6043,7 +6017,7 @@ a.prev:hover svg path {
 }
 
 .dropdown-content li .tiktok {
-  background-color: var(--text-dark);
+  background-color: #111111;
 }
 .dropdown-content li .new {
   background-color: #516CF4;

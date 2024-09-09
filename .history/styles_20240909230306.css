@@ -1294,8 +1294,6 @@ nav {
     color: var(--text-dark);
     cursor: pointer;
     font-weight: 500;
-    outline: none;
-    border: none;
   } 
   .item_img img {
     width: 100%;
@@ -2357,9 +2355,9 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 }
 span.iconcart-quatity-span2 {
   position: absolute;
-  font-size: 9px;
-  top: 1px;
-  right: 29px;
+  font-size: 10px;
+  top: 22px;
+  right: 26px;
   color: var(--color-white);
   font-weight: 300;
 }

@@ -127,13 +127,6 @@ const cartItems = [
         
             // Cập nhật giá trị mới vào phần tử
             element.textContent = newValue;
-            if(newValue ===1) {
-              element.style.right = '27px';
-            }
-            else {
-              element.style.right = '26px';
-            }
-
           } else {
             console.error('Giá trị hiện tại không phải là số.');
           }
@@ -147,16 +140,10 @@ const cartItems = [
           // Kiểm tra xem giá trị có phải là số không
           if (!isNaN(currentValue2)) {
             // Trừ đi 1
-            var newValue2 = currentValue2 - 1;
-            
+            var newValue = currentValue2 - 1;
+        
             // Cập nhật giá trị mới vào phần tử
-            element2.textContent = newValue2;
-            if(newValue2===1) {
-              element2.style.right = '29px';
-            }
-            else {
-              element2.style.right = '28px';
-            }
+            element2.textContent = newValue;
           } else {
             console.error('Giá trị hiện tại không phải là số.');
           }
