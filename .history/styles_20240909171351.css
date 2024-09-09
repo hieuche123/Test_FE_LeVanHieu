@@ -4977,14 +4977,7 @@ li.nav__links__item.nav__links__item2 {
   gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
   margin-top: 2px;
 }
-.new__arrivals__list2 {
-  display: flex;
-  flex-wrap: wrap; /* Cho phép các mục xuống dòng trên màn hình lớn */
-  overflow: hidden; /* Ẩn nội dung tràn */
-  scroll-behavior: smooth; /* Cuộn mượt mà */
-  gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
-  margin-top: 2px;
-}
+
 .new__arrivals__item {
   display: flex;
   flex: 1 1 calc(25% - 30px); /* 25% với khoảng cách giữa các mục trừ đi */

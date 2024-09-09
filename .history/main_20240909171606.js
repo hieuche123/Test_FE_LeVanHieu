@@ -492,22 +492,6 @@ function updateMobileSlide(n) {
     }
     slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
   }
-
-  // Update dots for mobile
-  updateDots(slideIndex);
-}
-
-// Function to update the dot for the current slide
-function updateDots(currentIndex) {
-  let dots = document.getElementsByClassName("dot");
-  
-  // Remove "active" class from all dots
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  // Add "active" class to the current dot
-  dots[currentIndex - 1].className += " active";
 }
 
 // Function to show slides for desktop

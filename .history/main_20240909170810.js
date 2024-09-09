@@ -299,9 +299,9 @@ const nextButton3 = document.querySelector('.next3');
 let scrollPosition3 = 0;
 
 prevButton3.addEventListener('click', () => {
-  if (scrollPosition3 > 0) {
+  if (scrollPosition > 0) {
     scrollPosition3 -= (list.clientWidth / 2) + 5;
-    list3.scrollTo({
+    list.scrollTo({
       left: scrollPosition3,
       behavior: 'smooth'
     });
@@ -310,8 +310,8 @@ prevButton3.addEventListener('click', () => {
 
 nextButton3.addEventListener('click', () => {
   if (scrollPosition3 < list.scrollWidth - list.clientWidth) {
-    scrollPosition3 += (list.clientWidth / 2) + 5;
-    list3.scrollTo({
+    scrollPosition += (list.clientWidth / 2) + 5;
+    list.scrollTo({
       left: scrollPosition3,
       behavior: 'smooth'
     });
@@ -492,22 +492,6 @@ function updateMobileSlide(n) {
     }
     slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
   }
-
-  // Update dots for mobile
-  updateDots(slideIndex);
-}
-
-// Function to update the dot for the current slide
-function updateDots(currentIndex) {
-  let dots = document.getElementsByClassName("dot");
-  
-  // Remove "active" class from all dots
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  // Add "active" class to the current dot
-  dots[currentIndex - 1].className += " active";
 }
 
 // Function to show slides for desktop
