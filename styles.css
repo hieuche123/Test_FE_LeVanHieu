@@ -23,7 +23,9 @@ a {
   margin: auto;
   padding: 5rem 1rem;
 }
-
+.footer__bottom__wrap {
+  margin-bottom: 102px;
+}
 .section__header {
   margin-bottom: 1rem;
   font-size: 2.5rem;
@@ -31,6 +33,32 @@ a {
   line-height: 3rem;
   color: var(--text-dark);
   text-align: center;
+}
+
+.dots {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #111111;
 }
 
 .section__description {
@@ -503,6 +531,7 @@ body {
   display: none; /* Ẩn thanh cuộn */
 }
 .item-buy {
+  width: 100%;
   display: flex;
   gap: 10px;
   padding-top: 20px;
@@ -532,20 +561,28 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
+span#item2-total, span#item1-total {
+  display: none;
+}
 .item-buy-total {
   height: 30px;
   width: 80px;
   background-color: #F5F5F5;
   border: 1px solid #EBEBEB;
   display: flex;
-  gap: 15px;
+  gap: 9px;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
 }
-.item-buy-total span {
+.item-buy-total input {
   color: #212529;
+  font-weight: 400;
+  outline: none;
+  width: 18px;
+  border: none;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 .item-buy-total button {
   color: #111111;
@@ -2150,7 +2187,11 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
  /* footer__mobile start */
  .footer__mobile {
   height: 75px;
+  position: fixed;
   display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
   flex-direction: column;
   background-color: #ffff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -2170,12 +2211,13 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     align-items: center;
     gap: 5px;
     width: 77px;
-    height: 30px;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-
+.cart-footer {
+  margin-left: -10px;
+}
 
 .footer__mobile__item.active {
     color: #abe212;
@@ -2209,6 +2251,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
  /* footer__mobile end */
 
 @media (min-width:431px) and (max-width:768px) {
+  
   .modal, .modalhome, .modalshop, .modalshoplayout {
     position: fixed;
     top: 0;
@@ -3750,6 +3793,12 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+  .footer__mobile {
+    display: none;
+  }
+  .footer__bottom__wrap {
+    margin-bottom: 0;
+  }
   .modalbuy {
     position: fixed;
     top: 0;

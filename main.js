@@ -1,59 +1,3 @@
-// Lấy nút và ảnh từ DOM
-const removeBtn1 = document.querySelector('.delete1');
-const buycontent1 = document.querySelector('.buy-content1');
-const confirmdelete1 = document.querySelector('.confirm-delete1');
-const confirmdelete1right = document.querySelector('.confirm-delete1-right');
-const btnyes1 = document.querySelector('.btn-yes1');
-const btnno1 = document.querySelector('.btn-no1');
-const itembuy1 = document.getElementById('itembuy-delete1');
-
-// Thêm sự kiện click vào nút
-removeBtn1.addEventListener('click', function() {
-    buycontent1.style.display = 'none';
-    confirmdelete1.style.display = 'flex';
-});
-
-btnyes1.addEventListener('click', function() {
-  itembuy1.style.display = 'none';
-});
-btnno1.addEventListener('click', function() {
-  buycontent1.style.display = 'flex';
-  confirmdelete1.style.display = 'none';
-});
-confirmdelete1right.addEventListener('click', function() {
-  buycontent1.style.display = 'flex';
-  confirmdelete1.style.display = 'none';
-});
-
-
-
-
-// Lấy nút và ảnh từ DOM
-const removeBtn2 = document.querySelector('.delete2');
-const buycontent2 = document.querySelector('.buy-content2');
-const confirmdelete2 = document.querySelector('.confirm-delete2');
-const confirmdelete2right = document.querySelector('.confirm-delete2-right');
-const btnyes2 = document.querySelector('.btn-yes2');
-const btnno2 = document.querySelector('.btn-no2');
-const itembuy2 = document.getElementById('itembuy-delete2');
-
-// Thêm sự kiện click vào nút
-removeBtn2.addEventListener('click', function() {
-    buycontent2.style.display = 'none';
-    confirmdelete2.style.display = 'flex';
-});
-
-btnyes2.addEventListener('click', function() {
-  itembuy2.style.display = 'none';
-});
-btnno2.addEventListener('click', function() {
-  buycontent2.style.display = 'flex';
-  confirmdelete2.style.display = 'none';
-});
-confirmdelete2right.addEventListener('click', function() {
-  buycontent2.style.display = 'flex';
-  confirmdelete2.style.display = 'none';
-});
 
 // Thiết lập thời gian kết thúc (ví dụ: 1 ngày sau)
 const endDate = new Date(Date.now() + 652 * 24 * 60 * 60 * 1000); // 652 ngày sau
@@ -113,7 +57,10 @@ modal__home__item__open.addEventListener('click', () => {
   modalshop.classList.remove('showshop');
 
 });
+closeModalBtnshop.addEventListener('click', () => {
+  modalshop.classList.remove('showshop');
 
+});
 // Khi nhấn vào nút mở modal
 openModalBtn.addEventListener('click', () => {
     modal.classList.add('show');
@@ -244,39 +191,39 @@ document.querySelector('.close_notification').addEventListener('click', function
   document.querySelector('.notification').style.display = 'none';
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const increaseBtn = document.querySelector('.increase_quantity');
-  const reduceBtn = document.querySelector('.reduce_quantity');
-  const totalNumberElem = document.querySelector('.total-number');
-  increaseBtn.addEventListener('click', function() {
-    let currentNumber = parseInt(totalNumberElem.textContent);
-    totalNumberElem.textContent = currentNumber + 1;
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//   const increaseBtn = document.querySelector('.increase_quantity');
+//   const reduceBtn = document.querySelector('.reduce_quantity');
+//   const totalNumberElem = document.querySelector('.total-number');
+//   increaseBtn.addEventListener('click', function() {
+//     let currentNumber = parseInt(totalNumberElem.textContent);
+//     totalNumberElem.textContent = currentNumber + 1;
+//   });
 
-  reduceBtn.addEventListener('click', function() {
-    let currentNumber = parseInt(totalNumberElem.textContent);
-    if (currentNumber > 0) {
-      totalNumberElem.textContent = currentNumber - 1;
-    }
-  });
-});
+//   reduceBtn.addEventListener('click', function() {
+//     let currentNumber = parseInt(totalNumberElem.textContent);
+//     if (currentNumber > 0) {
+//       totalNumberElem.textContent = currentNumber - 1;
+//     }
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const increaseBtn2 = document.querySelector('.increase_quantity2');
-  const reduceBtn2 = document.querySelector('.reduce_quantity2');
-  const totalNumberElem2 = document.querySelector('.total-number2');
-  increaseBtn2.addEventListener('click', function() {
-    let currentNumber2 = parseInt(totalNumberElem2.textContent);
-    totalNumberElem2.textContent = currentNumber2 + 1;
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//   const increaseBtn2 = document.querySelector('.increase_quantity2');
+//   const reduceBtn2 = document.querySelector('.reduce_quantity2');
+//   const totalNumberElem2 = document.querySelector('.total-number2');
+//   increaseBtn2.addEventListener('click', function() {
+//     let currentNumber2 = parseInt(totalNumberElem2.textContent);
+//     totalNumberElem2.textContent = currentNumber2 + 1;
+//   });
 
-  reduceBtn2.addEventListener('click', function() {
-    let currentNumber2 = parseInt(totalNumberElem2.textContent);
-    if (currentNumber2 > 0) {
-      totalNumberElem2.textContent = currentNumber2 - 1;
-    }
-  });
-});
+//   reduceBtn2.addEventListener('click', function() {
+//     let currentNumber2 = parseInt(totalNumberElem2.textContent);
+//     if (currentNumber2 > 0) {
+//       totalNumberElem2.textContent = currentNumber2 - 1;
+//     }
+//   });
+// });
 
 
 
