@@ -6115,3 +6115,8 @@ a.prev:hover svg path {
   }
 }
 
+@media (max-width: 678px) {
+  .slide {
+    flex: 0 0 100%;
+  }
+}

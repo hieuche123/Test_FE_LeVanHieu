@@ -2,8 +2,8 @@
 
 // Dữ liệu giỏ hàng
 const cartItems = [
-    { index: '1', id: 'item1', name: 'Square Textured Striped', price: 75, quantity: 1 },
-    { index: '2', id: 'item2', name: 'Square Textured Stripe2', price: 75, quantity: 1 }
+    { index: '1', id: 'item1', name: 'Square Textured Striped', price: 145, quantity: 1 },
+    { index: '2', id: 'item2', name: 'Square Textured Stripe2', price: 145, quantity: 1 }
   ];
   
   
@@ -95,14 +95,11 @@ const cartItems = [
         return total + (item.price * item.quantity);
     }, 0);
     document.getElementById('total-amount').innerText = `$${totalAmount.toFixed(2)}`;
-    const progressFill = document.querySelector('.progress-fill');
-    const progressicon = document.querySelector('.progress-icon');
     if (totalAmount > 100) {
+        const progressFill = document.querySelector('.progress-fill');
+        const progressicon = document.querySelector('.progress-icon');
         progressFill.style.width = 100 + '%';
-        progressicon.style.left = 100 + '%';
-    }else {
-        progressFill.style.width = totalAmount + '%';
-        progressicon.style.left = totalAmount + '%';
+        progressFill.style.width = 100 + '%';
     }
   }
   
@@ -115,7 +112,6 @@ const cartItems = [
     if (itemIndex !== -1) {
         cartItems.splice(itemIndex, 1); // Xóa sản phẩm khỏi giỏ hàng
         renderCart(); // Render lại giỏ hàng
-        updateCartTotal();
     }
 }
   // Lấy nút và ảnh từ DOM

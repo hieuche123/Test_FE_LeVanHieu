@@ -417,56 +417,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// Function to check if screen width is greater than 768px
+function isDesktop() {
+  return window.innerWidth > 768;
+}
+
 let slideIndex = 1;
-let startX;
-let endX;
-const slidesContainer = document.querySelector('.slides');
+showSlides(slideIndex);
 
-// Track the start point of touch
-slidesContainer.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-// Track the end point of touch and determine swipe direction
-slidesContainer.addEventListener('touchend', (e) => {
-  endX = e.changedTouches[0].clientX;
-  const swipeThreshold = 50; // Adjust this value for swipe sensitivity
-  if (startX - endX > swipeThreshold) {
-    plusSlides(1); // Swipe left
-  } else if (endX - startX > swipeThreshold) {
-    plusSlides(-1); // Swipe right
-  }
-});
-
+// Function to move slides
 function plusSlides(n) {
   if (isDesktop()) {
     showSlides(slideIndex += n);
-  } else {
-    updateMobileSlide(n);
   }
 }
 
-// Function to update slide for mobile
-function updateMobileSlide(n) {
-  let slides = document.querySelector('.slides');
-  let slideWidth = slides.querySelector('.slide').offsetWidth;
-  
-  // Remove the transform style when the page loads on mobile
-  if (n === 0) {
-    slides.style.transform = 'none'; // Disable transform initially
-  } else {
-    // Apply transform only when there is user interaction
-    if (n === 1) {
-      slideIndex = (slideIndex % slides.children.length) + 1; // Move to next slide
-    } else {
-      slideIndex = (slideIndex - 2 + slides.children.length) % slides.children.length + 1; // Move to previous slide
-    }
-    slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
+// Function to show specific slide
+function currentSlide(n) {
+  if (isDesktop()) {
+    showSlides(slideIndex = n);
   }
 }
 
-// Function to show slides for desktop
+// Function to display slides
 function showSlides(n) {
+  if (!isDesktop()) return;
+
   let i;
   let slides = document.getElementsByClassName("slide");
   let dots = document.getElementsByClassName("dot");
@@ -484,12 +460,14 @@ function showSlides(n) {
   }
 
   slides[slideIndex - 1].style.display = "block";
+
   const bannerContent = slides[slideIndex - 1].querySelector('.banner__content');
-  
+
   bannerContent.style.opacity = '0';
+
   bannerContent.offsetHeight;
+
   bannerContent.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-  
   setTimeout(() => {
     bannerContent.style.opacity = '1';
   }, 50);
@@ -497,32 +475,13 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-function isDesktop() {
-  return window.innerWidth > 768;
-}
-
-// Function to handle resize events
+// Event listeners for window resize to toggle slider functionality
 window.addEventListener('resize', () => {
-  let slides = document.querySelector('.slides');
-  let slideWidth = slides.querySelector('.slide').offsetWidth;
-  
   if (isDesktop()) {
-    showSlides(slideIndex); // Ensure slides are shown correctly for desktop
-  } else {
-    // Ensure the transform is recalculated for mobile
-    slides.style.transform = `none`; // Remove transform on resize to mobile
-    updateMobileSlide(0); // Update the slide position to initial
+    showSlides(slideIndex); // Ensure slides are shown correctly if resized to desktop
   }
 });
 
-// Initialize on page load
-window.addEventListener('load', () => {
-  if (isDesktop()) {
-    showSlides(slideIndex);
-  } else {
-    updateMobileSlide(0); // Reset to the first slide for mobile without transform
-  }
-});
 
 
 

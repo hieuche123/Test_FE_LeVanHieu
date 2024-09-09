@@ -1162,7 +1162,6 @@ nav {
 }
 
 /* General styles for the slider (mobile-first) */
-/* General styles for the slider (mobile-first) */
 .slider {
   position: relative;
   overflow: hidden;
@@ -1172,16 +1171,13 @@ nav {
   display: flex;
   flex-direction: row;
   transition: transform 0.5s ease;
+  overflow-y: auto;
 }
 
 .slide {
   flex: 0 0 100%;
   box-sizing: border-box;
 }
-
-
-/* Hide navigation arrows on mobile */
-
 
 /* Show navigation arrows and adjust slider for desktop */
 /* Dots */
@@ -6114,4 +6110,3 @@ a.prev:hover svg path {
     position: relative;
   }
 }
-

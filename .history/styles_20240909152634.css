@@ -611,7 +611,7 @@ span#item2-total, span#item1-total {
   height: 5px;
   background-color: #d73f0f;
   border-radius: 25px;
-  transition: width 0.3s ease;
+  transition: width 0.5s ease;
   position: relative;
   z-index: 1;
 }
@@ -1161,29 +1161,7 @@ nav {
   display: none;
 }
 
-/* General styles for the slider (mobile-first) */
-/* General styles for the slider (mobile-first) */
-.slider {
-  position: relative;
-  overflow: hidden;
-}
 
-.slides {
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  flex: 0 0 100%;
-  box-sizing: border-box;
-}
-
-
-/* Hide navigation arrows on mobile */
-
-
-/* Show navigation arrows and adjust slider for desktop */
 /* Dots */
 
 /* bannercss end */
@@ -6114,4 +6092,3 @@ a.prev:hover svg path {
     position: relative;
   }
 }
-

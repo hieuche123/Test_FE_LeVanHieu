@@ -416,115 +416,68 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 let slideIndex = 1;
-let startX;
-let endX;
-const slidesContainer = document.querySelector('.slides');
+showSlides(slideIndex);
 
-// Track the start point of touch
-slidesContainer.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
+// Kiểm tra kích thước màn hình khi trang tải và khi thay đổi kích thước
+window.addEventListener('resize', handleResize);
+window.addEventListener('load', handleResize); // Đảm bảo rằng sự thay đổi kích thước được kiểm tra khi trang tải
 
-// Track the end point of touch and determine swipe direction
-slidesContainer.addEventListener('touchend', (e) => {
-  endX = e.changedTouches[0].clientX;
-  const swipeThreshold = 50; // Adjust this value for swipe sensitivity
-  if (startX - endX > swipeThreshold) {
-    plusSlides(1); // Swipe left
-  } else if (endX - startX > swipeThreshold) {
-    plusSlides(-1); // Swipe right
-  }
-});
-
-function plusSlides(n) {
-  if (isDesktop()) {
-    showSlides(slideIndex += n);
+function handleResize() {
+  if (window.innerWidth <= 678) {
+    // Cập nhật slider cho giao diện di động
+    setupMobileSlider();
   } else {
-    updateMobileSlide(n);
+    // Cập nhật slider cho giao diện desktop
+    setupDesktopSlider();
   }
 }
 
-// Function to update slide for mobile
-function updateMobileSlide(n) {
+function setupMobileSlider() {
   let slides = document.querySelector('.slides');
   let slideWidth = slides.querySelector('.slide').offsetWidth;
+
+  slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
   
-  // Remove the transform style when the page loads on mobile
-  if (n === 0) {
-    slides.style.transform = 'none'; // Disable transform initially
-  } else {
-    // Apply transform only when there is user interaction
-    if (n === 1) {
-      slideIndex = (slideIndex % slides.children.length) + 1; // Move to next slide
-    } else {
-      slideIndex = (slideIndex - 2 + slides.children.length) % slides.children.length + 1; // Move to previous slide
+  // Thêm các xử lý khác cho di động nếu cần
+}
+
+function setupDesktopSlider() {
+  showSlides(slideIndex); // Sử dụng cách hiển thị slide mặc định trên desktop
+
+  // Thêm các xử lý khác cho desktop nếu cần
+}
+
+function plusSlides(n) {
+  if (window.innerWidth <= 678) {
+    let slides = document.querySelector('.slides');
+    let slideWidth = slides.querySelector('.slide').offsetWidth;
+    
+    slideIndex += n;
+    if (slideIndex < 1) {
+      slideIndex = slides.children.length;
+    } else if (slideIndex > slides.children.length) {
+      slideIndex = 1;
     }
+
     slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
+  } else {
+    showSlides(slideIndex += n);
   }
 }
 
-// Function to show slides for desktop
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slide");
-  let dots = document.getElementsByClassName("dot");
 
   if (n > slides.length) { slideIndex = 1 }
   if (n < 1) { slideIndex = slides.length }
 
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    slides[i].classList.remove("slide-active");
+    slides[i].style.display = "none";  
   }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  const bannerContent = slides[slideIndex - 1].querySelector('.banner__content');
-  
-  bannerContent.style.opacity = '0';
-  bannerContent.offsetHeight;
-  bannerContent.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-  
-  setTimeout(() => {
-    bannerContent.style.opacity = '1';
-  }, 50);
-
-  dots[slideIndex - 1].className += " active";
+  slides[slideIndex - 1].style.display = "block";  
 }
-
-function isDesktop() {
-  return window.innerWidth > 768;
-}
-
-// Function to handle resize events
-window.addEventListener('resize', () => {
-  let slides = document.querySelector('.slides');
-  let slideWidth = slides.querySelector('.slide').offsetWidth;
-  
-  if (isDesktop()) {
-    showSlides(slideIndex); // Ensure slides are shown correctly for desktop
-  } else {
-    // Ensure the transform is recalculated for mobile
-    slides.style.transform = `none`; // Remove transform on resize to mobile
-    updateMobileSlide(0); // Update the slide position to initial
-  }
-});
-
-// Initialize on page load
-window.addEventListener('load', () => {
-  if (isDesktop()) {
-    showSlides(slideIndex);
-  } else {
-    updateMobileSlide(0); // Reset to the first slide for mobile without transform
-  }
-});
-
-
 
 //select color
 // Lấy tất cả các phần tử .list_color_item

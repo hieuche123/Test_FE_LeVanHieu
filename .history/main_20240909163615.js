@@ -451,18 +451,13 @@ function updateMobileSlide(n) {
   let slides = document.querySelector('.slides');
   let slideWidth = slides.querySelector('.slide').offsetWidth;
   
-  // Remove the transform style when the page loads on mobile
-  if (n === 0) {
-    slides.style.transform = 'none'; // Disable transform initially
+  if (n === 1) {
+    slideIndex = (slideIndex % slides.children.length) + 1; // Move to next slide
   } else {
-    // Apply transform only when there is user interaction
-    if (n === 1) {
-      slideIndex = (slideIndex % slides.children.length) + 1; // Move to next slide
-    } else {
-      slideIndex = (slideIndex - 2 + slides.children.length) % slides.children.length + 1; // Move to previous slide
-    }
-    slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
+    slideIndex = (slideIndex - 2 + slides.children.length) % slides.children.length + 1; // Move to previous slide
   }
+
+  slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
 }
 
 // Function to show slides for desktop
@@ -508,10 +503,10 @@ window.addEventListener('resize', () => {
   
   if (isDesktop()) {
     showSlides(slideIndex); // Ensure slides are shown correctly for desktop
+    slides.style.transform = translateX(0px)';
   } else {
     // Ensure the transform is recalculated for mobile
-    slides.style.transform = `none`; // Remove transform on resize to mobile
-    updateMobileSlide(0); // Update the slide position to initial
+    slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
   }
 });
 
@@ -520,10 +515,9 @@ window.addEventListener('load', () => {
   if (isDesktop()) {
     showSlides(slideIndex);
   } else {
-    updateMobileSlide(0); // Reset to the first slide for mobile without transform
+    updateMobileSlide(0); // Set to current slide for mobile
   }
 });
-
 
 
 //select color

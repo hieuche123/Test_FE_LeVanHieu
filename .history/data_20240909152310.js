@@ -95,14 +95,11 @@ const cartItems = [
         return total + (item.price * item.quantity);
     }, 0);
     document.getElementById('total-amount').innerText = `$${totalAmount.toFixed(2)}`;
-    const progressFill = document.querySelector('.progress-fill');
-    const progressicon = document.querySelector('.progress-icon');
     if (totalAmount > 100) {
+        const progressFill = document.querySelector('.progress-fill');
+        const progressicon = document.querySelector('.progress-icon');
         progressFill.style.width = 100 + '%';
         progressicon.style.left = 100 + '%';
-    }else {
-        progressFill.style.width = totalAmount + '%';
-        progressicon.style.left = totalAmount + '%';
     }
   }
   

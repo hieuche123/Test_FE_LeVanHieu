@@ -6115,3 +6115,11 @@ a.prev:hover svg path {
   }
 }
 
+@media (max-width: 678px) {
+  .slides{
+    transform: translateX(0px);
+  }
+  .slide {
+    flex: 0 0 100%;
+  }
+}

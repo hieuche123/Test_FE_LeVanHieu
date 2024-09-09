@@ -1172,6 +1172,7 @@ nav {
   display: flex;
   flex-direction: row;
   transition: transform 0.5s ease;
+  overflow-x: auto;
 }
 
 .slide {
@@ -6114,4 +6115,3 @@ a.prev:hover svg path {
     position: relative;
   }
 }
-

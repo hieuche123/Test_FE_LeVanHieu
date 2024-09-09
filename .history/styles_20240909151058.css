@@ -579,8 +579,6 @@ span#item2-total, span#item1-total {
 .free-ship-progress-bar {
   height: 29px;
   width: 100%;
-  display: flex;
-  align-items: center;
   position: relative;
 }
 
@@ -618,7 +616,7 @@ span#item2-total, span#item1-total {
 
 .progress-icon {
   position: absolute;
-  top: -3px;
+  top: -15px; /* Đặt icon trên thanh tiến trình */
   transform: translateX(-50%);
   z-index: 2; /* Đặt icon ở trên thanh tiến trình */
 }
@@ -1161,29 +1159,7 @@ nav {
   display: none;
 }
 
-/* General styles for the slider (mobile-first) */
-/* General styles for the slider (mobile-first) */
-.slider {
-  position: relative;
-  overflow: hidden;
-}
 
-.slides {
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  flex: 0 0 100%;
-  box-sizing: border-box;
-}
-
-
-/* Hide navigation arrows on mobile */
-
-
-/* Show navigation arrows and adjust slider for desktop */
 /* Dots */
 
 /* bannercss end */
@@ -6114,4 +6090,3 @@ a.prev:hover svg path {
     position: relative;
   }
 }
-

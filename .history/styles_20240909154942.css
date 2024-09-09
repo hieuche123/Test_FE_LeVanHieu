@@ -1071,13 +1071,7 @@ nav {
 
 /* bannercss start */
 
-.slider {
-  margin-top: 60px;
-  position: relative;
-  width: 100%;
-  height: 550px;
-  min-width: 367px;
-}
+
 
 .slides {
   display: flex;
@@ -1161,29 +1155,7 @@ nav {
   display: none;
 }
 
-/* General styles for the slider (mobile-first) */
-/* General styles for the slider (mobile-first) */
-.slider {
-  position: relative;
-  overflow: hidden;
-}
 
-.slides {
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  flex: 0 0 100%;
-  box-sizing: border-box;
-}
-
-
-/* Hide navigation arrows on mobile */
-
-
-/* Show navigation arrows and adjust slider for desktop */
 /* Dots */
 
 /* bannercss end */
@@ -6114,4 +6086,3 @@ a.prev:hover svg path {
     position: relative;
   }
 }
-

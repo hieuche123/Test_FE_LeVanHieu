@@ -101,8 +101,8 @@ const cartItems = [
         progressFill.style.width = 100 + '%';
         progressicon.style.left = 100 + '%';
     }else {
-        progressFill.style.width = totalAmount + '%';
-        progressicon.style.left = totalAmount + '%';
+        progressFill.style.width = 75 + '%';
+        progressicon.style.left = 75 + '%';
     }
   }
   

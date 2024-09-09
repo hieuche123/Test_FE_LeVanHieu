@@ -1165,13 +1165,14 @@ nav {
 /* General styles for the slider (mobile-first) */
 .slider {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Đảm bảo không có thanh cuộn ngang */
 }
 
 .slides {
   display: flex;
   flex-direction: row;
   transition: transform 0.5s ease;
+  overflow: hidden; /* Đảm bảo không có thanh cuộn ngang */
 }
 
 .slide {
@@ -6114,4 +6115,3 @@ a.prev:hover svg path {
     position: relative;
   }
 }
-

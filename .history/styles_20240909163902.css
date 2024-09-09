@@ -4455,7 +4455,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
 
 .slide-active .banner__content {
   opacity: 1; /* Hiển thị khi được kích hoạt */
-  transform: translate(-50%, -50%) translateX(0); /* Trượt vào giữa */
+  
 }
 
 .banner__text {

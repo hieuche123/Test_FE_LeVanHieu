@@ -416,56 +416,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Sử dụng matchMedia để kiểm tra kích thước màn hình
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
 
+  function handleScreenSizeChange(e) {
+      if (e.matches) {
+//slider banner
 let slideIndex = 1;
-let startX;
-let endX;
-const slidesContainer = document.querySelector('.slides');
-
-// Track the start point of touch
-slidesContainer.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-// Track the end point of touch and determine swipe direction
-slidesContainer.addEventListener('touchend', (e) => {
-  endX = e.changedTouches[0].clientX;
-  const swipeThreshold = 50; // Adjust this value for swipe sensitivity
-  if (startX - endX > swipeThreshold) {
-    plusSlides(1); // Swipe left
-  } else if (endX - startX > swipeThreshold) {
-    plusSlides(-1); // Swipe right
-  }
-});
+showSlides(slideIndex);
 
 function plusSlides(n) {
-  if (isDesktop()) {
-    showSlides(slideIndex += n);
-  } else {
-    updateMobileSlide(n);
-  }
+  showSlides(slideIndex += n);
 }
 
-// Function to update slide for mobile
-function updateMobileSlide(n) {
-  let slides = document.querySelector('.slides');
-  let slideWidth = slides.querySelector('.slide').offsetWidth;
-  
-  // Remove the transform style when the page loads on mobile
-  if (n === 0) {
-    slides.style.transform = 'none'; // Disable transform initially
-  } else {
-    // Apply transform only when there is user interaction
-    if (n === 1) {
-      slideIndex = (slideIndex % slides.children.length) + 1; // Move to next slide
-    } else {
-      slideIndex = (slideIndex - 2 + slides.children.length) % slides.children.length + 1; // Move to previous slide
-    }
-    slides.style.transform = `translateX(${-(slideIndex - 1) * slideWidth}px)`;
-  }
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-// Function to show slides for desktop
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slide");
@@ -476,55 +444,37 @@ function showSlides(n) {
 
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    slides[i].classList.remove("slide-active");
+    slides[i].classList.remove("slide-active"); // Loại bỏ lớp slide-active khỏi tất cả các slide
   }
 
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
+  // Hiển thị slide hiện tại
   slides[slideIndex - 1].style.display = "block";
+
+  // Đảm bảo lớp animation được kích hoạt lại
   const bannerContent = slides[slideIndex - 1].querySelector('.banner__content');
   
+  // Reset trạng thái ban đầu của banner__content
   bannerContent.style.opacity = '0';
-  bannerContent.offsetHeight;
-  bannerContent.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
   
+  // Buộc trình duyệt phải tính toán lại layout (force reflow)
+  bannerContent.offsetHeight; 
+
+  // Thêm lại lớp slide-active và kích hoạt lại animation
+  bannerContent.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
   setTimeout(() => {
     bannerContent.style.opacity = '1';
+  
+
   }, 50);
 
+  // Cập nhật chấm tròn (dot)
   dots[slideIndex - 1].className += " active";
 }
-
-function isDesktop() {
-  return window.innerWidth > 768;
-}
-
-// Function to handle resize events
-window.addEventListener('resize', () => {
-  let slides = document.querySelector('.slides');
-  let slideWidth = slides.querySelector('.slide').offsetWidth;
-  
-  if (isDesktop()) {
-    showSlides(slideIndex); // Ensure slides are shown correctly for desktop
-  } else {
-    // Ensure the transform is recalculated for mobile
-    slides.style.transform = `none`; // Remove transform on resize to mobile
-    updateMobileSlide(0); // Update the slide position to initial
-  }
-});
-
-// Initialize on page load
-window.addEventListener('load', () => {
-  if (isDesktop()) {
-    showSlides(slideIndex);
-  } else {
-    updateMobileSlide(0); // Reset to the first slide for mobile without transform
-  }
-});
-
-
+}}
 
 //select color
 // Lấy tất cả các phần tử .list_color_item

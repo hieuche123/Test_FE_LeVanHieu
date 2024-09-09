@@ -575,61 +575,6 @@ span#item2-total, span#item1-total {
   align-items: center;
   border-radius: 3px;
 }
-
-.free-ship-progress-bar {
-  height: 29px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.progress-text {
-  color: #555;
-}
-
-.progress-percentage {
-  font-weight: bold;
-  color: #d73f0f;
-}
-
-.progress-bar {
-  width: 100%;
-  background-color: #e0e0e0;
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 5px;
-  background-color: #d73f0f;
-  border-radius: 25px;
-  transition: width 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.progress-icon {
-  position: absolute;
-  top: -3px;
-  transform: translateX(-50%);
-  z-index: 2; /* Đặt icon ở trên thanh tiến trình */
-}
-
-
-.goal-info {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-}
 .item-buy-total input {
   color: #212529;
   font-weight: 400;
@@ -1161,29 +1106,7 @@ nav {
   display: none;
 }
 
-/* General styles for the slider (mobile-first) */
-/* General styles for the slider (mobile-first) */
-.slider {
-  position: relative;
-  overflow: hidden;
-}
 
-.slides {
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  flex: 0 0 100%;
-  box-sizing: border-box;
-}
-
-
-/* Hide navigation arrows on mobile */
-
-
-/* Show navigation arrows and adjust slider for desktop */
 /* Dots */
 
 /* bannercss end */
@@ -6114,4 +6037,3 @@ a.prev:hover svg path {
     position: relative;
   }
 }
-

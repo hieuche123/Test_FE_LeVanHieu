@@ -1163,22 +1163,23 @@ nav {
 
 /* General styles for the slider (mobile-first) */
 /* General styles for the slider (mobile-first) */
+
 .slider {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
 }
 
 .slides {
   display: flex;
   flex-direction: row;
   transition: transform 0.5s ease;
+  overflow: hidden; /* Hide horizontal scrollbar */
 }
 
 .slide {
   flex: 0 0 100%;
   box-sizing: border-box;
 }
-
 
 /* Hide navigation arrows on mobile */
 
