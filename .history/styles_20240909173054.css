@@ -449,11 +449,10 @@ body {
 }
 span.iconcart-quatity-span {
   position: absolute;
-  font-size: 10px;
+  font-size: 11px;
   top: 18px;
   right: 36px;
   color: var(--color-white);
-  font-weight: 300;
 }
 .chat_box, .croll_top {
   display: flex;
