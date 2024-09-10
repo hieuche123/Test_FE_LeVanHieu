@@ -2125,7 +2125,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   .footer_newsletter_contact .btn_subscribe {
     height: 50px;
     border-radius: 30px;
-    padding: 10px 30px;
+    padding: 10px;
     background: var(--text-dark);
     font-size: 12px;
     font-weight: 600;
