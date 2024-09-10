@@ -493,7 +493,7 @@
         />
       </svg>
     </div>
-    <div class="notification p-relativ d-flex-center f-size-14 f-weight-4">
+    <div class="notification d-flex-center f-size-14 f-weight-4">
       Black Friday 50% Off! Limited time only:
       <span id="countdown"> 652 days : 05 hours : 09 mins : 52 secs </span>
       <div class="close_notification">
@@ -731,7 +731,7 @@
     
                   <div class="comfirm-buy d-flex">
                     <label class="container-checkbox p-relative f-size-16 d-flex-a" for="checkbox-id">I agree with the <span>terms and conditions</span>
-                      <input class="p-absolute" type="checkbox" id="checkbox-id">
+                      <input type="checkbox" id="checkbox-id">
                       <span class="checkmark"></span>
                     </label>
                   </div>
@@ -1037,11 +1037,11 @@
         </ul>
       </div>
     </nav>
-    <section class="slider p-relative">
+    <section class="slider">
       <div class="slides">
         <div class="slide">
           <img rel="preload" src="./assets/bg1.webp" alt="img logo">
-          <div class="banner__content p-absolute d-flex-c">
+          <div class="banner__content d-flex-c">
             <div class="banner__text">
               <div class="banner__text__list d-flex-c">
                 <h2 class="f-weight-4">Stylish</h2>
@@ -1054,7 +1054,7 @@
         </div>
         <div class="slide">
           <img src="./assets/bg2.webp" alt="bg2 logo" loading="lazy">
-          <div class="banner__content p-absolute d-flex-c">
+          <div class="banner__content d-flex-c">
             <div class="banner__text">
               <div class="banner__text__list">
                 <h2 class="f-weight-4">New Arrivals</h2>
@@ -1067,7 +1067,7 @@
         </div>
         <div class="slide">
           <img src="./assets/bg3.webp" alt="bg3 logo" loading="lazy">
-          <div class="banner__content p-absolute d-flex-c">
+          <div class="banner__content d-flex-c">
             <div class="banner__text">
               <div class="banner__text__list">
                 <h2 class="f-weight-4">Exclusive</h2>
@@ -1079,7 +1079,7 @@
           </div>
         </div>
       </div>
-      <a class="prev p-absolute d-flex-center" href="#" aria-label="Previous slide" onclick="plusSlides(-1)"
+      <a class="prev" href="#" aria-label="Previous slide" onclick="plusSlides(-1)"
         ><svg
           width="6"
           height="11"
@@ -1093,7 +1093,7 @@
           />
         </svg>
       </a>
-      <a class="next p-absolute d-flex-center" href="#" aria-label="next slide" onclick="plusSlides(1)"
+      <a class="next" href="#" aria-label="next slide" onclick="plusSlides(1)"
         ><svg
           width="6"
           height="11"
@@ -1123,16 +1123,16 @@
         </p>
       </div>
       <div class="categories__list">
-        <div class="categories__item p-relative">
+        <div class="categories__item">
           <img src="./assets/collection1.jpg" alt="collection">
           <button class="btn__collection btn__collection_clothing font-primary d-flex-center f-weight-5 f-size-16">Clothing</button>
-          <div class="item_img item_img_mobile p-relative">
+          <div class="item_img item_img_mobile">
             <img src="./assets/collection2.jpg" alt="collection img">
             <button class="btn__collection2 btn__collection_top font-primary d-flex-center f-weight-5 f-size-16">Sunglasses</button>
           </div>
         </div>
         <div class="categories__item__double">
-          <div class="item_img p-relative item_img1 item_img_pc">
+          <div class="item_img item_img1 item_img_pc">
             <img
               class="img1"
               src="./assets/collection2.jpg"
@@ -1140,13 +1140,13 @@
             >
             <button class="btn__collection2 font-primary d-flex-center f-weight-5 f-size-16">Sunglasses</button>
           </div>
-          <div class="item_img p-relative item_img2 item_img_pc">
+          <div class="item_img item_img2 item_img_pc">
             <img class="img2" src="./assets/bag.png" alt="bag img">
             <button class="btn__collection2 font-primary d-flex-center f-weight-5 f-size-16">Bags</button>
           </div>
         </div>
-        <div class="categories__item p-relative">
-          <div class="item_img item_img_mobile p-relative">
+        <div class="categories__item">
+          <div class="item_img item_img_mobile">
             <img src="./assets/bag.png" alt="bag img">
             <button class="btn__collection2 btn__collection_bottom font-primary d-flex-center f-weight-5 f-size-16">Bags</button>
           </div>
@@ -1164,19 +1164,19 @@
         </p>
         <div class="trending__nav">
           <ul class="trending__nav__list d-flex-center">
-            <li class="trending__nav__item f-size-14 f-weight-5 trending-active">
+            <li class="trending__nav__item trending-active">
               <a href="#">TOPS</a>
             </li>
-            <li class="trending__nav__item f-size-14 f-weight-5">
+            <li class="trending__nav__item">
               <a href="#">DRESSES</a>
             </li>
-            <li class="trending__nav__item f-size-14 f-weight-5">
+            <li class="trending__nav__item">
               <a href="#">T-SHIRT</a>
             </li>
-            <li class="trending__nav__item f-size-14 f-weight-5">
+            <li class="trending__nav__item">
               <a href="#">BAGS</a>
             </li>
-            <li class="trending__nav__item f-size-14 f-weight-5">
+            <li class="trending__nav__item">
               <a href="#">SHOES</a>
             </li>
           </ul>
@@ -1214,9 +1214,9 @@
       </div>
       <div class="new__arrivals__list">
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new1.webp" alt="new arrivals img">
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -1308,9 +1308,9 @@
           </div>
         </div>
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new2.webp" alt="new arrivals img">
-            <div class="badge p-absolute d-flex-c">
+            <div class="badge">
               <div class="badge1">
                 -10%
               </div>
@@ -1318,7 +1318,7 @@
                 Pre-Order
               </div>
             </div>
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -1411,9 +1411,9 @@
           </div>
         </div>
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new3.webp" alt="new arrivals img" loading="lazy">
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -1505,9 +1505,9 @@
           </div>
         </div>
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new4.webp" alt="new arrivals img" loading="lazy">
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -1600,58 +1600,56 @@
       </div>
     </section>
 
-    <section class="section__news__wrapper">
-          <section class="section__news d-flex">
-            <div class="section__news__item">
-              <div class="news__img__item p-relative">
-                <img
-                  class="news__item__img"
-                  src="./assets/news1.svg"
-                  alt="news img"
-                >
-                <div class="section__news__content p-absolute d-flex-c">
-                  <p class="subtext f-size-12 f-weight-5">ONLINE EXCLUSIVE</p>
-                  <h3 class="content-name f-weight-4">Oversized Shirt</h3>
-                  <div class="btn-look">
-                    <a class="f-size-12 f-weight-6" href="#">SHOP THE LOOK</a>
-                  </div>
-                </div>
-              </div>
+    <section class="section__news">
+      <div class="section__news__item">
+        <div class="news__img__item">
+          <img
+            class="news__item__img"
+            src="./assets/news1.svg"
+            alt="news img"
+          >
+          <div class="section__news__content">
+            <p class="subtext">ONLINE EXCLUSIVE</p>
+            <h3 class="content-name">Oversized Shirt</h3>
+            <div class="btn-look">
+              <a href="#">SHOP THE LOOK</a>
             </div>
-            <div class="section__news__item">
-              <div class="news__img__item p-relative">
-                <img
-                  class="news__item__img"
-                  src="./assets/news2.svg"
-                  alt="news img"
-                >
-                <div class="section__news__content p-absolute d-flex-c">
-                  <p class="subtext f-size-12 f-weight-5">BEST-SELLERS</p>
-                  <h3 class="content-name f-weight-4">Unique SS’23</h3>
-                  <div class="btn-look">
-                    <a class="f-size-12 f-weight-6" href="#">SHOP THE LOOK</a>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__news__item">
+        <div class="news__img__item">
+          <img
+            class="news__item__img"
+            src="./assets/news2.svg"
+            alt="news img"
+          >
+          <div class="section__news__content">
+            <p class="subtext">BEST-SELLERS</p>
+            <h3 class="content-name">Unique SS’23</h3>
+            <div class="btn-look">
+              <a href="#">SHOP THE LOOK</a>
             </div>
-            <div class="section__news__item">
-              <div class="news__img__item p-relative">
-                <img
-                  class="news__item__img"
-                  src="./assets/news3.svg"
-                  alt="news img"
-                  loading="lazy"
-                >
-                <div class="section__news__content p-absolute d-flex-c">
-                  <p class="subtext f-size-12 f-weight-5">LIMITED EDITION</p>
-                  <h3 class="content-name f-weight-4">Autumn Trends</h3>
-                  <div class="btn-look">
-                    <a class="f-size-12 f-weight-6" href="#">SHOP THE LOOK</a>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__news__item">
+        <div class="news__img__item">
+          <img
+            class="news__item__img"
+            src="./assets/news3.svg"
+            alt="news img"
+            loading="lazy"
+          >
+          <div class="section__news__content">
+            <p class="subtext">LIMITED EDITION</p>
+            <h3 class="content-name">Autumn Trends</h3>
+            <div class="btn-look">
+              <a href="#">SHOP THE LOOK</a>
             </div>
-          </section>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section__new__arrivals section__new__arrivals2">
@@ -1693,9 +1691,9 @@
       </div>
       <div class="new__arrivals__list2">
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new1.webp" alt="new arrivals img" >
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -1787,9 +1785,9 @@
           </div>
         </div>
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new2.webp" alt="new arrivals img">
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -1883,9 +1881,9 @@
           </div>
         </div>
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new3.webp" alt="new arrivals img" loading="lazy">
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -1977,9 +1975,9 @@
           </div>
         </div>
         <div class="new__arrivals__item">
-          <a href="#" class="img__item p-relative">
+          <a href="#" class="img__item">
             <img src="./assets/new4.webp" alt="new arrivals img" loading="lazy">
-            <div class="new_icon d-flex-c p-absolute">
+            <div class="new_icon">
               <div class="new_icon_div">
                 <svg
                   width="14"
@@ -2073,7 +2071,7 @@
       </div>
     </section>
 
-    <section class="section__new__customer d-flex-c">
+    <section class="section__new__customer">
       <div class="new__customer__title d-flex-c">
         <h2 class="section__header f-weight-4">Customer Say!</h2>
         <p class="section__description section__description__say f-weight-4 f-size-16">
@@ -2373,10 +2371,10 @@
         </p>
       </div>
       <div class="section__instagram__list">
-        <div class="section__instagram__item p-relative">
+        <div class="section__instagram__item">
           <div class="instagram__list__img">
             <img class="instagram__img" src="./assets/insta1.webp" alt="instagram__list__img">
-            <div class="instagram__icon p-absolute">
+            <div class="instagram__icon">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="26" height="26" rx="13" fill="#111111"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1875 9.79744C15.1875 8.51799 14.0882 7.49319 12.7856 7.61957L12.784 7.61972C11.7215 7.71888 10.8125 8.79554 10.8125 9.90828V10.4741C10.8125 10.7157 10.6166 10.9116 10.375 10.9116C10.1334 10.9116 9.9375 10.7157 9.9375 10.4741V9.90828C9.9375 8.39627 11.1398 6.89484 12.7019 6.74858C14.5256 6.57211 16.0625 8.00883 16.0625 9.79744V10.6024C16.0625 10.8441 15.8666 11.0399 15.625 11.0399C15.3834 11.0399 15.1875 10.8441 15.1875 10.6024V9.79744Z" fill="white"/>
@@ -2388,10 +2386,10 @@
             </div>
           </div>
         </div>
-        <div class="section__instagram__item p-relative">
+        <div class="section__instagram__item">
           <div class="instagram__list__img">
             <img class="instagram__img" src="./assets/insta2.webp" alt="instagram__list__img">
-            <div class="instagram__icon p-absolute">
+            <div class="instagram__icon">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="26" height="26" rx="13" fill="#111111"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1875 9.79744C15.1875 8.51799 14.0882 7.49319 12.7856 7.61957L12.784 7.61972C11.7215 7.71888 10.8125 8.79554 10.8125 9.90828V10.4741C10.8125 10.7157 10.6166 10.9116 10.375 10.9116C10.1334 10.9116 9.9375 10.7157 9.9375 10.4741V9.90828C9.9375 8.39627 11.1398 6.89484 12.7019 6.74858C14.5256 6.57211 16.0625 8.00883 16.0625 9.79744V10.6024C16.0625 10.8441 15.8666 11.0399 15.625 11.0399C15.3834 11.0399 15.1875 10.8441 15.1875 10.6024V9.79744Z" fill="white"/>
@@ -2403,10 +2401,10 @@
             </div>
           </div>
         </div>
-        <div class="section__instagram__item p-relative">
+        <div class="section__instagram__item">
           <div class="instagram__list__img">
             <img class="instagram__img" src="./assets/insta3.webp" alt="instagram__list__img" loading="lazy">
-            <div class="instagram__icon p-absolute">
+            <div class="instagram__icon">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="26" height="26" rx="13" fill="#111111"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1875 9.79744C15.1875 8.51799 14.0882 7.49319 12.7856 7.61957L12.784 7.61972C11.7215 7.71888 10.8125 8.79554 10.8125 9.90828V10.4741C10.8125 10.7157 10.6166 10.9116 10.375 10.9116C10.1334 10.9116 9.9375 10.7157 9.9375 10.4741V9.90828C9.9375 8.39627 11.1398 6.89484 12.7019 6.74858C14.5256 6.57211 16.0625 8.00883 16.0625 9.79744V10.6024C16.0625 10.8441 15.8666 11.0399 15.625 11.0399C15.3834 11.0399 15.1875 10.8441 15.1875 10.6024V9.79744Z" fill="white"/>
@@ -2418,10 +2416,10 @@
             </div>
           </div>
         </div>
-        <div class="section__instagram__item p-relative">
+        <div class="section__instagram__item">
           <div class="instagram__list__img">
             <img class="instagram__img" src="./assets/insta4.webp" alt="instagram__list__img" loading="lazy">
-            <div class="instagram__icon p-absolute">
+            <div class="instagram__icon">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="26" height="26" rx="13" fill="#111111"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1875 9.79744C15.1875 8.51799 14.0882 7.49319 12.7856 7.61957L12.784 7.61972C11.7215 7.71888 10.8125 8.79554 10.8125 9.90828V10.4741C10.8125 10.7157 10.6166 10.9116 10.375 10.9116C10.1334 10.9116 9.9375 10.7157 9.9375 10.4741V9.90828C9.9375 8.39627 11.1398 6.89484 12.7019 6.74858C14.5256 6.57211 16.0625 8.00883 16.0625 9.79744V10.6024C16.0625 10.8441 15.8666 11.0399 15.625 11.0399C15.3834 11.0399 15.1875 10.8441 15.1875 10.6024V9.79744Z" fill="white"/>
@@ -2433,10 +2431,10 @@
             </div>
           </div>
         </div>
-        <div class="section__instagram__item p-relative">
+        <div class="section__instagram__item">
           <div class="instagram__list__img">
             <img class="instagram__img" src="./assets/insta5.webp" alt="instagram__list__img" loading="lazy">
-            <div class="instagram__icon p-absolute">
+            <div class="instagram__icon">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="26" height="26" rx="13" fill="#111111"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1875 9.79744C15.1875 8.51799 14.0882 7.49319 12.7856 7.61957L12.784 7.61972C11.7215 7.71888 10.8125 8.79554 10.8125 9.90828V10.4741C10.8125 10.7157 10.6166 10.9116 10.375 10.9116C10.1334 10.9116 9.9375 10.7157 9.9375 10.4741V9.90828C9.9375 8.39627 11.1398 6.89484 12.7019 6.74858C14.5256 6.57211 16.0625 8.00883 16.0625 9.79744V10.6024C16.0625 10.8441 15.8666 11.0399 15.625 11.0399C15.3834 11.0399 15.1875 10.8441 15.1875 10.6024V9.79744Z" fill="white"/>
@@ -2448,10 +2446,10 @@
             </div>
           </div>
         </div>
-        <div class="section__instagram__item p-relative">
+        <div class="section__instagram__item">
           <div class="instagram__list__img">
             <img class="instagram__img" src="./assets/insta6.webp" alt="instagram__list__img" loading="lazy">
-            <div class="instagram__icon p-absolute">
+            <div class="instagram__icon">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="26" height="26" rx="13" fill="#111111"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1875 9.79744C15.1875 8.51799 14.0882 7.49319 12.7856 7.61957L12.784 7.61972C11.7215 7.71888 10.8125 8.79554 10.8125 9.90828V10.4741C10.8125 10.7157 10.6166 10.9116 10.375 10.9116C10.1334 10.9116 9.9375 10.7157 9.9375 10.4741V9.90828C9.9375 8.39627 11.1398 6.89484 12.7019 6.74858C14.5256 6.57211 16.0625 8.00883 16.0625 9.79744V10.6024C16.0625 10.8441 15.8666 11.0399 15.625 11.0399C15.3834 11.0399 15.1875 10.8441 15.1875 10.6024V9.79744Z" fill="white"/>
