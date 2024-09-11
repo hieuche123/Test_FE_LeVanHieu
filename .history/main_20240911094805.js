@@ -1,0 +1,676 @@
+
+// Thiết lập thời gian kết thúc (ví dụ: 1 ngày sau)
+const endDate = new Date(Date.now() + 652 * 24 * 60 * 60 * 1000); // 652 ngày sau
+
+function updateCountdown() {
+  const now = new Date();
+  const timeLeft = endDate - now;
+
+  if (timeLeft <= 0) {
+    document.getElementById('countdown').innerText = '00 days : 00 hours : 00 mins : 00 secs';
+    clearInterval(countdownInterval); // Dừng đếm ngược khi thời gian kết thúc
+    return;
+  }
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  document.getElementById('countdown').innerText = 
+    `${formatNumber(days)} days : ${formatNumber(hours)} hours : ${formatNumber(minutes)} mins : ${formatNumber(seconds)} secs`;
+}
+
+// Cập nhật đồng hồ mỗi giây
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// Cập nhật ngay lập tức khi tải trang
+updateCountdown();
+
+
+
+
+// closeModalBtnlayout
+const openModalBtn = document.getElementById('openModalBtn');
+const openModalBtnhome = document.querySelector('.openModalBtnhome');
+const modal__home__item__open = document.querySelector('.modal__home__item__open');
+const openModalBtnshop = document.querySelector('.openModalBtnshop');
+const turnModalBtnhome = document.getElementById('turnModalBtnhome');
+const turnModalBtnshop = document.getElementById('turnModalBtnshop');
+const turnModalBtnlayout = document.getElementById('turnModalBtnlayout');
+
+
+const modal = document.getElementById('modal');
+const modalhome = document.getElementById('modalhome');
+const modalshop = document.getElementById('modalshop');
+const modalshoplayout = document.getElementById('modalshoplayout');
+
+
+const closeModalBtn = document.getElementById('closeModalBtn');
+const closeModalBtnshop = document.getElementById('closeModalBtnshop');
+const closeModalBtnhome = document.getElementById('closeModalBtnhome');
+const closeModalBtnlayout = document.getElementById('closeModalBtnlayout');
+
+
+modal__home__item__open.addEventListener('click', () => {
+  modalshoplayout.classList.add('showlayout');
+  modalshop.classList.remove('showshop');
+
+});
+closeModalBtnshop.addEventListener('click', () => {
+  modalshop.classList.remove('showshop');
+
+});
+// Khi nhấn vào nút mở modal
+openModalBtn.addEventListener('click', () => {
+    modal.classList.add('show');
+});
+
+
+turnModalBtnlayout.addEventListener('click', () => {
+  modalshoplayout.classList.remove('showlayout');
+  modalshop.classList.add('showshop');
+});
+
+
+turnModalBtnhome.addEventListener('click', () => {
+  modalhome.classList.remove('showhome');
+  modal.classList.add('show');
+});
+turnModalBtnshop.addEventListener('click', () => {
+  modalshop.classList.remove('showshop');
+  modal.classList.add('show');
+
+});
+// Khi nhấn vào dấu X để đóng modal
+closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+});
+
+// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.remove('show');
+    }
+});
+
+// Khi nhấn vào nút mở modal
+openModalBtnhome.addEventListener('click', () => {
+    modalhome.classList.add('showhome');
+    modal.classList.remove('show');
+
+});
+
+// Khi nhấn vào dấu X để đóng modal
+closeModalBtnhome.addEventListener('click', () => {
+    modalhome.classList.remove('showhome');
+});
+
+closeModalBtnhome.addEventListener('click', () => {
+  modalhome.classList.remove('showhome');
+});
+
+// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
+modalhome.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modalhome.classList.remove('showhome');
+    }
+});
+
+
+// Khi nhấn vào nút mở modal
+openModalBtnshop.addEventListener('click', () => {
+  modalshop.classList.add('showshop');
+  modal.classList.remove('show');
+
+});
+
+// Khi nhấn vào dấu X để đóng modal
+modalshoplayout.addEventListener('click', () => {
+  modalshoplayout.classList.remove('showlayout');
+});
+
+// Khi nhấn vào bất kỳ đâu ngoài modal-content cũng đóng modal
+modalshop.addEventListener('click', (event) => {
+  if (event.target === modal) {
+      modalshop.classList.remove('showshop');
+  }
+});
+
+
+
+// Lấy tất cả các thẻ li
+const navItems = document.querySelectorAll('.trending__nav__item');
+
+// Lặp qua từng thẻ li và thêm sự kiện click
+navItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Loại bỏ class trending-active từ tất cả các thẻ li
+    navItems.forEach(nav => nav.classList.remove('trending-active'));
+
+    // Thêm class trending-active vào thẻ li được click
+    this.classList.add('trending-active');
+  });
+});
+
+  // Lấy phần tử header
+  const navHeader = document.querySelector('.nav_header');
+  let isFixed = false; // Biến để theo dõi trạng thái có đang fixed hay không
+
+  // Hàm xử lý khi cuộn chuột
+  function handleScroll() {
+    if (window.scrollY > 170) {
+      // Kiểm tra nếu chưa có class fixed-header thì mới thêm
+      if (!isFixed) {
+        isFixed = true; // Cập nhật trạng thái
+        navHeader.classList.add('fixed-header');
+
+        // Thêm class show để header trượt xuống sau một chút delay
+        setTimeout(() => {
+          navHeader.classList.add('show');
+        }, 80); // Delay nhỏ để đảm bảo hiệu ứng hoạt động mượt mà
+      }
+    } else {
+      // Kiểm tra nếu đang fixed thì mới xóa class
+      if (isFixed) {
+        isFixed = false; // Cập nhật trạng thái
+        navHeader.classList.remove('show');
+
+        // Sau khi hiệu ứng trượt lên kết thúc thì xóa class fixed-header
+          navHeader.classList.remove('fixed-header');
+      }
+    }
+  }
+
+  // Gán sự kiện scroll vào window
+  window.addEventListener('scroll', handleScroll);
+
+
+
+document.querySelector('.close_notification').addEventListener('click', function() {
+  document.querySelector('.notification').style.display = 'none';
+});
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const increaseBtn = document.querySelector('.increase_quantity');
+//   const reduceBtn = document.querySelector('.reduce_quantity');
+//   const totalNumberElem = document.querySelector('.total-number');
+//   increaseBtn.addEventListener('click', function() {
+//     let currentNumber = parseInt(totalNumberElem.textContent);
+//     totalNumberElem.textContent = currentNumber + 1;
+//   });
+
+//   reduceBtn.addEventListener('click', function() {
+//     let currentNumber = parseInt(totalNumberElem.textContent);
+//     if (currentNumber > 0) {
+//       totalNumberElem.textContent = currentNumber - 1;
+//     }
+//   });
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const increaseBtn2 = document.querySelector('.increase_quantity2');
+//   const reduceBtn2 = document.querySelector('.reduce_quantity2');
+//   const totalNumberElem2 = document.querySelector('.total-number2');
+//   increaseBtn2.addEventListener('click', function() {
+//     let currentNumber2 = parseInt(totalNumberElem2.textContent);
+//     totalNumberElem2.textContent = currentNumber2 + 1;
+//   });
+
+//   reduceBtn2.addEventListener('click', function() {
+//     let currentNumber2 = parseInt(totalNumberElem2.textContent);
+//     if (currentNumber2 > 0) {
+//       totalNumberElem2.textContent = currentNumber2 - 1;
+//     }
+//   });
+// });
+
+
+
+const openModalBtnbuy = document.getElementById('openModalBtnbuy');
+const openModalBtnbuy5 = document.getElementById('openModalBtnbuy5');
+const openModalBtnbuy6 = document.getElementById('openModalBtnbuy6');
+const btnOpenCart = document.getElementById('btnOpenCart');
+
+const modalbuy = document.getElementById('modalbuy');
+const overlay = document.getElementById('overlay');
+const closeModalBtnbuy = document.getElementById('closeModalBtnbuy');
+
+btnOpenCart.addEventListener('click', () => {
+  modalbuy.classList.add('showbuy');
+    overlay.classList.add('showbuy');
+});
+
+openModalBtnbuy.addEventListener('click', () => {
+  modalbuy.classList.add('showbuy');
+    overlay.classList.add('showbuy');
+});
+
+openModalBtnbuy5.addEventListener('click', () => {
+  modalbuy.classList.add('showbuy');
+    overlay.classList.add('showbuy');
+});
+openModalBtnbuy6.addEventListener('click', () => {
+  modalbuy.classList.add('showbuy');
+    overlay.classList.add('showbuy');
+});
+
+closeModalBtnbuy.addEventListener('click', () => {
+  modalbuy.classList.remove('showbuy');
+    overlay.classList.remove('showbuy');
+});
+
+overlay.addEventListener('click', () => {
+  modalbuy.classList.remove('showbuy');
+    overlay.classList.remove('showbuy');
+});
+
+
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+
+const list = document.querySelector('.new__arrivals__list');
+const prevButton = document.querySelector('.prev2');
+const nextButton = document.querySelector('.next2');
+
+let scrollPosition = 0;
+
+prevButton.addEventListener('click', () => {
+  if (scrollPosition > 0) {
+    scrollPosition -= (list.clientWidth / 2) + 5;
+    list.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+  }
+});
+
+nextButton.addEventListener('click', () => {
+  if (scrollPosition < list.scrollWidth - list.clientWidth) {
+    scrollPosition += (list.clientWidth / 2) + 5;
+    list.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+  }
+});
+
+
+
+const list3 = document.querySelector('.new__arrivals__list2');
+const prevButton3 = document.querySelector('.prev3');
+const nextButton3 = document.querySelector('.next3');
+
+let scrollPosition3 = 0;
+
+prevButton3.addEventListener('click', () => {
+  if (scrollPosition3 > 0) {
+    scrollPosition3 -= (list.clientWidth / 2) + 5;
+    list3.scrollTo({
+      left: scrollPosition3,
+      behavior: 'smooth'
+    });
+  }
+});
+
+nextButton3.addEventListener('click', () => {
+  if (scrollPosition3 < list.scrollWidth - list.clientWidth) {
+    scrollPosition3 += (list.clientWidth / 2) + 5;
+    list3.scrollTo({
+      left: scrollPosition3,
+      behavior: 'smooth'
+    });
+  }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Sử dụng matchMedia để kiểm tra kích thước màn hình
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+  function handleScreenSizeChange(e) {
+      if (e.matches) {
+          console.log('Running on a mobile device'); // Debug
+
+          function toggleServiceOption(imgSelector, optionSelector) {
+              const imgAdd = document.querySelector(imgSelector);
+              const serviceOption = document.querySelector(optionSelector);
+
+              if (!imgAdd || !serviceOption) {
+                  console.error(`Could not find elements: ${imgSelector} or ${optionSelector}`); // Debug
+                  return;
+              }
+
+              console.log(`Found elements: ${imgSelector} and ${optionSelector}`); // Debug
+
+              // Đặt max-height mặc định
+              const defaultHeight = serviceOption.scrollHeight + 'px';
+              serviceOption.style.maxHeight = defaultHeight; // Hiển thị phần tử ngay từ đầu
+
+              imgAdd.addEventListener('click', function() {
+                  // Toggle max-height for slide down/up effect
+                  if (serviceOption.style.maxHeight === '0px' || serviceOption.style.maxHeight === '') {
+                      serviceOption.style.maxHeight = defaultHeight;
+                      imgAdd.src = './assets/tru.png'; // Đổi src khi mở
+                      serviceOption.style.marginBottom = '10px';
+                  } else {
+                      serviceOption.style.maxHeight = '0px';
+                      imgAdd.src = './assets/cong.png'; // Đổi src khi đóng
+                      serviceOption.style.marginBottom = '0px';
+                  }
+              });
+          }
+
+          // Apply to all sections
+          toggleServiceOption('.img_add_categories', '.footer_categories_option');
+          toggleServiceOption('.img_add_service', '.footer_service_option');
+          toggleServiceOption('.img_add_newsletter', '.footer_newsletter_option');
+      } else {
+          console.log('Running on a desktop device'); // Debug
+
+          // Reset tất cả các trạng thái khi không ở giao diện mobile
+          function resetServiceOption(imgSelector, optionSelector) {
+              const imgAdd = document.querySelector(imgSelector);
+              const serviceOption = document.querySelector(optionSelector);
+
+              if (!imgAdd || !serviceOption) {
+                  return;
+              }
+
+              // Reset các thuộc tính về mặc định
+              serviceOption.style.maxHeight = null;
+              serviceOption.style.marginBottom = null;
+              imgAdd.src = './assets/cong.png'; // Đặt lại hình ảnh mặc định
+          }
+
+          // Reset all sections
+          resetServiceOption('.img_add_categories', '.footer_categories_option');
+          resetServiceOption('.img_add_service', '.footer_service_option');
+          resetServiceOption('.img_add_newsletter', '.footer_newsletter_option');
+      }
+  }
+
+  // Lắng nghe thay đổi kích thước màn hình
+  mediaQuery.addListener(handleScreenSizeChange);
+
+  // Gọi hàm một lần để xử lý ngay lập tức khi trang được tải
+  handleScreenSizeChange(mediaQuery);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('.footer__mobile__item');
+  const footerScroll = document.querySelector('.footer_scroll');
+
+  // Thiết lập vị trí mặc định cho footer_scroll (vị trí của mục thứ 3)
+  const defaultActiveItem = items[2];
+  const itemWidth = defaultActiveItem.offsetWidth;
+  const defaultScrollPosition = defaultActiveItem.offsetLeft;
+  footerScroll.style.transform = `translateX(${defaultScrollPosition}px)`;
+
+  // Sự kiện click cho các mục
+  items.forEach((item, index) => {
+      item.addEventListener('click', function() {
+          // Xóa lớp 'active' khỏi tất cả các mục
+          items.forEach(i => i.classList.remove('active'));
+
+          // Thêm lớp 'active' vào mục được click
+          this.classList.add('active');
+
+          // Tính toán vị trí của thanh footer_scroll
+          const scrollPosition = this.offsetLeft;
+
+          // Di chuyển thanh footer_scroll đến vị trí tính toán
+          footerScroll.style.transform = `translateX(${scrollPosition}px)`;
+      });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollTopButton = document.querySelector('.croll_top');
+
+  // Hiển thị hoặc ẩn nút cuộn lên dựa trên vị trí cuộn của trang
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      scrollTopButton.style.display = 'flex'; // Hiển thị nút khi cuộn xuống hơn 300px
+    } else {
+      scrollTopButton.style.display = 'none'; // Ẩn nút khi cuộn lên trên 300px
+    }
+  });
+
+  // Cuộn mượt mà lên đầu trang khi nhấn vào nút
+  scrollTopButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Cuộn mượt mà
+    });
+  });
+});
+
+
+
+let slideIndex = 1;
+let startX;
+let endX;
+const slidesContainer = document.querySelector('.slides');
+
+// Track the start point of touch
+slidesContainer.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+// Track the end point of touch and determine swipe direction
+slidesContainer.addEventListener('touchend', (e) => {
+  endX = e.changedTouches[0].clientX;
+  const swipeThreshold = 50; // Adjust this value for swipe sensitivity
+  if (startX - endX > swipeThreshold) {
+    plusSlides(1); // Swipe left
+  } else if (endX - startX > swipeThreshold) {
+    plusSlides(-1); // Swipe right
+  }
+});
+
+function plusSlides(n) {
+  if (isDesktop()) {
+    showSlides(slideIndex += n);
+  } else {
+    updateMobileSlide(n);
+  }
+}
+
+// Function to update slide for mobile
+
+
+// Function to update the dot for the current slide
+function updateDots(currentIndex) {
+  let dots = document.getElementsByClassName("dot");
+  
+  // Remove "active" class from all dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // Add "active" class to the current dot
+  dots[currentIndex - 1].className += " active";
+}
+
+// Function to show slides for desktop
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+
+  const bannerContent = slides[slideIndex - 1].querySelector('.banner__content');
+  
+ // Hàm để áp dụng hiệu ứng trượt
+function applySlideInEffect() {
+  // Đặt opacity thành 0 và áp dụng transform để di chuyển phần tử ra khỏi khung nhìn
+  bannerContent.style.opacity = '0';
+  bannerContent.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
+  bannerContent.style.transform = 'translate(-50%, -50%) translateX(-100px)';
+
+  // Đảm bảo rằng các thuộc tính CSS đã được áp dụng
+  bannerContent.offsetHeight;
+
+  // Thiết lập lại opacity và transform để bắt đầu hiệu ứng trượt và mờ dần
+  setTimeout(() => {
+    bannerContent.style.opacity = '1';
+    bannerContent.style.transform = 'translate(-50%, -50%) translateX(0)';
+  }, 50); // Thời gian trễ nhỏ để đảm bảo rằng các thuộc tính CSS đã được thiết lập
+}
+
+// Gọi hàm để áp dụng hiệu ứng ban đầu
+applySlideInEffect();
+
+// Thêm sự kiện resize để cập nhật trạng thái khi thay đổi kích thước màn hình
+window.addEventListener('resize', () => {
+  // Đặt lại trạng thái của phần tử để hiệu ứng trượt được áp dụng đúng cách
+  bannerContent.style.transition = 'none'; // Tắt chuyển đổi để áp dụng trạng thái ngay lập tức
+  bannerContent.style.transform = 'translateY(-50%)';
+  bannerContent.style.opacity = '1'; // Đảm bảo rằng opacity luôn là 1 khi co dãn màn hình
+  // Kích hoạt lại chuyển đổi cho hiệu ứng tiếp theo
+});
+  dots[slideIndex - 1].className += " active";
+}
+
+function isDesktop() {
+  return window.innerWidth > 1024;
+}
+
+// Function to handle resize events
+window.addEventListener('resize', () => {
+  let slides = document.querySelector('.slides');
+  let slideWidth = slides.querySelector('.slide').offsetWidth;
+  
+  if (isDesktop()) {
+    showSlides(slideIndex); // Ensure slides are shown correctly for desktop
+  } else {
+    // Ensure the transform is recalculated for mobile
+    slides.style.transform = `none`; // Remove transform on resize to mobile
+    updateMobileSlide(0); // Update the slide position to initial
+  }
+});
+
+// Initialize on page load
+window.addEventListener('load', () => {
+  if (isDesktop()) {
+    showSlides(slideIndex);
+  } else {
+    updateMobileSlide(0); // Reset to the first slide for mobile without transform
+  }
+});
+
+
+
+//select color
+// Lấy tất cả các phần tử .list_color_item
+const listColorItems = document.querySelectorAll('.list_color_item');
+
+// Thiết lập mặc định: .color_item_big của item đầu tiên sẽ có border màu #111111
+// listColorItems[0].querySelector('.color_item_big').style.borderColor = '#111111';
+
+// Thêm sự kiện click cho từng item
+listColorItems.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // Đặt lại tất cả .color_item_big có border màu #DDDDDD
+    listColorItems.forEach(item => {
+      item.querySelector('.color_item_big').style.borderColor = '#DDDDDD';
+    });
+
+    // Đổi màu border của item được click sang #111111
+    item.querySelector('.color_item_big').style.borderColor = '#111111';
+  });
+});
+
+// Hàm để định dạng số với 2 chữ số
+function formatNumber(number) {
+  return number < 10 ? '0' + number : number;
+}
+
+
+
+
+
+const prevBtn = document.getElementById('prevBtn-customer');
+const nextBtn = document.getElementById('nextBtn-customer');
+const sliderList = document.querySelector('.section__customer__list');
+const itemss = document.querySelectorAll('.section__customer__item');
+const itemCount = itemss.length;
+let index = 0;
+
+function updateSlider() {
+  if (itemss.length > 0 && itemss[0]) {
+    const itemWidth = itemss[0].offsetWidth;
+    sliderList.style.transform = `translateX(-${index * itemWidth}px)`;
+  } 
+}
+
+// Event listeners for the previous and next buttons
+// Event listeners for the previous and next buttons
+prevBtn.addEventListener('click', () => {
+  if (itemss.length > 0) {
+    index = (index > 0) ? index - 1 : itemCount - 1;
+    updateSlider();
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  if (itemss.length > 0) {
+    index = (index < itemCount - 1) ? index + 1 : 0;
+    updateSlider();
+  }
+});
+// Initial call to set up the slider position
+updateSlider();
+
+const listcustomer = document.querySelector('.new__customer__list');
+const prevButtoncustomer = document.querySelector('.prev-customer');
+const nextButtoncustomer = document.querySelector('.next-customer');
+
+let scrollPositioncustomer = 0;
+
+prevButtoncustomer.addEventListener('click', () => {
+  if (scrollPositioncustomer > 0) {
+    scrollPositioncustomer -= (listcustomer.clientWidth + 10);
+    if (scrollPositioncustomer < 0) {
+      scrollPositioncustomer = 0;
+    }
+    listcustomer.scrollTo({
+      left: scrollPositioncustomer,
+      behavior: 'smooth'
+    });
+  }
+});
+
+nextButtoncustomer.addEventListener('click', () => {
+  if (scrollPositioncustomer < listcustomer.scrollWidth - listcustomer.clientWidth) {
+    scrollPositioncustomer += (listcustomer.clientWidth + 11);
+    if (scrollPositioncustomer > listcustomer.scrollWidth - listcustomer.clientWidth) {
+      scrollPositioncustomer = listcustomer.scrollWidth - listcustomer.clientWidth;
+    }
+    listcustomer.scrollTo({
+      left: scrollPositioncustomer,
+      behavior: 'smooth'
+    });
+  }
+});
+
+
+
+
+
