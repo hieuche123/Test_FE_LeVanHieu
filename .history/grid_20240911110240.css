@@ -1,0 +1,64 @@
+@media (max-width: 430px) {
+  .m-sm-0 { margin: 0; }
+  .m-sm-10 { margin: 10px; }
+  .m-sm-20 { margin: 20px; }
+  .m-sm-30 { margin: 30px; }
+  .m-sm-40 { margin: 40px; }
+  .m-sm-50 { margin: 50px; }
+
+  .p-sm-x-20 {
+    padding: 0 20px;
+  }
+
+  .p-sm-20 {
+    padding: 20px;
+}
+}
+
+  
+/* Màn hình vừa (máy tính bảng nhỏ) */
+@media (min-width: 431px) and (max-width: 768px) {
+    .m-m-0 { margin: 0; }
+    .m-m-10 { margin: 10px; }
+    .m-m-20 { margin: 20px; }
+    .m-m-30 { margin: 30px; }
+    .m-m-40 { margin: 40px; }
+    .m-m-50 { margin: 50px; }
+
+    .p-m-x-20 {
+        padding: 0 20px;
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .m-md-0 { margin: 0; }
+    .m-md-10 { margin: 10px; }
+    .m-md-20 { margin: 20px; }
+    .m-md-30 { margin: 30px; }
+    .m-md-40 { margin: 40px; }
+    .m-md-50 { margin: 50px; }
+
+    .p-md-x-20 {
+        padding: 0 20px;
+    }
+
+    
+
+
+    .p-md-20 {
+        padding: 20px;
+    }
+}
+
+/* Màn hình lớn (máy tính để bàn) */
+@media (min-width: 1025px) {
+    .m-lg-b-100 {
+        margin-bottom: 100px;
+    }
+
+    .p-lg-x-30 {
+        padding: 0 30px;
+    }
+}

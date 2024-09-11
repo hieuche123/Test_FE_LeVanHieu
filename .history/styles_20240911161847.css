@@ -2089,7 +2089,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
  .footer__mobile {
   height: 75px;
   position: fixed;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   right: 0;
   background-color: var(--color-white);

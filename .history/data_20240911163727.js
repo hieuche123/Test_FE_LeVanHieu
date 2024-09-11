@@ -184,9 +184,6 @@ const cartItems = [
             {
               element.textContent = newValue - 1;
             } else{
-              if(newValue < 0) {
-                newValue = 0
-              }
               element.textContent = newValue;
             }
             if(newValue ===1) {
@@ -216,9 +213,6 @@ const cartItems = [
             {
               element2.textContent = newValue2 - 1;
             }else{
-              if(newValue2 < 0) {
-                newValue2 = 0
-              }
               element2.textContent = newValue2;
             }
             if(newValue2===1) {
@@ -241,16 +235,15 @@ const cartItems = [
           if (!isNaN(currentValue3)) {
             // Trừ đi 1
             var newValue3 = currentValue3 - currentChange;
-            
+            if(newValue3 < 0) {
+              newValue3 = 0
+            }
             // Cập nhật giá trị mới vào phần tử
             if(currentChange===0)
               {
                 element3.textContent = newValue3 - 1;
               }
               else{
-                if(newValue3 < 0) {
-                  newValue3 = 0
-                }
                 element3.textContent = newValue3;
               }
             if(newValue3 ===1) {

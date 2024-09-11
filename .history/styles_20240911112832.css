@@ -10,15 +10,6 @@
   --color-text-a: #555555;
   --max-width: 1920px;
 }
-.text-center {
-  text-align: center;
-}
-.align-start{
-  align-items: start;
-}
-.align-center{
-  align-items: center;
-}
 .p-relative {
   position: relative;
 }
@@ -105,6 +96,7 @@ a {
   font-size: 2.5rem;
   line-height: 3rem;
   color: var(--text-dark);
+  text-align: center;
 }
 
 .dots {
@@ -491,9 +483,7 @@ span.iconcart-quatity-span, span.iconcart-quatity-span3 {
   font-weight: 300;
 }
 
-.reserved {
-  text-align: center;
-}
+
 
 .chat_box, .croll_top {
   width: 60px; /* Thay đổi kích thước nếu cần */
@@ -1308,6 +1298,7 @@ nav {
 
   .section__new__arrivals .new__arrivals__title h2 {
     font-size: 36px;
+    text-align: center;
     line-height: 52.02px;
     margin: 0 ;
     color: var(--text-dark);
@@ -1316,7 +1307,13 @@ nav {
   
   .section__new__arrivals .new__arrivals__title p {
     line-height: 23.12px;
+    text-align: center;
     color: var(--color-text-a);
+  }
+  
+  .new__arrivals__list2 {
+    display: flex;
+    gap: 10px;
   }
   
   .new__arrivals__item {
@@ -1392,6 +1389,7 @@ nav {
   .new__arrivals__list2 {
     overflow-x: auto; /* Cuộn ngang nếu cần */
     flex-wrap: nowrap; /* Không cho các mục xuống dòng */
+    gap: 10px; /* Giảm khoảng cách giữa các mục */
     margin-top: -14px;
 
   }
@@ -1507,13 +1505,15 @@ button#prevBtn {
 }
 .section__news {
   width: 100%;
+  gap: 20px; /* Khoảng cách giữa các phần tử */
   padding-bottom: 60px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 80px;
+  padding-top: 60px;
   overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
   scroll-snap-type: x mandatory; /* Snap vào các phần tử khi cuộn */
   -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên iOS */
+  margin-top: 7px;
   margin-bottom: -14px;
   
 }
@@ -1591,6 +1591,9 @@ span.new_prices.new_prices_new {
   margin-bottom: 4px;
   color: var(--text-dark);
 }
+footer.footer__section {
+  margin-top: 41px;
+}
 
 .section__instagram__desc {
   color: var(--color-text-a);
@@ -1630,6 +1633,7 @@ span.new_prices.new_prices_new {
 .section__new__customer {
   width: 100%;
   margin: 0 auto;
+  gap: 50px;
   margin-bottom: -32px;
 }
 
@@ -1716,6 +1720,7 @@ span.new_prices.new_prices_new {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   margin-top: -32px;
 }
 .controls-customer {
@@ -1725,6 +1730,9 @@ span.new_prices.new_prices_new {
 width: 40px;
 height: 40px;
 border-radius: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 button#nextBtn-customer {
@@ -2069,6 +2077,8 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
   }
   
   .footer__bottom__right {
+    display: flex;
+    gap: 5px;
     overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
   }
   
@@ -2089,7 +2099,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
  .footer__mobile {
   height: 75px;
   position: fixed;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   right: 0;
   background-color: var(--color-white);
@@ -3027,6 +3037,7 @@ span.iconcart-quatity-span2 {
     
     .section__new__arrivals .new__arrivals__title h2 {
       font-size: 36px;
+      text-align: center;
       line-height: 52.02px;
       margin: 0 ;
       color: var(--text-dark);
@@ -3035,13 +3046,19 @@ span.iconcart-quatity-span2 {
     
     .section__new__arrivals .new__arrivals__title p {
       line-height: 23.12px;
+      text-align: center;
       color: var(--color-text-a);
     }
     
     .new__arrivals__list {
       display: flex;
     }
-  
+    .new__arrivals__list2 {
+      display: flex;
+      gap: 10px;
+    }
+    
+    
     .new__arrivals__item {
       cursor: pointer;
       display: flex;
@@ -3103,11 +3120,11 @@ span.iconcart-quatity-span2 {
     .new__arrivals__list {
       overflow-x: auto; /* Cuộn ngang nếu cần */
       flex-wrap: nowrap; /* Không cho các mục xuống dòng */
-      gap: 10px; /* Giảm khoảng cách giữa các mục */
     }
     .new__arrivals__list2 {
       overflow-x: auto; /* Cuộn ngang nếu cần */
       flex-wrap: nowrap; /* Không cho các mục xuống dòng */
+      gap: 10px; /* Giảm khoảng cách giữa các mục */
     }
     .new__arrivals__item {
       flex: 0 0 calc(50% - 5px); /* 50% với khoảng cách giữa các mục */
@@ -3209,6 +3226,7 @@ span.iconcart-quatity-span2 {
     padding-bottom: 60px;
     padding-left: 20px;
     padding-right: 20px;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
     padding-bottom: 60px;
     padding-top: 60px;
     overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
@@ -3327,7 +3345,7 @@ span.iconcart-quatity-span2 {
   .section__new__customer .new__customer__title {
     line-height: 65.03px;
     gap: 15px;
-    margin-top: 40px;
+    margin-top: 60px;
   }
   
   .section__new__customer .new__customer__title h2 {
@@ -3674,6 +3692,7 @@ span.iconcart-quatity-span2 {
 
 .section__new__arrivals .new__arrivals__title h2 {
   font-size: 45px;
+  text-align: center;
   margin: 0 ;
   color: var(--text-dark);
   margin-bottom: 5px;
@@ -3682,7 +3701,17 @@ span.iconcart-quatity-span2 {
 .section__new__arrivals .new__arrivals__title p {
   font-size: 16px;
   line-height: 23.12px;
+  text-align: center;
   color: var(--color-text-a);
+}
+
+.new__arrivals__list {
+  display: flex;
+  gap: 30px;
+}
+.new__arrivals__list2 {
+  display: flex;
+  gap: 30px;
 }
 
 .new__arrivals__item {
@@ -3721,10 +3750,12 @@ span.iconcart-quatity-span2 {
 .new__arrivals__list {
   overflow-x: auto; /* Cuộn ngang nếu cần */
   flex-wrap: nowrap; /* Không cho các mục xuống dòng */
+  gap: 20px; /* Giảm khoảng cách giữa các mục */
 }
 .new__arrivals__list2 {
   overflow-x: auto; /* Cuộn ngang nếu cần */
   flex-wrap: nowrap; /* Không cho các mục xuống dòng */
+  gap: 20px; /* Giảm khoảng cách giữa các mục */
 }
 .new__arrivals__item {
   flex: 0 0 calc(50% - 10px); /* 50% với khoảng cách giữa các mục */
@@ -3935,6 +3966,8 @@ span.iconcart-quatity-span2 {
   }
   .nav__btn .nav__icon {
     align-items: center;
+    gap: 20px;
+
   }
   .nav__btn .nav__icon li{
     cursor: pointer;
@@ -4156,7 +4189,7 @@ div#openModalBtnbuy {
   max-width: 1410px;
   margin: 100px auto;
   gap: 32px;
-  margin-bottom: 90px;
+  margin-bottom: 89px;
 }
 
 .section__collections .collections__title {
@@ -4183,6 +4216,7 @@ div#openModalBtnbuy {
 
 .section__collections  .categories__list {
   width: 100%;
+  display: flex;
   margin-top: 2px;
 }
 
@@ -4329,7 +4363,7 @@ span.new_prices.new_prices_new {
   width: 50px;
   height: 25px;
   background-color: #D73F0F;
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 13px;
   font-weight: 400;
   text-align: center;
@@ -4344,7 +4378,7 @@ span.new_prices.new_prices_new {
   width: 75px;
   height: 25px;
   background-color: #177983;
-  color: var(--color-white);
+  color: #FFFFFF;
   font-size: 13px;
   font-weight: 400;
   border-radius: 30px;
@@ -4413,12 +4447,14 @@ li.nav__links__item.nav__links__item2 {
 }
 .section__new__arrivals .new__arrivals__title h2 {
   font-size: 45px;
+  text-align: center;
   margin: 0 ;
   color: var(--text-dark);
   margin-bottom: 11px;
 }
 .section__new__arrivals .new__arrivals__title .section__header-trending {
   font-size: 45px;
+  text-align: center;
   margin: 0 ;
 }
 
@@ -4428,12 +4464,21 @@ li.nav__links__item.nav__links__item2 {
 
 .section__new__arrivals .new__arrivals__title p {
   line-height: 23.12px;
+  text-align: center;
   color: var(--color-text-a);
   display: none;
   margin-top: -3px;
 }
 .section__new__arrivals .new__arrivals__title .section__description2 {
   display: block;
+}
+.new__arrivals__list {
+  display: flex;
+  gap: 30px;
+}
+.new__arrivals__list2 {
+  display: flex;
+  gap: 30px;
 }
 
 .new__arrivals__item {
@@ -4462,6 +4507,7 @@ li.nav__links__item.nav__links__item2 {
   flex-wrap: wrap; /* Cho phép các mục xuống dòng trên màn hình lớn */
   overflow: hidden; /* Ẩn nội dung tràn */
   scroll-behavior: smooth; /* Cuộn mượt mà */
+  gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
   margin-top: 2px;
 }
 .new__arrivals__list2 {
@@ -4469,6 +4515,7 @@ li.nav__links__item.nav__links__item2 {
   flex-wrap: wrap; /* Cho phép các mục xuống dòng trên màn hình lớn */
   overflow: hidden; /* Ẩn nội dung tràn */
   scroll-behavior: smooth; /* Cuộn mượt mà */
+  gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
   margin-top: 2px;
 }
 .new__arrivals__item {
@@ -4500,6 +4547,7 @@ li.nav__links__item.nav__links__item2 {
 .new__arrivals__item .img__item:hover img {
   transform: scale(1.1); /* Phóng to ảnh khi hover */
 }
+
 
 .tooltip2 {
   display: block;
@@ -4565,10 +4613,12 @@ li.nav__links__item.nav__links__item2 {
 }
 
 /* Show tooltip on hover */
+
 .list_color_item:hover .tooltip {
   opacity: 1;
   visibility: visible;
   z-index: 1000;
+  
 }
 
 .new_icon_div:hover .tooltip2 {
@@ -4577,14 +4627,19 @@ li.nav__links__item.nav__links__item2 {
   z-index: 1000;
   
 }
+
 /* section__new__arrivals end */
 
 /* section__news start */
 .section__news {
   max-width: 1860px;
+  /* height: 800px; */
+  gap: 30px;
   justify-content: space-between; /* Đảm bảo khoảng cách đều giữa các phần tử */
   margin: 0 auto;
+  margin-bottom: 90px;
   padding: 0 30px;
+
 }
 
 .section__news__item {
@@ -4631,6 +4686,9 @@ li.nav__links__item.nav__links__item2 {
   margin-top: 8px;
 }
 /* section__news end */
+
+
+
 
 /* section__customer start */
 .section__customer {
@@ -4686,8 +4744,10 @@ li.nav__links__item.nav__links__item2 {
   color: var(--text-dark);
 }
 .section__instagram__list {
+  height: 231px;
   overflow-x: hidden; /* Loại bỏ thanh cuộn ngang */
   justify-content: space-between;
+  gap: 5px;
   flex-wrap: wrap;
 }
 .instagram__list__img {
@@ -4712,6 +4772,9 @@ li.nav__links__item.nav__links__item2 {
 .section__instagram__item {
   flex: 0 0 calc(16.66% - 5px); /* Hiển thị 6 mục trên một hàng, trừ đi khoảng cách giữa các mục */
 }
+.section__instagram {
+  margin-top: 82px;
+}
 /* section__instagram end */
 
 
@@ -4726,6 +4789,7 @@ li.nav__links__item.nav__links__item2 {
 .new__customer__item {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .new__customer__item .img__item {
@@ -4794,12 +4858,17 @@ li.nav__links__item.nav__links__item2 {
   color: var(--color-text-a);
 }
 
+.new__customer__list {
+  display: flex;
+  gap: 30px;
+}
 .customer__avatar__desc p {
   line-height: 24px;
 }
 .new__customer__item {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 footer.footer__section {
   margin-top: 0px;
@@ -4836,7 +4905,7 @@ footer.footer__section {
 /* General styles */
 
 .section__new__customer {
-  padding-bottom: 84px;
+  padding-bottom: 100px;
 }
 
 .new__customer__list {
@@ -4845,6 +4914,7 @@ footer.footer__section {
   flex-wrap: wrap; /* Cho phép các mục xuống dòng trên màn hình lớn */
   overflow: hidden; /* Ẩn nội dung tràn */
   scroll-behavior: smooth; /* Cuộn mượt mà */
+  gap: 30px; /* Khoảng cách giữa các mục trên màn hình lớn */
   margin-top: 2px;
 }
 
@@ -5173,6 +5243,8 @@ footer.footer__section {
 }
 
 .footer__bottom__right {
+  display: flex;
+  gap: 5px;
   overflow: hidden;
 }
 
@@ -5327,8 +5399,11 @@ a.prev:hover svg path {
   width: 1047px;
   border-radius: 0 0 5px 5px;
 } 
-li.shop-dropdown-left, li.shop-dropdown-center {
-  align-items: start;
+.shop-dropdown-left {
+  gap: 20px;
+  width: 150px;
+}
+.shop-dropdown-center {
   gap: 20px;
   width: 150px;
 }
@@ -5447,9 +5522,6 @@ li.shop-dropdown-left, li.shop-dropdown-center {
 
 }
 @media (min-width: 1025px) and (max-width: 1350px) {
-  .section__collections .categories__list, .section__new__arrivals, .section__new__customer, .section__instagram  {
-    padding: 0 30px;
-  }
   .section__news__wrapper {
     padding-left: 0px;
   }
@@ -5478,18 +5550,9 @@ li.shop-dropdown-left, li.shop-dropdown-center {
     width: 6px;
     height: 12px;
   }
-  .section__instagram  {
-    margin-top: 80px;
-  }
 
 }
 @media (min-width: 1200px) and (max-width: 1449px) {
-  .section__instagram  {
-    margin-top: 80px;
-  }
-  .section__collections .categories__list, .section__new__arrivals, .section__new__customer, .section__instagram  {
-    padding: 0 30px;
-  }
   .nav__links {
     left: 44px;
   }
@@ -5546,6 +5609,9 @@ li.shop-dropdown-left, li.shop-dropdown-center {
   }
 }
 @media (max-width: 431px) {
+  .section__news {
+    gap: 10px;
+  }
   .news__img__item {
     width: 230px;
     overflow: hidden;

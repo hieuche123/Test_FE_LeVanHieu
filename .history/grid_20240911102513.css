@@ -1,0 +1,13 @@
+@media (max-width: 430px) {
+    
+  }
+  
+/* Màn hình vừa (máy tính bảng nhỏ) */
+@media (min-width: 431px) and (max-width: 768px) {
+
+}
+
+/* Màn hình lớn (máy tính để bàn) */
+@media (min-width: 900px) {
+
+}

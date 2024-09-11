@@ -10,9 +10,6 @@
   --color-text-a: #555555;
   --max-width: 1920px;
 }
-.text-center {
-  text-align: center;
-}
 .align-start{
   align-items: start;
 }
@@ -105,6 +102,7 @@ a {
   font-size: 2.5rem;
   line-height: 3rem;
   color: var(--text-dark);
+  text-align: center;
 }
 
 .dots {
@@ -491,9 +489,7 @@ span.iconcart-quatity-span, span.iconcart-quatity-span3 {
   font-weight: 300;
 }
 
-.reserved {
-  text-align: center;
-}
+
 
 .chat_box, .croll_top {
   width: 60px; /* Thay đổi kích thước nếu cần */
@@ -1308,6 +1304,7 @@ nav {
 
   .section__new__arrivals .new__arrivals__title h2 {
     font-size: 36px;
+    text-align: center;
     line-height: 52.02px;
     margin: 0 ;
     color: var(--text-dark);
@@ -1316,6 +1313,7 @@ nav {
   
   .section__new__arrivals .new__arrivals__title p {
     line-height: 23.12px;
+    text-align: center;
     color: var(--color-text-a);
   }
   
@@ -1510,10 +1508,11 @@ button#prevBtn {
   padding-bottom: 60px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 80px;
+  padding-top: 60px;
   overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
   scroll-snap-type: x mandatory; /* Snap vào các phần tử khi cuộn */
   -webkit-overflow-scrolling: touch; /* Cuộn mượt mà trên iOS */
+  margin-top: 7px;
   margin-bottom: -14px;
   
 }
@@ -2089,7 +2088,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
  .footer__mobile {
   height: 75px;
   position: fixed;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   right: 0;
   background-color: var(--color-white);
@@ -3027,6 +3026,7 @@ span.iconcart-quatity-span2 {
     
     .section__new__arrivals .new__arrivals__title h2 {
       font-size: 36px;
+      text-align: center;
       line-height: 52.02px;
       margin: 0 ;
       color: var(--text-dark);
@@ -3035,6 +3035,7 @@ span.iconcart-quatity-span2 {
     
     .section__new__arrivals .new__arrivals__title p {
       line-height: 23.12px;
+      text-align: center;
       color: var(--color-text-a);
     }
     
@@ -3327,7 +3328,7 @@ span.iconcart-quatity-span2 {
   .section__new__customer .new__customer__title {
     line-height: 65.03px;
     gap: 15px;
-    margin-top: 40px;
+    margin-top: 60px;
   }
   
   .section__new__customer .new__customer__title h2 {
@@ -3674,6 +3675,7 @@ span.iconcart-quatity-span2 {
 
 .section__new__arrivals .new__arrivals__title h2 {
   font-size: 45px;
+  text-align: center;
   margin: 0 ;
   color: var(--text-dark);
   margin-bottom: 5px;
@@ -3682,6 +3684,7 @@ span.iconcart-quatity-span2 {
 .section__new__arrivals .new__arrivals__title p {
   font-size: 16px;
   line-height: 23.12px;
+  text-align: center;
   color: var(--color-text-a);
 }
 
@@ -4156,7 +4159,7 @@ div#openModalBtnbuy {
   max-width: 1410px;
   margin: 100px auto;
   gap: 32px;
-  margin-bottom: 90px;
+  margin-bottom: 89px;
 }
 
 .section__collections .collections__title {
@@ -4413,12 +4416,14 @@ li.nav__links__item.nav__links__item2 {
 }
 .section__new__arrivals .new__arrivals__title h2 {
   font-size: 45px;
+  text-align: center;
   margin: 0 ;
   color: var(--text-dark);
   margin-bottom: 11px;
 }
 .section__new__arrivals .new__arrivals__title .section__header-trending {
   font-size: 45px;
+  text-align: center;
   margin: 0 ;
 }
 
@@ -4428,6 +4433,7 @@ li.nav__links__item.nav__links__item2 {
 
 .section__new__arrivals .new__arrivals__title p {
   line-height: 23.12px;
+  text-align: center;
   color: var(--color-text-a);
   display: none;
   margin-top: -3px;
@@ -4686,6 +4692,7 @@ li.nav__links__item.nav__links__item2 {
   color: var(--text-dark);
 }
 .section__instagram__list {
+  height: 231px;
   overflow-x: hidden; /* Loại bỏ thanh cuộn ngang */
   justify-content: space-between;
   flex-wrap: wrap;
@@ -4726,6 +4733,7 @@ li.nav__links__item.nav__links__item2 {
 .new__customer__item {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .new__customer__item .img__item {
@@ -4836,7 +4844,7 @@ footer.footer__section {
 /* General styles */
 
 .section__new__customer {
-  padding-bottom: 84px;
+  padding-bottom: 100px;
 }
 
 .new__customer__list {
@@ -5447,9 +5455,6 @@ li.shop-dropdown-left, li.shop-dropdown-center {
 
 }
 @media (min-width: 1025px) and (max-width: 1350px) {
-  .section__collections .categories__list, .section__new__arrivals, .section__new__customer, .section__instagram  {
-    padding: 0 30px;
-  }
   .section__news__wrapper {
     padding-left: 0px;
   }
@@ -5478,18 +5483,9 @@ li.shop-dropdown-left, li.shop-dropdown-center {
     width: 6px;
     height: 12px;
   }
-  .section__instagram  {
-    margin-top: 80px;
-  }
 
 }
 @media (min-width: 1200px) and (max-width: 1449px) {
-  .section__instagram  {
-    margin-top: 80px;
-  }
-  .section__collections .categories__list, .section__new__arrivals, .section__new__customer, .section__instagram  {
-    padding: 0 30px;
-  }
   .nav__links {
     left: 44px;
   }

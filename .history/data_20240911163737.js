@@ -184,9 +184,6 @@ const cartItems = [
             {
               element.textContent = newValue - 1;
             } else{
-              if(newValue < 0) {
-                newValue = 0
-              }
               element.textContent = newValue;
             }
             if(newValue ===1) {
@@ -216,9 +213,6 @@ const cartItems = [
             {
               element2.textContent = newValue2 - 1;
             }else{
-              if(newValue2 < 0) {
-                newValue2 = 0
-              }
               element2.textContent = newValue2;
             }
             if(newValue2===1) {

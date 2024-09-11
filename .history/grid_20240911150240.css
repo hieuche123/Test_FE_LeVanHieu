@@ -1,0 +1,132 @@
+@media (max-width: 430px) {
+  .m-sm-0 { margin: 0; }
+  .m-sm-10 { margin: 10px; }
+  .m-sm-20 { margin: 20px; }
+  .m-sm-30 { margin: 30px; }
+  .m-sm-40 { margin: 40px; }
+  .m-sm-50 { margin: 50px; }
+  
+  .m-sm-t-40 {
+    margin-top: 40px;
+  }
+
+  .p-sm-x-20 {
+    padding: 0 20px;
+  }
+
+  .p-sm-20 {
+    padding: 20px;
+  }
+
+  .gap-sm-10 {
+    gap: 10px;
+  }
+  .gap-sm-20 {
+    gap: 20px;
+  }
+  .gap-sm-30 {
+    gap: 30px;
+  }
+  .gap-sm-50 {
+    gap: 50px;
+  }
+}
+
+  
+/* Màn hình vừa (máy tính bảng nhỏ) */
+@media (min-width: 431px) and (max-width: 768px) {
+    .m-m-0 { margin: 0; }
+    .m-m-10 { margin: 10px; }
+    .m-m-20 { margin: 20px; }
+    .m-m-30 { margin: 30px; }
+    .m-m-40 { margin: 40px; }
+    .m-m-50 { margin: 50px; }
+
+    .p-m-x-20 {
+        padding: 0 20px;
+    }
+
+    .p-m-20 {
+        padding: 20px;
+    }
+
+    .gap-m-10 {
+        gap: 10px;
+    }
+    .gap-m-20 {
+    gap: 20px;
+    }
+    .gap-m-30 {
+    gap: 30px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .m-md-0 { margin: 0; }
+    .m-md-10 { margin: 10px; }
+    .m-md-20 { margin: 20px; }
+    .m-md-30 { margin: 30px; }
+    .m-md-40 { margin: 40px; }
+    .m-md-50 { margin: 50px; }
+
+    .m-md-t-40 {
+        margin-top: 40px;
+    }
+
+    .p-md-x-20 {
+        padding: 0 20px;
+    }
+
+    
+
+
+    .p-md-20 {
+        padding: 20px;
+    }
+
+    .gap-md-10 {
+        gap: 10px;
+    }
+    .gap-md-20 {
+    gap: 20px;
+    }
+    .gap-md-30 {
+    gap: 30px;
+    }
+}
+
+/* Màn hình lớn (máy tính để bàn) */
+@media (min-width: 1025px) {
+    .m-lg-t-2 {
+        margin-top: 2px;
+    }
+    .m-lg-t-80 {
+        margin-top: 80px;
+    }
+    .m-lg-b-90 {
+        margin-bottom: 90px;
+    }
+    .m-lg-b-100 {
+        margin-bottom: 100px;
+    }
+
+    .p-lg-x-30 {
+        padding: 0 30px;
+    }
+    .gap-lg-5 {
+        gap: 5px;
+    }
+    .gap-lg-10 {
+        gap: 10px;
+    }
+    .gap-lg-16 {
+        gap: 16px;
+    }
+    .gap-lg-20 {
+    gap: 20px;
+    }
+    .gap-lg-30 {
+    gap: 30px;
+    }
+}

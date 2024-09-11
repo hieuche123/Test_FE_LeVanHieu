@@ -870,8 +870,8 @@
               fill="#555555"
             />
           </svg>
-          <ul class="shop-dropdown">
-            <li class="shop-dropdown-left align-start d-flex-c">
+          <div class="shop-dropdown">
+            <div class="shop-dropdown-left d-flex-c">
               <h3 class="dropdown-left-title">Shop Layouts</h3>
               <ul class="dropdown-left-content d-flex-c">
                 <li><a class="color-a" href="#">Filter Left Sidebar</a></li>
@@ -884,9 +884,9 @@
                 <li><a class="color-a" href="#">Grid 3 Columns</a></li>
                 <li><a class="color-a" href="#">Grid 4 Columns</a></li>
               </ul>
-            </li>
+            </div>
 
-            <li class="shop-dropdown-center align-start d-flex-c">
+            <div class="shop-dropdown-center d-flex-c">
               <h3 class="dropdown-center-title">Shop Layouts</h3>
               <ul class="dropdown-center-content d-flex-c">
                 <li><a class="color-a" href="#">Filter Left Sidebar</a></li>
@@ -899,9 +899,9 @@
                 <li><a class="color-a" href="#">Grid 3 Columns</a></li>
                 <li><a class="color-a" href="#">Grid 4 Columns</a></li>
               </ul>
-            </li>
+            </div>
 
-            <li class="shop-dropdown-right">
+            <div class="shop-dropdown-right">
               <div class="dropdown-right-item p-relative">
                 <img class="dropdown-right-item1 p-relative" src="./assets/shop1.webp" alt="dropdown" loading="lazy">
                 <div class="btn-layout-shop f-weight-5 f-size-16">
@@ -914,8 +914,8 @@
                   Underwear
                 </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </li>
         <li class="nav__links__item">
           <a href="/chef">Products</a
@@ -970,7 +970,7 @@
       </ul>
       <div class="nav__btn">
         <!-- <button class="btn"><i class="ri-shopping-bag-fill"></i></button> -->
-        <ul class="nav__icon d-flex gap-lg-20">
+        <ul class="nav__icon d-flex">
           <li class="nav__icon_li">
             <svg
               width="17"
@@ -1115,15 +1115,15 @@
       </div>
     </section>
 
-    <section class="section__collections p-sm-x-20 p-m-x-20 p-md-x-20 d-flex-c">
+    <section class="section__collections p-sm-x-20 .p-m-x-20 d-flex-c">
       <div class="collections__title d-flex-c">
-        <h2 class="section__header text-center f-weight-4">Featured Collections</h2>
+        <h2 class="section__header f-weight-4">Featured Collections</h2>
         <p class="section__description f-size-16 f-weight-4">
           Elevate your style with our chic featured collection where fashion
           meets flair effortlessly.
         </p>
       </div>
-      <div class="categories__list gap-sm-10 gap-m-10 gap-md-20 gap-lg-30 d-flex m-lg-t-2">
+      <div class="categories__list">
         <div class="categories__item p-relative">
           <img src="./assets/collection1.jpg" alt="collection">
           <button class="btn__collection btn__collection_clothing font-primary d-flex-center f-weight-5 f-size-16">Clothing</button>
@@ -1157,9 +1157,9 @@
       </div>
     </section>
 
-    <section class="section__new__arrivals p-xl-x-30 p-sm-x-20 p-m-x-20 p-md-20 m-lg-b-90">
-      <div class="new__arrivals__title text-center trending__arrivals__title d-flex-c">
-        <h2 class="section__header-trending text-center f-weight-4">Trending this Week</h2>
+    <section class="section__new__arrivals">
+      <div class="new__arrivals__title trending__arrivals__title d-flex-c">
+        <h2 class="section__header-trending f-weight-4">Trending this Week</h2>
         <p class="section__description-trending f-weight-4 f-size-16">
           Here’s some of our most popular products people are in love with.
         </p>
@@ -1213,7 +1213,7 @@
           </svg>
         </button>
       </div>
-      <div class="new__arrivals__list gap-sm-10 gap-m-10 gap-md-20 gap-lg-30">
+      <div class="new__arrivals__list">
         <div class="new__arrivals__item">
           <a href="#" class="img__item p-relative">
             <img src="./assets/new1.webp" alt="new arrivals img">
@@ -1602,7 +1602,7 @@
     </section>
 
     <section class="section__news__wrapper">
-          <div class="section__news d-flex gap-sm-10 gap-m-10 gap-md-20 gap-lg-30 m-lg-b-90">
+          <section class="section__news d-flex">
             <div class="section__news__item">
               <div class="news__img__item p-relative">
                 <img
@@ -1652,12 +1652,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </section>
     </section>
 
-    <section class="section__new__arrivals p-xl-x-30 section__new__arrivals2 p-sm-x-20 p-m-x-20 p-md-20 m-lg-b-90">
-      <div class="new__arrivals__title text-center new__arrivals__title2">
-        <h2 class="section__header text-center f-weight-4">New Arrivals</h2>
+    <section class="section__new__arrivals section__new__arrivals2">
+      <div class="new__arrivals__title new__arrivals__title2">
+        <h2 class="section__header f-weight-4">New Arrivals</h2>
         <p class="section__description2 f-weight-4 f-size-16">
           Here’s some of our new arrivals products people are in love with.
         </p>
@@ -1692,7 +1692,7 @@
           </svg>
         </button>
       </div>
-      <div class="new__arrivals__list2 gap-sm-10 gap-m-10 gap-md-20 gap-lg-30 d-flex">
+      <div class="new__arrivals__list2">
         <div class="new__arrivals__item">
           <a href="#" class="img__item p-relative">
             <img src="./assets/new1.webp" alt="new arrivals img" >
@@ -2074,16 +2074,16 @@
       </div>
     </section>
 
-    <section class="section__new__customer gap-sm-50 d-flex-c p-sm-x-20 p-m-x-20 p-md-x-20">
+    <section class="section__new__customer d-flex-c">
       <div class="new__customer__title d-flex-c">
-        <h2 class="section__header text-center f-weight-4">Customer Say!</h2>
+        <h2 class="section__header f-weight-4">Customer Say!</h2>
         <p class="section__description section__description__say f-weight-4 f-size-16">
           Customers love our products and we always strive to please them all.
         </p>
       </div>
-      <div class="slider__controls-customer m-md-t-20 gap-sm-10">
+      <div class="slider__controls-customer">
         <div class="controls-customer-btn">
-          <button class="prev-customer d-flex-center" id="prevBtn-customer" aria-label="prevBtn-customer">
+          <button class="prev-customer" id="prevBtn-customer" aria-label="prevBtn-customer">
             <svg
               width="6"
               height="10"
@@ -2097,7 +2097,7 @@
               />
             </svg>
           </button>
-          <button class="next-customer d-flex-center" id="nextBtn-customer" aria-label="nextBtn-customer">
+          <button class="next-customer" id="nextBtn-customer" aria-label="nextBtn-customer">
             <svg
               width="6"
               height="10"
@@ -2113,8 +2113,8 @@
           </button>
         </div>
       </div>
-      <div class="new__customer__list m-md-t-40 gap-lg-30 d-flex">
-        <div class="new__customer__item d-flex-c gap-lg-16">
+      <div class="new__customer__list">
+        <div class="new__customer__item d-flex-c">
           <div class="customer__avatar">
             <img src="./assets/avatar1.png" alt="customer__avatar">
           </div>
@@ -2192,7 +2192,7 @@
             <p class="f-weight-4 f-size-16">Algistino Lionel - Verified Buyer</p>
           </div>
         </div>
-        <div class="new__customer__item d-flex-c gap-lg-16">
+        <div class="new__customer__item d-flex-c">
           <div class="customer__avatar">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect width="60" height="60" rx="30" fill="url(#pattern0_0_462)"/>
@@ -2277,7 +2277,7 @@
             <p class="f-weight-4 f-size-16">Algistino Lionel - Verified Buyer</p>
           </div>
         </div>
-        <div class="new__customer__item d-flex-c gap-lg-16">
+        <div class="new__customer__item d-flex-c">
           <div class="customer__avatar">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <rect width="60" height="60" rx="30" fill="url(#pattern0_0_471)"/>
@@ -2365,7 +2365,7 @@
       </div>
     </section>
 
-    <section class="section__instagram p-sm-20 p-m-20 p-md-20 m-md-t-40">
+    <section class="section__instagram">
       <div class="section__instagram__head d-flex-c">
         <h2 class="section__instagram__title f-weight-4">Shop by Gram</h2>
         <p class="section__instagram__desc f-weight-4 f-size-16">
@@ -2373,7 +2373,7 @@
           another.
         </p>
       </div>
-      <div class="section__instagram__list gap-lg-5">
+      <div class="section__instagram__list">
         <div class="section__instagram__item p-relative">
           <div class="instagram__list__img">
             <img class="instagram__img" src="./assets/insta1.webp" alt="instagram__list__img">
@@ -2466,7 +2466,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer__section m-sm-t-40">
+    <footer class="footer__section">
       <div class="section__footer">
         <div class="footer__left">
           <div class="footer__left__about d-flex-c">
@@ -2595,8 +2595,8 @@
                 
             </div>
           </div>
-          <div class="f-size-16 f-weight-4 reserved">© 2023 Umino Store. All Rights Reserved.</div>
-          <div class="footer__bottom__right gap-lg-5 d-flex">
+          <div class="f-size-16 f-weight-4">© 2023 Umino Store. All Rights Reserved.</div>
+          <div class="footer__bottom__right">
             <img src="./assets/1.webp" alt="img visa">
             <img src="./assets/2.webp" alt="img visa">
             <img src="./assets/3.webp" alt="img visa">

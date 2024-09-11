@@ -78,21 +78,10 @@ const cartItems = [
   let currentChange = 0;
   // Hàm thay đổi số lượng sản phẩm
   function changeQuantity(itemId, change) {
+    currentChange = change;
     const element = document.querySelector('.iconcart-quatity-span');
     const element2 = document.querySelector('.iconcart-quatity-span2');
     const element3 = document.querySelector('.iconcart-quatity-span3');
-
-    const item = cartItems.find(item => item.id === itemId);
-    const quantityInput = document.getElementById(`${itemId}-quantity`);
-    let quantity = parseInt(quantityInput.value);
-    quantity = Math.max(1, quantity + change); // Không cho phép số lượng nhỏ hơn 1
-    quantityInput.value = quantity;
-    item.quantity = quantity;
-    currentChange = quantity;
-  
-    const itemTotal = item.price * item.quantity;
-    document.getElementById(`${itemId}-total`).innerText = itemTotal + ' VND';
-
     if (element) {
       // Lấy giá trị hiện tại và chuyển đổi từ chuỗi sang số nguyên
       let currentValue = parseInt(element.textContent, 10);
@@ -101,13 +90,7 @@ const cartItems = [
       if (!isNaN(currentValue)) {
         // Trừ đi 1
         let newValue = currentValue + change;
-        if(currentChange===0)
-        {
-          element.textContent = newValue - 1;
-        }
-        else{
-          element.textContent = newValue;
-        }
+        element.textContent = newValue;
       } else {
         console.error('Giá trị hiện tại không phải là số.');
       }
@@ -138,6 +121,15 @@ const cartItems = [
         console.error('Giá trị hiện tại không phải là số.');
       }
     }
+    const item = cartItems.find(item => item.id === itemId);
+    const quantityInput = document.getElementById(`${itemId}-quantity`);
+    let quantity = parseInt(quantityInput.value);
+    quantity = Math.max(1, quantity + change); // Không cho phép số lượng nhỏ hơn 1
+    quantityInput.value = quantity;
+    item.quantity = quantity;
+  
+    const itemTotal = item.price * item.quantity;
+    document.getElementById(`${itemId}-total`).innerText = itemTotal + ' VND';
     updateCartTotal();
   }
   
@@ -176,19 +168,10 @@ const cartItems = [
           // Kiểm tra xem giá trị có phải là số không
           if (!isNaN(currentValue)) {
             // Trừ đi 1
-            
-            let newValue = currentValue - currentChange;
+            var newValue = currentValue - currentChange - 1;
         
             // Cập nhật giá trị mới vào phần tử
-            if(currentChange===0)
-            {
-              element.textContent = newValue - 1;
-            } else{
-              if(newValue < 0) {
-                newValue = 0
-              }
-              element.textContent = newValue;
-            }
+            element.textContent = newValue;
             if(newValue ===1) {
               element.style.right = '37px';
             }
@@ -209,18 +192,10 @@ const cartItems = [
           // Kiểm tra xem giá trị có phải là số không
           if (!isNaN(currentValue2)) {
             // Trừ đi 1
-            var newValue2 = currentValue2 - currentChange;
+            var newValue2 = currentValue2 - currentChange - 1;
             
             // Cập nhật giá trị mới vào phần tử
-            if(currentChange===0)
-            {
-              element2.textContent = newValue2 - 1;
-            }else{
-              if(newValue2 < 0) {
-                newValue2 = 0
-              }
-              element2.textContent = newValue2;
-            }
+            element2.textContent = newValue2;
             if(newValue2===1) {
               element2.style.right = '-3px';
             }
@@ -240,19 +215,10 @@ const cartItems = [
           // Kiểm tra xem giá trị có phải là số không
           if (!isNaN(currentValue3)) {
             // Trừ đi 1
-            var newValue3 = currentValue3 - currentChange;
-            
+            var newValue3 = currentValue3 - currentChange - 1;
+        
             // Cập nhật giá trị mới vào phần tử
-            if(currentChange===0)
-              {
-                element3.textContent = newValue3 - 1;
-              }
-              else{
-                if(newValue3 < 0) {
-                  newValue3 = 0
-                }
-                element3.textContent = newValue3;
-              }
+            element3.textContent = newValue3;
             if(newValue3 ===1) {
               element3.style.right = '27px';
             }
