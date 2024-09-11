@@ -559,8 +559,8 @@ applySlideInEffect();
 // Thêm sự kiện resize để cập nhật trạng thái khi thay đổi kích thước màn hình
 window.addEventListener('resize', () => {
   // Đặt lại trạng thái của phần tử để hiệu ứng trượt được áp dụng đúng cách
-  bannerContent.style.transition = 'none'; // Tắt chuyển đổi để áp dụng trạng thái ngay lập tức
-  bannerContent.style.transform = 'translateY(-50%)';
+  bannerContent.style.transition = 'translate(-50%, -50%)'; // Tắt chuyển đổi để áp dụng trạng thái ngay lập tức
+  bannerContent.style.transform = 'none';
   bannerContent.style.opacity = '1'; // Đảm bảo rằng opacity luôn là 1 khi co dãn màn hình
   // Kích hoạt lại chuyển đổi cho hiệu ứng tiếp theo
 });

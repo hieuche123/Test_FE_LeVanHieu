@@ -255,7 +255,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-white);
+  background-color: white;
   box-sizing: border-box;
 }
 
@@ -357,6 +357,8 @@ body {
   background-color: var(--text-dark);
   border-radius: 30px;
   color: var(--color-white);
+  font-size: 12px;
+  font-weight: 600;
   height: 100%;
   width: 100%;
   border-bottom: 1px solid #EBEBEB;
@@ -400,6 +402,8 @@ body {
 }
 
 .layout-buy {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: calc(100% - 212px);
 }
@@ -746,7 +750,6 @@ span#item2-total, span#item1-total {
 }
 /* Customize the label (the container) */
 .container-checkbox {
-  display: flow;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
@@ -2084,6 +2087,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     gap: 20px;
   }
   .bottom__left_item {
+    display: flex;
     gap: 5px;
     line-height: 23.12px;
     align-items: center;
@@ -2116,18 +2120,25 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
  .footer__mobile {
   height: 75px;
   position: fixed;
+  display: flex;
   bottom: 0;
   left: 0;
   right: 0;
+  flex-direction: column;
   background-color: var(--color-white);
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .06);
 }
 
 .footer__mobile__icon {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__mobile__item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 5px;
     width: 77px;
@@ -2162,6 +2173,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     color: var(--text-dark);
 }
 span.iconcart-quatity-span2 {
+  position: absolute;
   font-size: 9px;
   top: -28px;
   right: -4px;
@@ -2228,6 +2240,16 @@ span.iconcart-quatity-span2 {
   {
     background: #555; /* Màu của thumb khi hover */
   }
+  .modal-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+  }
+  
   
   .modal.show ,
   .modalhome.showhome,
@@ -2246,7 +2268,7 @@ span.iconcart-quatity-span2 {
     font-weight: 600;
   }
   .header__left__menu {
-    color: var(--color-white);
+    color: #FFFFFF;
   }
   .header__left__cate {
     color: #f4dddd;
@@ -2312,6 +2334,16 @@ span.iconcart-quatity-span2 {
     height: 100%;
   }
   
+  .modal__home__btn {
+    background-color: var(--text-dark);
+    border-radius: 30px;
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #EBEBEB;
+  }
   .modal__home__button {
     margin-top: 30px;
     border-bottom: none;
@@ -3245,10 +3277,12 @@ span.iconcart-quatity-span2 {
 }
   .section__news {
     width: 100%;
+    gap: 20px;
     padding-bottom: 60px;
     padding-left: 20px;
     padding-right: 20px;
     gap: 10px; /* Khoảng cách giữa các phần tử */
+    margin: 0 20px; /* Padding cho container */
     padding-bottom: 60px;
     padding-top: 60px;
     overflow-x: scroll; /* Cho phép cuộn ngang nhưng ẩn thanh cuộn */
@@ -4100,6 +4134,7 @@ span.iconcart-quatity-span2 {
   align-items: center;
   top: 50%; /* Căn giữa theo chiều dọc */
   left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%) translateX(-100px);
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
@@ -5290,6 +5325,7 @@ footer.footer__section {
   gap: 20px;
 }
 .bottom__left_item {
+  display: flex;
   gap: 5px;
   line-height: 23.12px;
   align-items: center;
@@ -5554,6 +5590,8 @@ a.prev:hover svg path {
   padding-bottom: 20px;
 }
 .layout-buy {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: calc(100% - 212px);
 }
@@ -5647,6 +5685,7 @@ a.prev:hover svg path {
 }
 
 @media (min-width: 1860px) {
+  
   .section__footer,
   .section__instagram,
   .section__new__customer,

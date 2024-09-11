@@ -525,6 +525,7 @@ function showSlides(n) {
   if (n < 1) { slideIndex = slides.length }
 
   for (i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("slide-active");
     slides[i].style.display = "none";
   }
 
@@ -532,43 +533,28 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
+  slides[slideIndex - 1].classList.add("slide-active");
   slides[slideIndex - 1].style.display = "block";
 
   const bannerContent = slides[slideIndex - 1].querySelector('.banner__content');
   
- // Hàm để áp dụng hiệu ứng trượt
-function applySlideInEffect() {
-  // Đặt opacity thành 0 và áp dụng transform để di chuyển phần tử ra khỏi khung nhìn
   bannerContent.style.opacity = '0';
+  bannerContent.offsetHeight;
   bannerContent.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
   bannerContent.style.transform = 'translate(-50%, -50%) translateX(-100px)';
 
-  // Đảm bảo rằng các thuộc tính CSS đã được áp dụng
-  bannerContent.offsetHeight;
-
-  // Thiết lập lại opacity và transform để bắt đầu hiệu ứng trượt và mờ dần
+  
   setTimeout(() => {
     bannerContent.style.opacity = '1';
     bannerContent.style.transform = 'translate(-50%, -50%) translateX(0)';
-  }, 50); // Thời gian trễ nhỏ để đảm bảo rằng các thuộc tính CSS đã được thiết lập
-}
 
-// Gọi hàm để áp dụng hiệu ứng ban đầu
-applySlideInEffect();
+  }, 50);
 
-// Thêm sự kiện resize để cập nhật trạng thái khi thay đổi kích thước màn hình
-window.addEventListener('resize', () => {
-  // Đặt lại trạng thái của phần tử để hiệu ứng trượt được áp dụng đúng cách
-  bannerContent.style.transition = 'none'; // Tắt chuyển đổi để áp dụng trạng thái ngay lập tức
-  bannerContent.style.transform = 'translateY(-50%)';
-  bannerContent.style.opacity = '1'; // Đảm bảo rằng opacity luôn là 1 khi co dãn màn hình
-  // Kích hoạt lại chuyển đổi cho hiệu ứng tiếp theo
-});
   dots[slideIndex - 1].className += " active";
 }
 
 function isDesktop() {
-  return window.innerWidth > 1024;
+  return window.innerWidth > 768;
 }
 
 // Function to handle resize events

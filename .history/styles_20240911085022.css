@@ -746,7 +746,6 @@ span#item2-total, span#item1-total {
 }
 /* Customize the label (the container) */
 .container-checkbox {
-  display: flow;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
@@ -2084,6 +2083,7 @@ fill: #FFFFFF; /* Thay đổi màu của path thành màu trắng */
     gap: 20px;
   }
   .bottom__left_item {
+    display: flex;
     gap: 5px;
     line-height: 23.12px;
     align-items: center;
@@ -4100,6 +4100,7 @@ span.iconcart-quatity-span2 {
   align-items: center;
   top: 50%; /* Căn giữa theo chiều dọc */
   left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%) translateX(-100px);
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
@@ -5290,6 +5291,7 @@ footer.footer__section {
   gap: 20px;
 }
 .bottom__left_item {
+  display: flex;
   gap: 5px;
   line-height: 23.12px;
   align-items: center;
